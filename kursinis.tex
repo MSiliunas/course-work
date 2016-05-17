@@ -95,12 +95,60 @@ NATIVE. Kita platforma, skirta kurti programėles Android, iOS ir Windows platfo
 
 Tiek vienas, tiek kitas programėlių kūrimo būdas turi ir pliusų, ir minusų. Hybrid tipo programėles galima kurti greičiau ir paprasčiau, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti išmaniojo įrenginio ir jo operacinės sistemos teikiamas funkcijas, pateikiamas per aplikacijų programavimo sąsaja. Tai vis dėlto yra geresnis variantas nei rašyti kiekvienai operacinei sistemai atskirą programėlę, laiko ir kainos atžvilgiu. Visgi kuriamos sistemos realizacijai reikia kuo geresnės integracijos su išmaniuoju įrenginiu. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant Xamarin platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
 
+\subsubsection{Naudojimo scenarijai}
+
+\subsubsubsection{Prisijungimas}
+
+Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (wireframe / design priede ar čia?). Studentas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis (arba grąžintą access token, priklausomai nuo sistemos įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
+
+\subsubsubsection{Įrenginio pririšimas}
+
+Prisijungus programėlėje, meniu juostoje iškviečiame context? meniu, pasirenkame "Susieti įrenginį". Programėlė surenka reikalingą informaciją apie įrenginį (Bluetooth MAC) ir siunčia užklausą į sistemos aplikacijų programavimo sąsają. Grąžinama žinutė apie sėkmingą arba nesėkmingą įrenginio susiejimą su paskyra.
+
+\subsubsubsection{Lankomumo pažymėjimas}
+
+Studentas atėjęs į paskaitą įsijungia programėlę bei įrenginio Bluetooth ryšį. Spaudžia "Pasižymėti". Programėlė ieško skaitytuvo ir nuskaito jo siunčiamą informaciją: paskaitos pavadinimą, dėstytojo vardą ir pavardę. Rodomas patvirtinimo langas su šia informacija. Studentas spaudžia "Čia pataikiau". Patvirtinimas siunčiamas į sistemą ir pažymimas studento dalyvavimas paskaitoje.
+
+\textbf{Alternatyvus scenarijus:} Studentui tereikia įjungti Bluetooth ryšį ir būti susiejus įrenginį su paskyra. Skaitytuvas aptikęs įrenginį automatiškai pažymi studento dalyvavimą paskaitoje.
+
 \subsection{Skaitytuvas - išmanusis telefonas}
 Kitas svarbus komponentas Bluetooth identifikacijoje - skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kurią įsidiegtų dėstytojas į išmanųjį telefoną.
 
 Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų MAC adresais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
 
 Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti kuo prieinamesnė. Todėl jos kūrimui taip pat pasirinkta Xamarin platforma.
+
+\subsubsection{Skaitytuvo programėlės funkcijos}
+
+\subsubsubsection{Prisijungimas}
+
+Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (wireframe / design priede ar čia?). Dėstytojas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis (arba grąžintą access token, priklausomai nuo sistemos įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
+
+\subsubsubsection{Paskaitos pradžia}
+
+Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo duomenis) pagrindiniame lange spaudžia "Pradėti paskaitą". Atidaromas paskaitų sąrašas, rikiuotas pagal paskaitos laiką (nurodoma administravimo dalyje). Paspaudžia ant paskaitos, atsiranda patvirtinimo langas, spaudžia "Pradėti". Programėlė pradeda skleisti informaciją Bluetooth ryšiu. Rodomas paskaitos langas su pasižymėjusiais studentais.
+
+\textbf{Alternatyvus scenarijus:} Pradėjus paskaitą periodiškai skanuojamas Bluetooth ryšys ir rasti įrenginiai siunčiami į sistemą.
+
+\subsubsubsection{Paskaitos pabaiga}
+
+Paskaitos lange spaudžia "Užbaigti paskaitą". Rodomas patvirtinimo pranešimas, spaudžia "Užbaigti". Programėlė nusiunčia užklausą į sistemą dėl paskaitos užbaigimo. Rodomas pranešimas su sėkmingo / nesėkmingo užbaigimo tekstu. Atidaromas pagrindinis langas.
+
+\section{Sistemos valdymas}
+
+Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės naudotis sistema. Bet visa tai neveiks be pagrindinės sistemos dalies. Kaip pavadinti backend? API?
+
+\subsection{Aplikacijų programavimo sąsaja (API)}
+
+Visas bendravimas tarp klientų (mobiliųjų programėlių, web?) ir sistemos vyksta per aplikacijų programavimo sąsają.
+
+\subsubsection{Saugumas}
+
+Generuojami tokenai, klientuose nesaugomi prisijungimo duomenys. Payload su encryption? Pasiklausti Eligijaus apie šitą.
+
+\subsection{Administravimo aplinka}
+
+
 
 \sectionnonum{Rezultatai ir išvados}
 Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo
