@@ -1,0 +1,130 @@
+\documentclass{VUMIFPSkursinis}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subfig}
+\usepackage{wrapfig}
+
+% Titulinio aprašas
+\university{Vilniaus universitetas}
+\faculty{Matematikos ir informatikos fakultetas}
+\department{Programų sistemų katedra}
+\papertype{Kursinis darbas}
+\title{Interaktyvios pratybos}
+\titleineng{Interactive lecture}
+\status{3 kurso 2 grupės studentas}
+\author{Marijus Siliūnas}
+% \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
+\supervisor{Dr. Kristina Lapin}
+\date{Vilnius – \the\year}
+
+% Nustatymai
+% \setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
+\bibliography{bibliografija}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\sectionnonum{Įvadas}
+\subsectionnonum{Darbo tikslas}
+Šiuo darbu siekiama palengvinti darbą dėstytojams paskaitų metu žymint lankomumą. Sukurti sistemą, kurioje studentai skatinami aktyviai dalyvauti paskaitose apdovanojant sistemoje už kiekvieną veiksmą. Atsiskaitymų metu studentams bei dėstytojui aiškiai pateikti atsiskaitomą darbą.
+Sukurti sistemą, kuri leistų teikti kokybišką atsaką akivaizdinių studijų užsiėmimų metu, gerina studentų ir dėstytojų bendradarbiavimą.
+\subsectionnonum{Temos aktualumas}
+Statistika apie technologijas, dabartinė situacija
+\subsectionnonum{Siekiami rezultatai}
+Ištirti dėstytojų pasikartojantys procesai paskaitų metu ir nustatyta kuriuos iš jų galima automatizuoti. Sukurta sistema su automatizuotu studentų identifikavimo procesu bei studentų skaitinimo aktyviai dalyvauti paskaitoje mechanizmu. 
+
+\section{Studento identifikavimas}
+Paskaitų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvienos paskaitos metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai. Sistemoje būtų vedamas lankomumo žurnalas.
+
+Lankomumo žymėjimą galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia studentus identifikuoti.
+
+\subsection{NFC technologija}
+Vienas iš būdų yra Lietuvos Studento Pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (Trumpinys NFC yra angliško termino „Near Field Communication“ atitikmuo, apibūdinantis nedideliame nuotolyje veikiantį bevielio ryšio standartą, kuris užtikrina kokybišką, patikimą ir saugų ryšį tarp dviejų elektroninių įrenginių) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
+
+Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Norint įgyvendinti tokį identifikavimo procesą dar reikalinga integracija su duomenų baze, kurioje būtų susiejamas unikalus LSP indentifikavimo numeris su LSP duomenimis. Gauti duomenys turėtų būti patikrinami ir su vidine universiteto sistema patikrinant, ar toks studentas tikrai egzistuoja, ar jis turi dalyvauti šioje paskaitoje ir t.t. Taip pat universiteto auditorijose turėtų būti įdiegti NFC skaitytuvai. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą.
+
+\subsection{Bluetooth technologija}
+Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota Bluetooth technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento informacija. Privalumas prieš LSP skaitymą - nereikia integruoti trečiųjų šalių paslaugų. Identifikaciniai numeriai išsaugomi ir susiejiami su studentu kuriamoje sistemoje.
+
+Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus Bluetooth ryšius galima nuskaityti visus vienu metu. Nors studentai turėtų įjungti šią technologiją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
+
+\subsection{NFC ar Bluetooth?}
+Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes: nepriklausoma nuo trečiųjų šalių paslaugų (services); auditorijose reikia įrengti mažiau skaitytuvų ir / ar greitesnis identifikavimas (nesusidaro eilės prie skaitytuvų).
+
+\subsection{Mobilioji programėlė studentams}
+Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
+
+Kiekvienas įrenginys turintis integruotą Bluetooth technologiją turi ir unikalų MAC (Media Access Control) adresą, dar vadinamą fiziniu adresu. Kadangi šis adresas kievienam įrenginiui yra unikalus, tai juo galime naudotis norint identifikuoti studentus. Norint susieti studento mobilųjį telefoną su jo paskyra sistemoje studentas įsidiegia programėlę. Programėlėje studentas prisijungia prie savo paskyros ir “pririša” mobilųjį telefoną. Programėlė nuskaito telefono Bluetooth MAC adresą ir kartu su studento identifikavimo numeriu (gaunamas prisijungus prie paskyros) siunčia į sistemą. Sistema gautą MAC adresą priskiria tam studentui. Programėlės pagrindinė funkcija yra “pririšti” telefoną prie paskyros. Tuo pačiu galima pateikti studento tvarkaraštį, lankomumo ataskaitą.
+
+Norint, kad sistema galėtų naudotis kuo daugiau studentų, programėlė turi būti palaikoma skirtingose įrenginiuose bei operacinėse sistemose. Pačios populiariausios išmaniųjų įrenginių operacinės sistemos yra Android ir iOS. Taip pat gana plačiai naudojama "Windows Phone" operacinė sistema.
+
+\subsubsection{Programėlių kūrimas pagal operacinę sistemą}
+
+\subsubsubsection{Android}
+Tai yra populiariausia, apie 60 procentų rinkos užimanti, operacinė sistema. Ši platforma yra atviro kodo ir prižiūrima "Google" kompanijos. "Android" operacinė sistema diegiama į tokių kaip "LG", "Sony" ir kitų gamintojų išmaniuosius telefonus. Šiai platformai programėlės kuriamos Java programavimo kalba. Programavimo aplinkai kūrėjai siūlo nemokamą įrankį "Android Studio" bei pamokų ciklą pirmąjai programėlei sukurti.
+
+\subsubsubsection{iOS}
+Antra pagal populiarumą, apie 25 procentus rinkos turinti, operacinė sistema. Ši platforma yra palaikoma ir sukurta "Apple" korporacijos. Programėlės kuriamos "Objective-C" arba "Swift" programavimo kalbomis.
+
+\subsubsubsection{Windows Phone}
+Trečia pagal populiarumą, apie 15 procentų išmaniųjų įrenginių rinkos užimanti, operacinė sistema. Tai yra "Microsoft" korporacijos produktas. Operacinė sistema diegiama "Nokia" korporacijos "Lumia" išmaniųjų telefonų linijoje. Programavimo kalba - C\#.
+
+\subsubsection{Viena programėlė - visoms operacinėms sistemoms}
+Dažnai poreikis yra palaikyti kuo daugiau įrenginių. Ir šiuo atveju - reikalinga, kad naudojimąsis sistema būtų kuo prieinamesnis. Būtent dėl šios priežasties buvo pradėtos kurti technologijos leisiančios rašyti vieną kodą vienai programėlei ir ji veiktų visuose palaikomose ąoperacinėse sistemose. Kol kas nėra tiek išvystyta technologija, tačiau šiuo metu galime su nedidelėmis korekcijomis sukurti programėlę tinkamą populiariausioms išmaniųjų irenginių operacinėms sistemoms.
+
+\subsubsubsection{Hybrid}
+
+HYBRID. Vienas iš labiausiai paplitusių karkasų yra "Adobe PhoneGap". Naudojantis šiuo karkasu galime programėlę kurti kaip tinklalapį, programuojant JavaScript programavimo kalba bei rašant HTML ir CSS kodą vartotojo sąsajai kurti. "Adobe PhoneGap" taip pat mums suteikia priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (angl. API - Application Programming Interface). Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus, o šiuo atveju - mums reikalingą Bluetooth modulį.
+
+\subsubsubsection{Native}
+
+NATIVE. Kita platforma, skirta kurti programėles Android, iOS ir Windows platformoms, tai Xamarin. Naudojantis šia platforma galima kurti visoms trims mobiliosioms operacinėms sistemoms "native" programėles. Šiuo atveju programėlės yra rašomos C\# programavimo kalba, o programinė įranga, reikalinga surinkti bei vystyti programėles, yra nemokama. Vidutiniškai 75\% programėlės kodo yra naudojama bendrai tarp operacinių sistemų. Platforma suteikia pilną priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (visose operacinėse sistemose). Vartotojo sąsają galima kurti pagal operacinės sistemos standartus arba naudojant platformos kūrėjų įrankį "Xamarin.Forms".
+
+\subsubsubsection{Hybrid ar Native}
+
+Tiek vienas, tiek kitas programėlių kūrimo būdas turi ir pliusų, ir minusų. Hybrid tipo programėles galima kurti greičiau ir paprasčiau, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti išmaniojo įrenginio ir jo operacinės sistemos teikiamas funkcijas, pateikiamas per aplikacijų programavimo sąsaja. Tai vis dėlto yra geresnis variantas nei rašyti kiekvienai operacinei sistemai atskirą programėlę, laiko ir kainos atžvilgiu. Visgi kuriamos sistemos realizacijai reikia kuo geresnės integracijos su išmaniuoju įrenginiu. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant Xamarin platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
+
+\subsection{Skaitytuvas - išmanusis telefonas}
+Kitas svarbus komponentas Bluetooth identifikacijoje - skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kurią įsidiegtų dėstytojas į išmanųjį telefoną.
+
+Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų MAC adresais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
+
+Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti kuo prieinamesnė. Todėl jos kūrimui taip pat pasirinkta Xamarin platforma.
+
+\sectionnonum{Rezultatai ir išvados}
+Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo
+rezultatai (kažkas išanalizuota, kažkas sukurta, kažkas įdiegta) ir pateikiamos
+išvados (daromi nagrinėtų problemų sprendimo metodų palyginimai, teikiamos
+rekomendacijos, akcentuojamos naujovės).
+
+\printbibliography[heading=bibintoc]  % Šaltinių sąraše nurodoma panaudota
+% literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų
+% (cituotų, perfrazuotų ar bent paminėtų) mokslo leidinių, kitokių publikacijų
+% bibliografiniai aprašai.  Šaltinių sąrašas spausdinamas iš naujo puslapio.
+% Aprašai pateikiami netransliteruoti. Šaltinių sąraše negali būti tokių
+% šaltinių, kurie nebuvo paminėti tekste.
+
+% \sectionnonum{Sąvokų apibrėžimai}
+\sectionnonum{Santrumpos}
+Sąvokų apibrėžimai ir santrumpų sąrašas sudaromas tada, kai darbo tekste
+vartojami specialūs paaiškinimo reikalaujantys terminai ir rečiau sutinkamos
+santrumpos.
+
+\appendix  % Priedai
+% Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
+% parengta, medžiaga. Savarankiški priedai gali būti pateikiami ir
+% kompaktiniame diske. Priedai taip pat numeruojami ir vadinami. Darbo tekstas
+% su priedais susiejamas nuorodomis.
+
+\end{document}
