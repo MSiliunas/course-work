@@ -36,21 +36,29 @@
 \tableofcontents
 
 \sectionnonum{Įvadas}
+
+\subsectionnonum{Temos aktualumas}
+Statistika apie technologijas, dabartinė situacija
+
 \subsectionnonum{Darbo tikslas}
 Šiuo darbu siekiama palengvinti darbą dėstytojams paskaitų metu žymint lankomumą. Sukurti sistemą, kurioje studentai skatinami aktyviai dalyvauti paskaitose apdovanojant sistemoje už kiekvieną veiksmą. Atsiskaitymų metu studentams bei dėstytojui aiškiai pateikti atsiskaitomą darbą.
 Sukurti sistemą, kuri leistų teikti kokybišką atsaką akivaizdinių studijų užsiėmimų metu, gerina studentų ir dėstytojų bendradarbiavimą.
-\subsectionnonum{Temos aktualumas}
-Statistika apie technologijas, dabartinė situacija
+
 \subsectionnonum{Siekiami rezultatai}
 Ištirti dėstytojų pasikartojantys procesai paskaitų metu ir nustatyta kuriuos iš jų galima automatizuoti. Sukurta sistema su automatizuotu studentų identifikavimo procesu bei studentų skaitinimo aktyviai dalyvauti paskaitoje mechanizmu. 
 
 \section{Studento identifikavimas}
-Paskaitų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvienos paskaitos metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai. Sistemoje būtų vedamas lankomumo žurnalas.
+
+Kuo tai svarbu.
+
+\subsection{Dabartinės situacijos apžvalga}
+
+Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai. Sistemoje būtų vedamas lankomumo žurnalas.
 
 Lankomumo žymėjimą galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia studentus identifikuoti.
 
 \subsection{NFC technologija}
-Vienas iš būdų yra Lietuvos Studento Pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (Trumpinys NFC yra angliško termino „Near Field Communication“ atitikmuo, apibūdinantis nedideliame nuotolyje veikiantį bevielio ryšio standartą, kuris užtikrina kokybišką, patikimą ir saugų ryšį tarp dviejų elektroninių įrenginių) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
+Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (Trumpinys NFC yra angliško termino „Near Field Communication“ atitikmuo, apibūdinantis nedideliame nuotolyje veikiantį bevielio ryšio standartą, kuris užtikrina kokybišką, patikimą ir saugų ryšį tarp dviejų elektroninių įrenginių) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
 
 Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Norint įgyvendinti tokį identifikavimo procesą dar reikalinga integracija su duomenų baze, kurioje būtų susiejamas unikalus LSP indentifikavimo numeris su LSP duomenimis. Gauti duomenys turėtų būti patikrinami ir su vidine universiteto sistema patikrinant, ar toks studentas tikrai egzistuoja, ar jis turi dalyvauti šioje paskaitoje ir t.t. Taip pat universiteto auditorijose turėtų būti įdiegti NFC skaitytuvai. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą.
 
@@ -83,19 +91,21 @@ Trečia pagal populiarumą, apie 15 procentų išmaniųjų įrenginių rinkos u�
 \subsubsection{Viena programėlė - visoms operacinėms sistemoms}
 Dažnai poreikis yra palaikyti kuo daugiau įrenginių. Ir šiuo atveju - reikalinga, kad naudojimąsis sistema būtų kuo prieinamesnis. Būtent dėl šios priežasties buvo pradėtos kurti technologijos leisiančios rašyti vieną kodą vienai programėlei ir ji veiktų visuose palaikomose ąoperacinėse sistemose. Kol kas nėra tiek išvystyta technologija, tačiau šiuo metu galime su nedidelėmis korekcijomis sukurti programėlę tinkamą populiariausioms išmaniųjų irenginių operacinėms sistemoms.
 
-\subsubsubsection{Hybrid}
-
-HYBRID. Vienas iš labiausiai paplitusių karkasų yra "Adobe PhoneGap". Naudojantis šiuo karkasu galime programėlę kurti kaip tinklalapį, programuojant JavaScript programavimo kalba bei rašant HTML ir CSS kodą vartotojo sąsajai kurti. "Adobe PhoneGap" taip pat mums suteikia priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (angl. API - Application Programming Interface). Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus, o šiuo atveju - mums reikalingą Bluetooth modulį.
-
 \subsubsubsection{Native}
 
 NATIVE. Kita platforma, skirta kurti programėles Android, iOS ir Windows platformoms, tai Xamarin. Naudojantis šia platforma galima kurti visoms trims mobiliosioms operacinėms sistemoms "native" programėles. Šiuo atveju programėlės yra rašomos C\# programavimo kalba, o programinė įranga, reikalinga surinkti bei vystyti programėles, yra nemokama. Vidutiniškai 75\% programėlės kodo yra naudojama bendrai tarp operacinių sistemų. Platforma suteikia pilną priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (visose operacinėse sistemose). Vartotojo sąsają galima kurti pagal operacinės sistemos standartus arba naudojant platformos kūrėjų įrankį "Xamarin.Forms".
+
+\subsubsubsection{Saityno (web)}
+
+\subsubsubsection{Hybrid}
+
+HYBRID. Vienas iš labiausiai paplitusių karkasų yra "Adobe PhoneGap". Naudojantis šiuo karkasu galime programėlę kurti kaip tinklalapį, programuojant JavaScript programavimo kalba bei rašant HTML ir CSS kodą vartotojo sąsajai kurti. "Adobe PhoneGap" taip pat mums suteikia priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (angl. Application Programming Interface, API). Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus, o šiuo atveju - mums reikalingą Bluetooth modulį.
 
 \subsubsubsection{Hybrid ar Native}
 
 Tiek vienas, tiek kitas programėlių kūrimo būdas turi ir pliusų, ir minusų. Hybrid tipo programėles galima kurti greičiau ir paprasčiau, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti išmaniojo įrenginio ir jo operacinės sistemos teikiamas funkcijas, pateikiamas per aplikacijų programavimo sąsaja. Tai vis dėlto yra geresnis variantas nei rašyti kiekvienai operacinei sistemai atskirą programėlę, laiko ir kainos atžvilgiu. Visgi kuriamos sistemos realizacijai reikia kuo geresnės integracijos su išmaniuoju įrenginiu. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant Xamarin platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
 
-\subsubsection{Naudojimo scenarijai}
+\subsubsection{Programėlės naudojimo scenarijai}
 
 \subsubsubsection{Prisijungimas}
 
@@ -134,11 +144,11 @@ Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo du
 
 Paskaitos lange spaudžia "Užbaigti paskaitą". Rodomas patvirtinimo pranešimas, spaudžia "Užbaigti". Programėlė nusiunčia užklausą į sistemą dėl paskaitos užbaigimo. Rodomas pranešimas su sėkmingo / nesėkmingo užbaigimo tekstu. Atidaromas pagrindinis langas.
 
-\section{Sistemos valdymas}
+\section{Sistemos vidinė pusė}
 
 Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės naudotis sistema. Bet visa tai neveiks be pagrindinės sistemos dalies. Kaip pavadinti backend? API?
 
-\subsection{Aplikacijų programavimo sąsaja (API)}
+\subsection{Programų sąsaja}
 
 Visas bendravimas tarp klientų (mobiliųjų programėlių, web?) ir sistemos vyksta per aplikacijų programavimo sąsają.
 
