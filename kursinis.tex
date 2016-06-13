@@ -249,17 +249,25 @@ Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmen
 
 \subsubsubsection{Prieigos taškų apsauga}
 
-Tai yra išorinės apsaugos sluoksnis - suteikti priėjimą prie saityno programų programavimo sąsajos prieigos taškų tik šios sistemos komponentams. Straipsnyje \cite{StormpathAPISecurity} apžvelgiami galimi apsaugos metodai ir išskiriamas saugiausias - \textit{OAuth 1.0a} protokolas.
+Tai yra išorinės apsaugos sluoksnis - suteikti priėjimą prie saityno programų programavimo sąsajos prieigos taškų tik šios sistemos komponentams. Dažnai šiam tikslui naudojami programų programavimo sąsajos raktas (angl. \textit{API key}).
 
-Tai plačiai naudojamas, saugus, parašo pagrindu veikiantis protokolas. \textit{OAuth 1.0a} naudoja kriptografinį parašą, kuris susideda iš slapto prieigos rakto, vienkartinio rakto (angl. \textit{nonce}) ir kitos užklausos informacijos. Didelis pliusas šio protokolo - niekada tiesiogiai nesiunčiamas slaptas prieigos raktas, todėl nėra grėsmės, kad jis bus nuskaitytas siunčiant užklausą. Taip pat dėl šios priežasties nėra būtina \textit{SSL} apsauga. Kadangi \textit{OAuth 1.0a} yra plačiai naudojama, rakto generavimui yra sukurta nemažai įrankių, kurių dėka rakto generavimo procesas tampa paprastas.
+Sistemos komponentui, kuriam norime suteikti prieigą sugeneruojame unikalų raktą. Norint užtikrinti unikalumą galima pasinaudoti universaliai unikalaus identifikatoriaus kūrimo standartu (angl. \textit{universally unique identifier, UUID}) RFC 4122 aprašytu \cite{uuidRef}. Kadangi sistemos komponentai į saityno programų programavimo sąsają kreipsis \textit{HTTP} protokolu, įgyvendinant tokią apsaugą yra priimta šį raktą dėti į užklausos \textit{Authentication} antraštę. Raktas tikrinamas kiekvienos užklausos metu todėl yra kreipiamasi į sistemos duomenų bazę.
 
 \subsubsubsection{Sistemos duomenų apsauga}
 
-Kuomet pasirūpinta, kad prieigos taškai yra prieinami tik šios sistemos komponentams, dar svarbu, kad skirtingos naudotojų grupės (mūsų atveju - dėstytojai ir studentai) galėtų pasiekti tik jiems skirtus išteklius. 
+Kuomet pasirūpinta, kad prieigos taškai yra prieinami tik šios sistemos komponentams, dar svarbu užtikrinti, kad skirtingos naudotojų grupės (mūsų atveju - dėstytojai ir studentai) galėtų pasiekti tik jiems skirtus išteklius ir atvirkščiai - negalėtų pasiekti išteklių, kurie yra neskirti tai naudotojų grupei.
+
+Naujas būdas tokioms užduotims spręsti - \textit{JSON Web Token (JWT)}  apibrėžtas RFC 7519 standartu \cite{jwtRef}. Tai yra savarankiškas ir kompaktiškas būdas perduoti informaciją tarp sistemos komponentų. Dėl nedidelio naudingos apkrovos (angl. \textit{payload}) dydžio, ją galima perduoti tiesiog universaliu adresu ar įdėti į \textit{HTTP} užklausos antraštę.
+
+\textit{JWT} susideda iš trijų dalių: antraštės, naudingos apkrovos bei parašo. Antraštėje įprastai nurodomas prieigos rakto tipas bei maišymo (angl. \textit{hashing}) algoritmas. Naudingą apkrovą sudaro informacija apie naudotoją: asmeniniai duomenys, naudotojų grupė ir pan. Paraše yra \textit{HMAC SHA256} arba \textit{RSA} algoritmu užšifruojama maišos reikšmė, kuri susideda iš \textit{Base64} būdu užkoduotos antraštės ir naudingos apkrovos.
+
+Naudojant \textit{JWT} nebereikia kiekvienos užklausos metu kreiptis į duomenų bazę, todėl atsakymas yra išsiunčiamas greičiau. Taip pat yra taupomi serverio resursai. 
 
 \subsection{Administravimo aplinka}
 
+\subsubsection{Vartotojo sąsaja}
 
+\subsubsection{Naudojimo scenarijai}
 
 \sectionnonum{Rezultatai ir išvados}
 Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo

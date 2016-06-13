@@ -56,6 +56,40 @@
       \field{title}{Smartphone OS Market Share, 2015 Q2}
       \field{year}{2015}
     \endentry
+    \entry{jwtRef}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=e8cd213a3d041f0c368fbe6f8807c6ef}{Jones}{J\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=fc7b2f652546db5bf03feb0236e6df52}{Bradley}{B\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=eebb42075b60148aa7107e41262f056f}{Sakimura}{S\bibinitperiod}{N.}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \strng{fullhash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \field{labelalpha}{JBS15}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://tools.ietf.org/html/rfc7519}}
+      \field{title}{JSON Web Token (JWT)}
+      \field{year}{2015}
+    \endentry
+    \entry{uuidRef}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=f31bb1fe6ada0f168f038a61dd0a064a}{Leach}{L\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=a700adf3a245e90b45d92887c5828fad}{Mealling}{M\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=9ea420d7847354fd8b42b09908b73066}{Salz}{S\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{06f858bdd7c30e18d88b65da40544407}
+      \strng{fullhash}{06f858bdd7c30e18d88b65da40544407}
+      \field{labelalpha}{LMS05}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://tools.ietf.org/html/rfc4122}}
+      \field{title}{A Universally Unique IDentifier (UUID) URN Namespace}
+      \field{year}{2005}
+    \endentry
     \entry{hybridFrameworks}{misc}{}
       \name{author}{1}{}{%
         {{hash=1591100acc8b090ad69eb10fa8d7de61}{Markov}{M\bibinitperiod}{Danny}{D\bibinitperiod}{}{}{}{}}%
@@ -84,21 +118,6 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{http://blog.smartbear.com/apis/understanding-soap-and-rest-basics/}}
       \field{title}{Understanding SOAP and REST Basics And Differences}
-      \field{year}{2013}
-    \endentry
-    \entry{StormpathAPISecurity}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=644c04bb1bc553e9ce060176b60b916c}{Stormpath}{S\bibinitperiod}{Team}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{644c04bb1bc553e9ce060176b60b916c}
-      \strng{fullhash}{644c04bb1bc553e9ce060176b60b916c}
-      \field{labelalpha}{Sto13}
-      \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://stormpath.com/blog/secure-your-rest-api-right-way}}
-      \field{title}{Secure Your REST API… The Right Way}
       \field{year}{2013}
     \endentry
     \entry{xamarin}{misc}{}
