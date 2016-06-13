@@ -120,6 +120,20 @@
       \field{title}{Understanding SOAP and REST Basics And Differences}
       \field{year}{2013}
     \endentry
+    \entry{spa}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2dcc3628986e6b97a504272b66a55f7a}{Takada}{T\bibinitperiod}{Mikito}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2dcc3628986e6b97a504272b66a55f7a}
+      \strng{fullhash}{2dcc3628986e6b97a504272b66a55f7a}
+      \field{labelalpha}{Tak13}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Single page apps in depth a.k.a Mixu's single page app book}
+      \field{year}{2013}
+    \endentry
     \entry{xamarin}{misc}{}
       \name{author}{1}{}{%
         {{hash=1b4419abc43a358b41d0ca5077a63908}{Xamarin}{X\bibinitperiod}{}{}{}{}{}{}}%

@@ -101,7 +101,7 @@ Dažnai poreikis yra palaikyti kuo daugiau įrenginių. Ir šiuo atveju - reikal
 
 Sparčiai tobulėjanti platforma, skirta kurti programėles \textit{Android}, \textit{iOS} ir \textit{Windows Phone} operacinėms sistemoms, tai \textit{Xamarin} \cite{xamarin}. Naudojantis šia platforma galima kurti visoms trims mobiliosioms operacinėms sistemoms savas (angl. \textit{native}) programėles. Šiuo atveju programėlės yra rašomos \textit{C\#} programavimo kalba, o programinė įranga, reikalinga surinkti bei vystyti programėles, yra nemokama. Vidutiniškai 75 procentai programėlės kodo yra naudojama bendrai tarp operacinių sistemų. Platforma suteikia pilną priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (visose operacinėse sistemose). Vartotojo sąsają galima kurti pagal operacinės sistemos standartus arba naudojant platformos kūrėjų įrankį \textit{Xamarin.Forms}.
 
-\subsubsubsection{Saityno programėlė}
+\subsubsubsection{Saityno programėlė} \label{webApp}
 
 Priklausomai nuo poreikių, galima sukurti tinklalapį pritaikytą mobiliesiems įrenginiams. Kuriant galima pasitelkti karkasus, skirtus kurti būtent tokias saityno programėles. Tai yra greitas ir pigus būdas, prieinamas iš visų operacinių sistemų, tačiau tinkamas tik tuomet, kai nereikia arba reikalingos elementarios (garsas, failai įrenginio atmintyje) sąsajos su įrenginiu. Dėl to šis variantas nėra tinkamas mūsų atveju - nėra galimybės pasinaudoti įrenginio \textit{Bluetooth} ryšiu.
 
@@ -223,7 +223,7 @@ Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės na
 
 Pagal pateiktą diegimo diagramą (\ref{img:deployment} pav.) matome, kad visą sistemą sudaro trys pagrindiniai moduliai: mobiliosios programėlės (aprašytos \ref{StudentApp} ir \ref{TeacherApp} poskyriuose), programų kūrimo sąsaja bei administravimo aplinka.
 
-\subsection{Saityno programų programavimo sąsaja}
+\subsection{Saityno programų programavimo sąsaja} \label{webApi}
 
 Visas bendravimas tarp programėlių ir pagrindinio sistemos modulio vyksta per aplikacijų programavimo sąsają. Šis sistemos modulis turi būti sukurtas taip, kad būtų galima nesunkiai įtraukti naują modulį į sistemos architektūrą. Saityno programų programavimo sąsaja (angl. \textit{Web Application Programming Interface}) yra dažnas sprendimas tokioms sistemoms įgyvendinti. Tai yra sąsaja, susidedanti iš vieno ar daugiau viešai pasiekiamų prieigos taškų (angl. \textit{endpoint}), su apibrėžta užklausos - atsakymo žinučių sistema. Yra du pagrindiniai saityno programų programavimo sąsajų tipai: \textit{SOAP (Simple Object Access Protocol)} saityno paslaugos ir \textit{REST (Representational State Transfer)} saityno ištekliai.
 
@@ -265,9 +265,27 @@ Naudojant \textit{JWT} nebereikia kiekvienos užklausos metu kreiptis į duomen�
 
 \subsection{Administravimo aplinka}
 
+Sistemai taip pat reikalinga administravimo aplinka, kurioje galima būtų valdyti naudotojus, įrenginius ar suteikti prieigą naujiems sistemos komponentams. Kaip jau minėta \ref{webApi} poskyryje - visi sistemos komponentai gali prieiti prie duomenų ir juos valdyti tik per saityno programų programavimo sąsają. Administravimo modulis ne išimtis. Taip pat svarbu, kad administravimo aplinka būtų pasiekiama iš įvairių įrenginių. Kaip jau \ref{webApp} poskyryje buvo apžvelgta, jei mums nereikia prieigos prie įrenginio funkcijų, galime kurti saityno programą.
+
+Sparčiai populiarėjantis saityno programų kūrimo būdas yra vieno puslapio programa (angl. \textit{Single Page Application, SPA}). Tai kūrimo metodas, kuomet visas turinys sutalpinamas viename saityno lape. Reikalinga informacija, kodas yra užkraunamas viena užklausa arba dinamiškai, kai to reikia. Tai pagerina naudotojo patirtį, naudojimas yra vientisesnis, nes nereikia perkrauti naršyklės. Taip pat vieno puslapio programa tinka mūsų atveju, nes yra sukurti karkasai labai palengvinantys integravimą su saityno programų programavimo sąsaja \cite{spa}.
+
+Atsižvelgiant į tai, kad administravimo moduliu nebus naudojamąsi kasdien, galima kurti klasikinę saityno programą. Šiuo būdu modulis bus sukurtas greičiau. Kadangi sistemos saityno programų programavimo sąsajai kurti naudojame plačiai naudojamą \textit{REST} metodą, nepriklausomai nuo pasirinktos technologijos ar karkaso administravimo modulio įgyvendinimui, yra sukurtas pagalbinis įrankis užklausų siuntimui bei apdorojimui.
+
 \subsubsection{Vartotojo sąsaja}
 
 \subsubsection{Naudojimo scenarijai}
+
+\subsubsubsection{Naudotojo sukūrimas}
+
+\subsubsubsection{Naudotojo redagavimas ir ištrynimas}
+
+\subsubsubsection{Studentų grupės sukūrimas}
+
+\subsubsubsection{Studentų grupės redagavimas ir ištrynimas}
+
+\subsubsubsection{Paskaitos sukūrimas}
+
+\subsubsubsection{Paskaitos redagavimas ir ištrynimas}
 
 \sectionnonum{Rezultatai ir išvados}
 Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo

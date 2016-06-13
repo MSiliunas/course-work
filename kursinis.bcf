@@ -2249,6 +2249,7 @@
     <bcf:citekey order="9">SoapRest</bcf:citekey>
     <bcf:citekey order="10">uuidRef</bcf:citekey>
     <bcf:citekey order="11">jwtRef</bcf:citekey>
+    <bcf:citekey order="12">spa</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt" type="entry" sortscheme="anyt">
   <bcf:sorting>

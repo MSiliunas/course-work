@@ -2,92 +2,104 @@
 \defcounter {refsection}{0}\relax 
 \select@language {lithuanian}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Įvadas}{2}
+\contentsline {section}{Įvadas}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.}Studento identifikavimas}{3}
+\contentsline {section}{\numberline {1.}Studento identifikavimas}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}Dabartinės situacijos apžvalga}{3}
+\contentsline {subsection}{\numberline {1.1.}Dabartinės situacijos apžvalga}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.}NFC technologija}{3}
+\contentsline {subsection}{\numberline {1.2.}NFC technologija}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.}Bluetooth technologija}{3}
+\contentsline {subsection}{\numberline {1.3.}Bluetooth technologija}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.}NFC ar Bluetooth?}{4}
+\contentsline {subsection}{\numberline {1.4.}NFC ar Bluetooth?}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.}Mobilioji programėlė studentams}{4}
+\contentsline {subsection}{\numberline {1.5.}Mobilioji programėlė studentams}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.1.}Programėlių kūrimas pagal operacinę sistemą}{4}
+\contentsline {subsubsection}{\numberline {1.5.1.}Programėlių kūrimas pagal operacinę sistemą}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.1.1.}Android}{4}
+\contentsline {paragraph}{\numberline {1.5.1.1.}Android}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.1.2.}iOS}{5}
+\contentsline {paragraph}{\numberline {1.5.1.2.}iOS}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.1.3.}Windows Phone}{5}
+\contentsline {paragraph}{\numberline {1.5.1.3.}Windows Phone}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.2.}Viena programėlė - visoms operacinėms sistemoms}{5}
+\contentsline {subsubsection}{\numberline {1.5.2.}Viena programėlė - visoms operacinėms sistemoms}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.2.1.}Sava programėlė}{5}
+\contentsline {paragraph}{\numberline {1.5.2.1.}Sava programėlė}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.2.2.}Saityno programėlė}{5}
+\contentsline {paragraph}{\numberline {1.5.2.2.}Saityno programėlė}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.2.3.}Hibridinė programėlė}{5}
+\contentsline {paragraph}{\numberline {1.5.2.3.}Hibridinė programėlė}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.2.4.}Hibridinė ar sava programėlė?}{6}
+\contentsline {paragraph}{\numberline {1.5.2.4.}Hibridinė ar sava programėlė?}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.3.}Programėlės vartoto sąsaja}{6}
+\contentsline {subsubsection}{\numberline {1.5.3.}Programėlės vartoto sąsaja}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.5.4.}Programėlės naudojimo scenarijai}{8}
+\contentsline {subsubsection}{\numberline {1.5.4.}Programėlės naudojimo scenarijai}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.4.1.}Prisijungimas}{8}
+\contentsline {paragraph}{\numberline {1.5.4.1.}Prisijungimas}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.4.2.}Įrenginio susiejimas}{8}
+\contentsline {paragraph}{\numberline {1.5.4.2.}Įrenginio susiejimas}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.4.3.}Lankomumo pasižymėjimas}{9}
+\contentsline {paragraph}{\numberline {1.5.4.3.}Lankomumo pasižymėjimas}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.5.4.4.}Paskyros peržiūra}{9}
+\contentsline {paragraph}{\numberline {1.5.4.4.}Paskyros peržiūra}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.}Skaitytuvas - išmanusis telefonas}{9}
+\contentsline {subsection}{\numberline {1.6.}Skaitytuvas - išmanusis telefonas}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.1.}Skaitytuvo programėlės vartotojo sąsaja}{9}
+\contentsline {subsubsection}{\numberline {1.6.1.}Skaitytuvo programėlės vartotojo sąsaja}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.2.}Skaitytuvo programėlės funkcijos}{10}
+\contentsline {subsubsection}{\numberline {1.6.2.}Skaitytuvo programėlės funkcijos}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.6.2.1.}Prisijungimas}{10}
+\contentsline {paragraph}{\numberline {1.6.2.1.}Prisijungimas}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.6.2.2.}Paskaitos pradžia}{10}
+\contentsline {paragraph}{\numberline {1.6.2.2.}Paskaitos pradžia}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.6.2.3.}Paskaitos pabaiga}{11}
+\contentsline {paragraph}{\numberline {1.6.2.3.}Paskaitos pabaiga}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Sistemos vidinė pusė}{12}
+\contentsline {section}{\numberline {2.}Sistemos vidinė pusė}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Saityno programų programavimo sąsaja}{12}
+\contentsline {subsection}{\numberline {2.1.}Saityno programų programavimo sąsaja}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1.}Saityno programų programavimo sąsajų tipai}{13}
+\contentsline {subsubsection}{\numberline {2.1.1.}Saityno programų programavimo sąsajų tipai}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {2.1.1.1.}SOAP}{13}
+\contentsline {paragraph}{\numberline {2.1.1.1.}SOAP}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {2.1.1.2.}REST}{13}
+\contentsline {paragraph}{\numberline {2.1.1.2.}REST}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2.}Saugumas}{13}
+\contentsline {subsubsection}{\numberline {2.1.2.}Saugumas}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {2.1.2.1.}Prieigos taškų apsauga}{14}
+\contentsline {paragraph}{\numberline {2.1.2.1.}Prieigos taškų apsauga}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {2.1.2.2.}Sistemos duomenų apsauga}{14}
+\contentsline {paragraph}{\numberline {2.1.2.2.}Sistemos duomenų apsauga}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Administravimo aplinka}{14}
+\contentsline {subsection}{\numberline {2.2.}Administravimo aplinka}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1.}Vartotojo sąsaja}{14}
+\contentsline {subsubsection}{\numberline {2.2.1.}Vartotojo sąsaja}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2.}Naudojimo scenarijai}{14}
+\contentsline {subsubsection}{\numberline {2.2.2.}Naudojimo scenarijai}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{15}
+\contentsline {paragraph}{\numberline {2.2.2.1.}Naudotojo sukūrimas}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{16}
+\contentsline {paragraph}{\numberline {2.2.2.2.}Naudotojo redagavimas ir ištrynimas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {2.2.2.3.}Studentų grupės sukūrimas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {2.2.2.4.}Studentų grupės redagavimas ir ištrynimas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {2.2.2.5.}Paskaitos sukūrimas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {2.2.2.6.}Paskaitos redagavimas ir ištrynimas}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Rezultatai ir išvados}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatūra}{18}
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
 \select@language {lithuanian}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{17}
+\contentsline {section}{Santrumpos}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{17}
+\contentsline {section}{\MakeUppercase {Priedai}}{19}
