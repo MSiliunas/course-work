@@ -41,10 +41,16 @@
 Statistika apie technologijas, dabartinė situacija
 
 \subsectionnonum{Darbo tikslas}
+
+Sukurti identifikavimo mechanizmą, kuris sudarytų pagrindą tolimesnei sistemos plėtrai, leistų plėtojant sistemą automatizuoti studentų lankomumo žymėjimo procesą.
+
 Šiuo darbu siekiama palengvinti darbą dėstytojams paskaitų metu žymint lankomumą. Sukurti sistemą, kurioje studentai skatinami aktyviai dalyvauti paskaitose apdovanojant sistemoje už kiekvieną veiksmą. Atsiskaitymų metu studentams bei dėstytojui aiškiai pateikti atsiskaitomą darbą.
 Sukurti sistemą, kuri leistų teikti kokybišką atsaką akivaizdinių studijų užsiėmimų metu, gerina studentų ir dėstytojų bendradarbiavimą.
 
 \subsectionnonum{Siekiami rezultatai}
+
+Sukurti studentų identifikavimo sistemą, kuri automatizuotų lankomumo žymėjimo procesą. Šią sistemą praplėsti studentų skatinimo aktyviai dalyvauti užsiėmimuose mechanizmu.
+
 Ištirti dėstytojų pasikartojantys procesai paskaitų metu ir nustatyta kuriuos iš jų galima automatizuoti. Sukurta sistema su automatizuotu studentų identifikavimo procesu bei studentų skaitinimo aktyviai dalyvauti paskaitoje mechanizmu. 
 
 \section{Studento identifikavimas}
@@ -70,12 +76,12 @@ Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie 
 \subsection{NFC ar Bluetooth?}
 Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes: nepriklausoma nuo trečiųjų šalių paslaugų (services); auditorijose reikia įrengti mažiau skaitytuvų ir / ar greitesnis identifikavimas (nesusidaro eilės prie skaitytuvų).
 
-\subsection{Mobilioji programėlė studentams}
+\subsection{Mobilioji programėlė studentams} \label{StudentApp}
 Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
 
 Kiekvienas įrenginys turintis integruotą Bluetooth technologiją turi ir unikalų MAC (angl. \textit{Media Access Control}) adresą, dar vadinamą fiziniu adresu. Kadangi šis adresas kievienam įrenginiui yra unikalus, tai juo galime naudotis norint identifikuoti studentus. Norint susieti studento mobilųjį telefoną su jo paskyra sistemoje studentas įsidiegia programėlę. Programėlėje studentas prisijungia prie savo paskyros ir susieja mobilųjį telefoną. Programėlė nuskaito telefono Bluetooth MAC adresą ir kartu su studento identifikavimo numeriu (gaunamas prisijungus prie paskyros) siunčia į sistemą. Sistema gautą MAC adresą priskiria tam studentui. Programėlės pagrindinė funkcija yra susieti telefoną su paskyra. Tuo pačiu galima pateikti studento tvarkaraštį, lankomumo ataskaitą.
 
-Norint, kad sistema galėtų naudotis kuo daugiau studentų, programėlė turi būti palaikoma skirtingose įrenginiuose bei operacinėse sistemose. Pačios populiariausios išmaniųjų įrenginių operacinės sistemos yra \textit{Android} ir \textit{iOS}. Taip pat gana plačiai naudojama \textit{Windows Phone} operacinė sistema.
+Norint, kad sistema galėtų naudotis kuo daugiau studentų, programėlė turi būti palaikoma skirtingose įrenginiuose bei operacinėse sistemose. Pačios populiariausios išmaniųjų įrenginių operacinės sistemos yra \textit{Android} ir \textit{iOS}. Taip pat gana plačiai naudojama \textit{Windows Phone} operacinė sistema \cite{MarketShareByOS}.
 
 \subsubsection{Programėlių kūrimas pagal operacinę sistemą}
 
@@ -166,7 +172,7 @@ Studentas atėjęs į paskaitą įsijungia programėlę bei įrenginio Bluetooth
 
 Programėlėje studentas taip pat gali peržiūrėti savo paskyrą meniu (\ref{img:menuView} pav.) spausdamas mygtuką „Paskyra“.
 
-\subsection{Skaitytuvas - išmanusis telefonas}
+\subsection{Skaitytuvas - išmanusis telefonas} \label{TeacherApp}
 Kitas svarbus komponentas, norint identifikuoti studentus, naudojant \textit{Bluetooth} ryšį - skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kuri būtų įdiegta dėstytojo išmaniajame telefone.
 
 Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų \textit{Bluetooth MAC} adresais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
@@ -174,6 +180,19 @@ Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia
 Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti kuo prieinamesnė. Todėl jos kūrimui taip pat pasirinkta \textit{Xamarin} platforma.
 
 \subsubsection{Skaitytuvo programėlės vartotojo sąsaja}
+
+Projektuojant skaitytuvo programėlės vartotojo sąsają stengtąsi pateikti taip, kad reikėtų kuo mažiau veiksmų norint atlikti pagrindines užduotis. Svarbiausios programėlės funkcijos yra paskaitos pasirinkimas bei studentų įrenginių aptikimas, todėl šioms užduotims skirtas pagrindinis dėmesys.
+
+Programėlėje išlaikomas ta pati struktūra, kaip ir studentų programėlėje. Kad nebūtų maišomos tarpusavyje, naudojamos kitos spalvos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/kursinio_app_login}
+	\caption{Prisijungimo langas}
+	\label{img:scannerLoginView}
+\end{figure}
+
+Prisijungimo langas (\ref{img:scannerLoginView} pav.) toks pat kaip ir studentų programėlėje.
 
 \subsubsection{Skaitytuvo programėlės funkcijos}
 
@@ -193,15 +212,50 @@ Paskaitos lange spaudžia „Užbaigti paskaitą“. Rodomas patvirtinimo prane�
 
 \section{Sistemos vidinė pusė}
 
-Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės naudotis sistema. Bet visa tai neveiks be pagrindinės sistemos dalies. Kaip pavadinti backend? API?
+Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės naudotis sistema. Bet visa tai neveiks be pagrindinės sistemos dalies, atsakingos už duomenų saugojimą, apdorojimą ir pateikimą.
 
-\subsection{Programų sąsaja}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/kursinio_deployment.png}
+	\caption{Sistemos diegimo vaizdas}
+	\label{img:deployment}
+\end{figure}
 
-Visas bendravimas tarp klientų (mobiliųjų programėlių, web?) ir sistemos vyksta per aplikacijų programavimo sąsają.
+Pagal pateiktą diegimo diagramą (\ref{img:deployment} pav.) matome, kad visą sistemą sudaro trys pagrindiniai moduliai: mobiliosios programėlės (aprašytos \ref{StudentApp} ir \ref{TeacherApp} poskyriuose), programų kūrimo sąsaja bei administravimo aplinka.
+
+\subsection{Saityno programų programavimo sąsaja}
+
+Visas bendravimas tarp programėlių ir pagrindinio sistemos modulio vyksta per aplikacijų programavimo sąsają. Šis sistemos modulis turi būti sukurtas taip, kad būtų galima nesunkiai įtraukti naują modulį į sistemos architektūrą. Saityno programų programavimo sąsaja (angl. \textit{Web Application Programming Interface}) yra dažnas sprendimas tokioms sistemoms įgyvendinti. Tai yra sąsaja, susidedanti iš vieno ar daugiau viešai pasiekiamų prieigos taškų (angl. \textit{endpoint}), su apibrėžta užklausos - atsakymo žinučių sistema. Yra du pagrindiniai saityno programų programavimo sąsajų tipai: \textit{SOAP (Simple Object Access Protocol)} saityno paslaugos ir \textit{REST (Representational State Transfer)} saityno ištekliai.
+
+\subsubsection{Saityno programų programavimo sąsajų tipai}
+
+\subsubsubsection{SOAP}
+
+Tai supaprastintas protokolas skirtas apsikeisti struktūrizuota informacija decentralizuotoje aplinkoje. Šis protokolas naudoja \textit{XML (EXtended Markup Language)} technologiją apibrėžti žinučių karkasą leidžiantį kurti žinutes, kuriomis galima apsikeisti su daugybe kitų protokolų. \textit{SOAP} projektuotas taip, kad būtų nepriklausomas nuo jokios programavimo kalbos ar modelio \cite{SoapDocs}.
+
+Kaip rašoma straipsnyje \cite{SoapRest} - nors modelis kurtas, kad bendravimas tarp sistemų būtų paprastesnis, tačiau naudojant \textit{XML} technologiją užklausų siuntimas gali tapti labai sudėtingas. Priklausomai nuo programavimo kalbos, gali tekti visą užklausą sukurti rankiniu būdu. Kita vertus, protokolas yra sukurtas \textit{Microsoft} korporacijos, todėl implementuojant \textit{SOAP C\#} programavimo kalboje, \textit{XML} kodo beveik netenka matyti.
+
+Viena svarbiausių \textit{SOAP} funkcijų ir privalumų - įtaisytas klaidų apdorojimas. Jei siunčiamoje užklausoje yra klaida, gautame atsakyme pateikiama informacija, kuri gali padėti greitai rasti ir ištaisyti klaidą.
+
+\subsubsubsection{REST}
+
+\textit{REST} metodologija leidžia dar paprasčiau apsikeisti žinutėmis tarp programų. Dažnai užtenka pagal taisykles sudaryto universalaus adreso. Kuomet reikia pateikti daugiau informacijos dažnai naudojamas \textit{JSON (JavaScript Object Notation)} formatas. Šis būdas yra patogus tuo, kad galima siųsti ir gauti žinutes forma, kurią lengva analizuoti programavimo kalboje su kuria yra kuriama programa \cite{SoapRest}.
+
+Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodologiją nei \textit{SOAP} atveju, taip pat yra efektyvesnis veikimas (galima siųsti mažesnes žinutes) bei ištekliai yra prieinamesni, nereikalingos papildomos programinės priemonės naudojimui. Dėl šių priežasčių tai yra tinkamesnis variantas sistemos saityno programų programavimo sąsajai sukurti.
 
 \subsubsection{Saugumas}
 
-Generuojami tokenai, klientuose nesaugomi prisijungimo duomenys. Payload su encryption? Pasiklausti Eligijaus apie šitą.
+Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmenys, kuriems nėra suteika teisė naudotis saityno programų programavimo sąsaja. Sagumas šiame modulyje įgyvendinamas dviem lygiais: sąsajos prieigos taškų apsauga ir sistemos duomenų apsauga.
+
+\subsubsubsection{Prieigos taškų apsauga}
+
+Tai yra išorinės apsaugos sluoksnis - suteikti priėjimą prie saityno programų programavimo sąsajos prieigos taškų tik šios sistemos komponentams. Straipsnyje \cite{StormpathAPISecurity} apžvelgiami galimi apsaugos metodai ir išskiriamas saugiausias - \textit{OAuth 1.0a} protokolas.
+
+Tai plačiai naudojamas, saugus, parašo pagrindu veikiantis protokolas. \textit{OAuth 1.0a} naudoja kriptografinį parašą, kuris susideda iš slapto prieigos rakto, vienkartinio rakto (angl. \textit{nonce}) ir kitos užklausos informacijos. Didelis pliusas šio protokolo - niekada tiesiogiai nesiunčiamas slaptas prieigos raktas, todėl nėra grėsmės, kad jis bus nuskaitytas siunčiant užklausą. Taip pat dėl šios priežasties nėra būtina \textit{SSL} apsauga. Kadangi \textit{OAuth 1.0a} yra plačiai naudojama, rakto generavimui yra sukurta nemažai įrankių, kurių dėka rakto generavimo procesas tampa paprastas.
+
+\subsubsubsection{Sistemos duomenų apsauga}
+
+Kuomet pasirūpinta, kad prieigos taškai yra prieinami tik šios sistemos komponentams, dar svarbu, kad skirtingos naudotojų grupės (mūsų atveju - dėstytojai ir studentai) galėtų pasiekti tik jiems skirtus išteklius. 
 
 \subsection{Administravimo aplinka}
 

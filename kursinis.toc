@@ -50,24 +50,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.6.1.}Skaitytuvo programėlės vartotojo sąsaja}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.6.2.}Skaitytuvo programėlės funkcijos}{9}
+\contentsline {subsubsection}{\numberline {1.6.2.}Skaitytuvo programėlės funkcijos}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.6.2.1.}Prisijungimas}{9}
+\contentsline {paragraph}{\numberline {1.6.2.1.}Prisijungimas}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.6.2.2.}Paskaitos pradžia}{9}
+\contentsline {paragraph}{\numberline {1.6.2.2.}Paskaitos pradžia}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.6.2.3.}Paskaitos pabaiga}{10}
+\contentsline {paragraph}{\numberline {1.6.2.3.}Paskaitos pabaiga}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Sistemos vidinė pusė}{11}
+\contentsline {section}{\numberline {2.}Sistemos vidinė pusė}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Programų sąsaja}{11}
+\contentsline {subsection}{\numberline {2.1.}Saityno programų programavimo sąsaja}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1.}Saugumas}{11}
+\contentsline {subsubsection}{\numberline {2.1.1.}Saityno programų programavimo sąsajų tipai}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Administravimo aplinka}{11}
+\contentsline {paragraph}{\numberline {2.1.1.1.}SOAP}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{12}
+\contentsline {paragraph}{\numberline {2.1.1.2.}REST}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{13}
+\contentsline {subsubsection}{\numberline {2.1.2.}Saugumas}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{13}
+\contentsline {paragraph}{\numberline {2.1.2.1.}Prieigos taškų apsauga}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\numberline {2.1.2.2.}Sistemos duomenų apsauga}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.}Administravimo aplinka}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Rezultatai ir išvados}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatūra}{16}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Santrumpos}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\MakeUppercase {Priedai}}{17}
