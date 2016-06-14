@@ -38,30 +38,37 @@
 \sectionnonum{Įvadas}
 
 \subsectionnonum{Temos aktualumas}
-Statistika apie technologijas, dabartinė situacija
+
+Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai, vedamas lankomumo žurnalas.
 
 \subsectionnonum{Darbo tikslas}
 
-Sukurti identifikavimo mechanizmą, kuris sudarytų pagrindą tolimesnei sistemos plėtrai, leistų plėtojant sistemą automatizuoti studentų lankomumo žymėjimo procesą.
+Sukurti universiteto bendruomenės narių identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri sudarytų pagrindą tolimesnei sistemos plėtrai. Išvystyta sistema leis teikti kokybišką atsaką akivaizdinių studijų užsiėmimų metu bei gerins studentų ir dėstytojų bendradarbiavimą.
 
-Šiuo darbu siekiama palengvinti darbą dėstytojams paskaitų metu žymint lankomumą. Sukurti sistemą, kurioje studentai skatinami aktyviai dalyvauti paskaitose apdovanojant sistemoje už kiekvieną veiksmą. Atsiskaitymų metu studentams bei dėstytojui aiškiai pateikti atsiskaitomą darbą.
-Sukurti sistemą, kuri leistų teikti kokybišką atsaką akivaizdinių studijų užsiėmimų metu, gerina studentų ir dėstytojų bendradarbiavimą.
+\subsectionnonum{Uždaviniai}
+
+Tikslui pasiekti keliami šie uždaviniai:
+
+\begin{itemize}
+	\item Apžvelgti studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes ir parinkti viena iš jų.
+	\item Apžvelgti išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus.
+	\item Sukurti studentų identifikavimo modulio vartotojų sąsajos eskizus.
+	\item Suformuluoti pagrindinius kuriamo modulio naudojimo scenarijus.
+	\item Apibrėžti studentų lankomumo žymėjimo sistemos svarbiausius komponentus bei apžvelgti jų komunikavimo aspektus.
+\end{itemize}
 
 \subsectionnonum{Siekiami rezultatai}
 
-Sukurti studentų identifikavimo sistemą, kuri automatizuotų lankomumo žymėjimo procesą. Šią sistemą praplėsti studentų skatinimo aktyviai dalyvauti užsiėmimuose mechanizmu.
-
-Ištirti dėstytojų pasikartojantys procesai paskaitų metu ir nustatyta kuriuos iš jų galima automatizuoti. Sukurta sistema su automatizuotu studentų identifikavimo procesu bei studentų skaitinimo aktyviai dalyvauti paskaitoje mechanizmu. 
+\begin{itemize}
+	\item Sukurtas automatizuotas studentų lankomumo žymėjimo modelis.
+	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys.
+	\item Sukurtas sistemos diegimo vaizdas.
+	\item Pateikti studentų identifikavimo modulio vartotojo sąsajos eskizai.
+\end{itemize}
 
 \section{Studento identifikavimas}
 
-Kuo tai svarbu.
-
-\subsection{Dabartinės situacijos apžvalga}
-
-Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai. Sistemoje būtų vedamas lankomumo žurnalas.
-
-Lankomumo žymėjimą galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia studentus identifikuoti.
+Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, jį galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia studentus identifikuoti.
 
 \subsection{NFC technologija}
 Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
@@ -194,21 +201,39 @@ Programėlėje išlaikomas ta pati struktūra, kaip ir studentų programėlėje.
 
 Prisijungimo langas (\ref{img:scannerLoginView} pav.) toks pat kaip ir studentų programėlėje.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/kursinio_app_dest_main}
+	\caption{Pagrindinis langas (kairėje) ir paskaitos pasirinkimo langas (dešinėje)}
+	\label{img:scannerMainView}
+\end{figure}
+
+Pagrindiniame lange (\ref{img:scannerMainView} pav.) galime pasirinkti paskaitą ir grupę. Grupės pasirinkimo langas yra analogiškas paskaitos pasirinkimo langui (\ref{img:scannerMainView} pav.) - taip pat pateikiama paieška ir dėstytojų grupių sąrašas. Verta pažymėti, kad grupės pasirinkimo lange pateikiamas sąrašas grupių, kurios yra priskirtos pasirinktai paskaitai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/kursinio_app_dest_lecture}
+	\caption{Paskaitos langas}
+	\label{img:scannerLectureView}
+\end{figure}
+
+Iš pagrindinio lango (\ref{img:scannerMainView} pav.) patenkama į paskaitos langą (\ref{img:scannerLectureView} pav.). Šiame lange matome paskaitos pavadinimą, paskaitos užbaigimo mygtuką bei dalyvaujančių (pažymėtų) studentų sąrašą.
+
 \subsubsection{Skaitytuvo programėlės funkcijos}
 
 \subsubsubsection{Prisijungimas}
 
-Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas. Dėstytojas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis arba prieigos raktą (priklausomai nuo sistemos vidinės pusės įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
+Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:scannerLoginView} pav.). Dėstytojas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis arba prieigos raktą (priklausomai nuo sistemos vidinės pusės įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
 
 \subsubsubsection{Paskaitos pradžia}
 
-Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo duomenis) pagrindiniame lange spaudžia „Pradėti paskaitą“. Atidaromas paskaitų sąrašas, rikiuotas pagal paskaitos laiką (nurodoma administravimo dalyje). Paspaudžia ant paskaitos, atsiranda patvirtinimo langas, spaudžia „Pradėti“. Programėlė pradeda skleisti informaciją \textit{Bluetooth} ryšiu. Rodomas paskaitos langas su pasižymėjusiais studentais.
+Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo duomenis) pagrindiniame lange (\ref{img:scannerMainView} pav.) naudotojas paspaudžia ant mygtuko „Paskaita“, atidaromas paskaitos pasirinkimo langas (\ref{img:scannerMainView} pav.), išsirenka paskaitą ir ant jos paspaudžia. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.) ir rodoma pasirinkta paskaita. Taip pat pasirenkama grupė. Parinkus paskaitą ir grupę naudotojas spaudžia „Pradėti paskaitą“. Programėlė pradeda skleisti informaciją \textit{Bluetooth} ryšiu. Rodomas paskaitos langas su pasižymėjusiais studentais.
 
 \textbf{Alternatyvus scenarijus:} Pradėjus paskaitą periodiškai ieškoma įrenginių su įjungtu \textit{Bluetooth} ryšiu. Rastų įrenginių \textit{Bluetooth MAC} adresai siunčiami į sistemą.
 
 \subsubsubsection{Paskaitos pabaiga}
 
-Paskaitos lange spaudžia „Užbaigti paskaitą“. Rodomas patvirtinimo pranešimas, spaudžia „Užbaigti“. Programėlė nusiunčia užklausą į sistemą dėl paskaitos užbaigimo. Rodomas pranešimas su sėkmingo arba nesėkmingo užbaigimo tekstu. Atidaromas pagrindinis langas.
+Paskaitos lange (\ref{img:scannerLectureView} pav.) naudotojas spaudžia „Užbaigti paskaitą“. Rodomas patvirtinimo pranešimas, spaudžia „Užbaigti“. Programėlė nusiunčia užklausą į sistemą dėl paskaitos užbaigimo. Rodomas pranešimas su sėkmingo arba nesėkmingo užbaigimo tekstu. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.).
 
 \section{Sistemos vidinė pusė}
 
@@ -239,7 +264,7 @@ Viena svarbiausių \textit{SOAP} funkcijų ir privalumų - įtaisytas klaidų ap
 
 \subsubsubsection{REST}
 
-\textit{REST} metodologija leidžia dar paprasčiau apsikeisti žinutėmis tarp programų. Dažnai užtenka pagal taisykles sudaryto universalaus adreso. Kuomet reikia pateikti daugiau informacijos dažnai naudojamas \textit{JSON (JavaScript Object Notation)} formatas. Šis būdas yra patogus tuo, kad galima siųsti ir gauti žinutes forma, kurią lengva analizuoti programavimo kalboje su kuria yra kuriama programa \cite{SoapRest}.
+\textit{REST} metodas leidžia dar paprasčiau apsikeisti žinutėmis tarp programų. Dažnai užtenka pagal taisykles sudaryto universalaus adreso. Kuomet reikia pateikti daugiau informacijos dažnai naudojamas \textit{JSON (JavaScript Object Notation)} formatas. Šis būdas yra patogus tuo, kad galima siųsti ir gauti žinutes forma, kurią lengva analizuoti programavimo kalboje su kuria yra kuriama programa \cite{SoapRest}.
 
 Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodologiją nei \textit{SOAP} atveju, taip pat yra efektyvesnis veikimas (galima siųsti mažesnes žinutes) bei ištekliai yra prieinamesni, nereikalingos papildomos programinės priemonės naudojimui. Dėl šių priežasčių tai yra tinkamesnis variantas sistemos saityno programų programavimo sąsajai sukurti.
 
@@ -271,27 +296,44 @@ Sparčiai populiarėjantis saityno programų kūrimo būdas yra vieno puslapio p
 
 Atsižvelgiant į tai, kad administravimo moduliu nebus naudojamąsi kasdien, galima kurti klasikinę saityno programą. Šiuo būdu modulis bus sukurtas greičiau. Kadangi sistemos saityno programų programavimo sąsajai kurti naudojame plačiai naudojamą \textit{REST} metodą, nepriklausomai nuo pasirinktos technologijos ar karkaso administravimo modulio įgyvendinimui, yra sukurtas pagalbinis įrankis užklausų siuntimui bei apdorojimui.
 
-\subsubsection{Vartotojo sąsaja}
-
 \subsubsection{Naudojimo scenarijai}
 
-\subsubsubsection{Naudotojo sukūrimas}
+\subsubsubsection{Naudotojo sukūrimas, redagavimas ir ištrynimas}
 
-\subsubsubsection{Naudotojo redagavimas ir ištrynimas}
+Galimybė sukurti sistemos naudotojus. Sistemoje turime du tipus naudotojų - naudotojas, kaip sistemos komponentas (programėlė, administravimo aplinka) ir naudotojas, kaip asmuo. Kuriant naudotoją, kaip sistemos komponentą, būtina nurodyti arba sugeneruoti priegos raktą, kuris bus naudojamas jungiantis prie saityno programų programavimo sąsajos. Naudotojai, kaip asmenys, skirstomi į dvi grupes: studentai ir dėstytojai. Pagal šias grupes bus suteikiamos teisės sistemos išteklius. Taip pat sistemoje turi būti galimybė sukurtus naudotojus redaguoti.
 
-\subsubsubsection{Studentų grupės sukūrimas}
+Sistema turi saugoti istoriją, todėl turi būti implementuotas \textit{Soft Delete} duomenų trynimo metodas. Tai trynimo būdas, kuomet vietoj to, kad būtų fiziškai pašalinamas įrašas iš duomenų bazės, yra uždedamas poyžmis, kad tas įrašas yra panaikintas ir nurodoma panaikinimo data. Šiuo metodu trinami įrašai išlaiko ryšius su kitomis esybėmis ir tuo pačiu išlaikome istorinius duomenis.
 
-\subsubsubsection{Studentų grupės redagavimas ir ištrynimas}
+\subsubsubsection{Studentų grupės sukūrimas, redagavimas ir ištrynimas}
 
-\subsubsubsection{Paskaitos sukūrimas}
+Kuriant studentų grupes turi būti galimybė iškart priskirti studentus į grupę. Reikalinga pateikti studentų sąrašą su galimybe ieškoti pagal pateiktą tekstą. Studentų grupės negalima ištrinti, jei yra priskirtas bent vienas studentas. Studentus pridėti prie grupės galima ir po studentų grupės sukūrimo.
 
-\subsubsubsection{Paskaitos redagavimas ir ištrynimas}
+\subsubsubsection{Paskaitos sukūrimas, redagavimas ir ištrynimas}
+
+Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką - dieną, valandą, minutę, taip pat priskirti grupes ar grupę, kuriai vedama paskaita. Pagal priskirtas grupes paskaitai bus žymimas lankomumas. Jei studentas nepriklauso grupei, į kurios paskaitą atėjo - jo lankomumas nėra pažymimas. Paskaitos trynimui taip pat taikomas \textit{Soft Delete} metodas.
 
 \sectionnonum{Rezultatai ir išvados}
-Rezultatų ir išvadų dalyje turi būti aiškiai išdėstomi pagrindiniai darbo
-rezultatai (kažkas išanalizuota, kažkas sukurta, kažkas įdiegta) ir pateikiamos
-išvados (daromi nagrinėtų problemų sprendimo metodų palyginimai, teikiamos
-rekomendacijos, akcentuojamos naujovės).
+
+Šio darbo metu pasiekti šie rezultatai:
+
+\begin{itemize}
+	\item Sukurtas automatizuotas studentų lankomumo žymėjimo modelis paremtas \textit{Bluetooth} ryšio technologija.
+	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys.
+	\item Sukurtas sistemos diegimo vaizdas, kuriame pavaizduota sistemos komponentų išdėstymas ir jų komunikacijos būdai.
+	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai.
+\end{itemize}
+
+Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas, nereikalaujantis specialios įrangos identifikuojant studentus yra pasitelkiant \textit{Bluetooth} ryšio technologiją. Šis būdas pasirinktas, atsižvelgiant į tai, jog didžioji dalis studentų turi įrenginius su įdiegta \textit{Bluetooth} ryšio technologija.
+
+Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus pastebėta, jog sava programėlė yra tinkamas būdas įgyvendinimui. Šis būdas leidžia lengvai panaudoti išmaniojo įrenginio operacinės sistemos programų programavimo sąsają, kurios pagalba galima naudoti įrenginyje įdiegtą \textit{Bluetooth} ryšio technologiją.
+
+Aptariant sistemos komponentų komunikavimo būdus pastebėta, jog tinkamas būdas vykdyti komunikavimą tarp komponentų yra per apibrėžtas saityno programų programavimo sąsają. Taip pat išskirtas \textit{REST} sąsajos kūrimo metodas kaip tinkamas kuriamai sistemai.
+
+\sectionnonum{Darbo plėtojimo galimybės}
+
+\begin{itemize}
+	\item Sukurti duomenų apsikeitimo sąsają su universiteto informacine sistema.
+\end{itemize}
 
 \printbibliography[heading=bibintoc]  % Šaltinių sąraše nurodoma panaudota
 % literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų
@@ -301,12 +343,12 @@ rekomendacijos, akcentuojamos naujovės).
 % šaltinių, kurie nebuvo paminėti tekste.
 
 % \sectionnonum{Sąvokų apibrėžimai}
-\sectionnonum{Santrumpos}
-Sąvokų apibrėžimai ir santrumpų sąrašas sudaromas tada, kai darbo tekste
-vartojami specialūs paaiškinimo reikalaujantys terminai ir rečiau sutinkamos
-santrumpos.
+%\sectionnonum{Santrumpos}
+%Sąvokų apibrėžimai ir santrumpų sąrašas sudaromas tada, kai darbo tekste
+%vartojami specialūs paaiškinimo reikalaujantys terminai ir rečiau sutinkamos
+%santrumpos.
 
-\appendix  % Priedai
+% \appendix  % Priedai
 % Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
 % parengta, medžiaga. Savarankiški priedai gali būti pateikiami ir
 % kompaktiniame diske. Priedai taip pat numeruojami ir vadinami. Darbo tekstas

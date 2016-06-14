@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  14 JUN 2016 01:50
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  14 JUN 2016 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,7 +990,13 @@ Package biblatex Info: ... file 'lithuanian.lbx' found.
 (./lithuanian.lbx
 File: lithuanian.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)$Id: lithu
 anian.lbx,v 1.0 2015/02/05 20:21:28 niekas stable $
-) (./kursinis.aux)
+) (./kursinis.aux
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
+))
 \openout1 = `kursinis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1142,62 +1148,62 @@ Package biblatex Info: Reference segment=0 on input line 33.
  [1
 
 ]
-(./kursinis.toc [1
-
-])
+(./kursinis.toc)
 \tf@toc=\write4
 \openout4 = `kursinis.toc'.
 
- [2] [3
+ [1
 
-] [4
+] [2
 
-] [5] [6]
+] [3
+
+] [4] [5]
 File: img/kursinio_app_login.png Graphic file (type QTm)
  <use  "img/kursinio_app_login.png" >
-[7]
 File: img/kursinio_app_main.png Graphic file (type QTm)
- <use  "img/kursinio_app_main.png" > [8]
-File: img/kursinio_app_menu.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_menu.png" > [9]
+<use  "img/kursinio_app_main.png" > [6]
+File: img/kursinio_app_menu.png Graphic file (type QTm)
+ <use  "img/kursinio_app_menu.png" >
+[7] [8]
 File: img/kursinio_app_login.png Graphic file (type QTm)
  <use  "img/kursinio_app_login.png" >
-[10] [11] [12]
-File: img/kursinio_deployment.png Graphic file (type QTm)
- <use  "img/kursinio_deployment.png" > [13
+File: img/kursinio_app_dest_main.png Graphic file (type QTm)
 
-] [14] [15] [16]
-[17
+<use  "img/kursinio_app_dest_main.png" > [9]
+File: img/kursinio_app_dest_lecture.png Graphic file (type QTm)
+
+<use  "img/kursinio_app_dest_lecture.png" > [10] [11]
+File: img/kursinio_deployment.png Graphic file (type QTm)
+
+<use  "img/kursinio_deployment.png" > [12
+
+] [13] [14] [15] [16
+
+] [17
 
 ]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 296
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 338
 .
- (/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
+) [18
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
-)
-[18
-
-] [19
-
-] (./kursinis.aux)
+]
+(./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
 \openout1 = `kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24895 strings out of 493706
- 475950 string characters out of 6145770
- 895309 words of memory out of 5000000
- 27925 multiletter control sequences out of 15000+600000
+ 24901 strings out of 493706
+ 476113 string characters out of 6145770
+ 898468 words of memory out of 5000000
+ 27929 multiletter control sequences out of 15000+600000
  16606 words of font info for 85 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 67i,11n,96p,10508b,3650s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,12n,96p,10508b,3652s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (20 pages).
+Output written on kursinis.pdf (19 pages).
