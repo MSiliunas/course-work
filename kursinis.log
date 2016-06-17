@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  17 JUN 2016 13:41
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  17 JUN 2016 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,13 +990,7 @@ Package biblatex Info: ... file 'lithuanian.lbx' found.
 (./lithuanian.lbx
 File: lithuanian.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)$Id: lithu
 anian.lbx,v 1.0 2015/02/05 20:21:28 niekas stable $
-) (./kursinis.aux
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
-))
+) (./kursinis.aux)
 \openout1 = `kursinis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1134,11 +1128,11 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'kursinis.bbl' found.
 (./kursinis.bbl
-LaTeX Font Info:    Try loading font information for U+msa on input line 42.
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 42.
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -1158,52 +1152,61 @@ Package biblatex Info: Reference segment=0 on input line 33.
 
 ] [3
 
-] [4] [5] [6]
+]
+File: img/kursinio_component.png Graphic file (type QTm)
+ <use  "img/kursinio_component.png" > [4] [5]
+[6]
 File: img/kursinio_app_login.png Graphic file (type QTm)
- <use  "img/kursinio_app_login.png" >
+ <use  "img/kursinio_app_login.png" > [7]
 File: img/kursinio_app_main.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_main.png" > [7]
+<use  "img/kursinio_app_main.png" > [8]
 File: img/kursinio_app_menu.png Graphic file (type QTm)
  <use  "img/kursinio_app_menu.png" >
-[8] [9]
+[9]
 File: img/kursinio_app_login.png Graphic file (type QTm)
- <use  "img/kursinio_app_login.png" >
+ <use  "img/kursinio_app_login.png" > [10]
 File: img/kursinio_app_dest_main.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_dest_main.png" > [10]
+<use  "img/kursinio_app_dest_main.png" >
 File: img/kursinio_app_dest_lecture.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_dest_lecture.png" > [11]
+<use  "img/kursinio_app_dest_lecture.png" > [11] [12]
 File: img/kursinio_deployment.png Graphic file (type QTm)
 
-<use  "img/kursinio_deployment.png" > [12
+<use  "img/kursinio_deployment.png" > [13
 
-] [13] [14] [15] [16
+] [14] [15] [16] [17
 
-] [17
+] [18
 
 ]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 346
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 370
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [18
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
 
-]
-(./kursinis.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
+)
+[19
+
+] (./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
 \openout1 = `kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24901 strings out of 493706
- 476113 string characters out of 6145770
- 898535 words of memory out of 5000000
- 27929 multiletter control sequences out of 15000+600000
+ 24905 strings out of 493706
+ 476212 string characters out of 6145770
+ 895972 words of memory out of 5000000
+ 27932 multiletter control sequences out of 15000+600000
  16606 words of font info for 85 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  67i,11n,96p,10508b,3652s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (19 pages).
+Output written on kursinis.pdf (20 pages).

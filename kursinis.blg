@@ -1,14 +1,14 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'kursinis.blg'
-[53] biber-darwin:276> INFO - === Tue Jun 14, 2016, 01:50:48
-[53] Biber.pm:333> INFO - Reading 'kursinis.bcf'
-[181] Biber.pm:645> INFO - Found 8 citekeys in bib section 0
-[201] Biber.pm:2977> INFO - Processing section 0
-[217] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
-[223] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[226] bibtex.pm:895> INFO - Found BibTeX data source 'bibliografija.bib'
-[362] UCollate.pm:66> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[362] UCollate.pm:66> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[362] Biber.pm:2854> INFO - Sorting list 'anyt' of type 'entry' with scheme 'anyt' and locale 'lt-LT'
-[375] bbl.pm:505> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
-[376] bbl.pm:596> INFO - Output to kursinis.bbl
+[64] biber-darwin:276> INFO - === Fri Jun 17, 2016, 17:11:18
+[64] Biber.pm:333> INFO - Reading 'kursinis.bcf'
+[184] Biber.pm:645> INFO - Found 9 citekeys in bib section 0
+[206] Biber.pm:2977> INFO - Processing section 0
+[224] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
+[225] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[227] bibtex.pm:895> INFO - Found BibTeX data source 'bibliografija.bib'
+[382] UCollate.pm:66> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[382] UCollate.pm:66> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[382] Biber.pm:2854> INFO - Sorting list 'anyt' of type 'entry' with scheme 'anyt' and locale 'lt-LT'
+[398] bbl.pm:505> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
+[399] bbl.pm:596> INFO - Output to kursinis.bbl

@@ -19,6 +19,21 @@
 
 \refsection{0}
   \sortlist{anyt}{anyt}
+    \entry{cssFrameworks}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=375c883a2bf10a67937dd0aac75a7e1f}{awwwards-team}{a\bibinithyphendelim t\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{375c883a2bf10a67937dd0aac75a7e1f}
+      \strng{fullhash}{375c883a2bf10a67937dd0aac75a7e1f}
+      \field{labelalpha}{aww16}
+      \field{sortinit}{a}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.awwwards.com/what-are-frameworks-22-best-responsive-css-frameworks-for-web-design.html}}
+      \field{title}{What are Frameworks? 22 Best Responsive CSS Frameworks for Web Design}
+      \field{year}{2016}
+    \endentry
     \entry{SoapDocs}{misc}{}
       \name{author}{7}{}{%
         {{hash=3f6f74834a7ac6856fc19236fa38cd5f}{Gudgin}{G\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%

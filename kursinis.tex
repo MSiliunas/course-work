@@ -72,22 +72,45 @@ Tikslui pasiekti keliami šie uždaviniai:
 
 \section{Užsiėmime dalyvaujančių studentų identifikavimas}
 
-Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia susieti studento išmanųjį telefoną su jo vardu ir pavarde, esančias dėstytojo sąraše. Yra du būdai - nfc ir bluetooth
+Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Lengviausiai prieinamos studentams priemonės yra:
+
+\begin{itemize}
+	\item Lietuvos studento pažymėjimas
+	\item Išmanusis telefonas
+\end{itemize}
+
+Automatizavus lankomumo žymėjimo procesą, pasitelkiant vieną iš pateiktų priemonių, būtų supaprastinamas dėstytojų darbas bei taupomas užsiėmimo laikas. 
 
 \subsection{Lietuvos studento pažymėjimas}
 Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
 
-Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Norint įgyvendinti tokį identifikavimo procesą dar reikalinga integracija su duomenų baze, kurioje būtų susiejamas unikalus LSP indentifikavimo numeris su LSP duomenimis. Gauti duomenys turėtų būti patikrinami ir su vidine universiteto sistema patikrinant, ar toks studentas tikrai egzistuoja, ar jis turi dalyvauti šioje paskaitoje ir t.t. Taip pat universiteto auditorijose turėtų būti įdiegti NFC skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta NFC technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą.
+Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Pagrindinis trūkumas, kad universiteto auditorijose turėtų būti įdiegti \textit{NFC} skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta \textit{NFC} technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą. Taip pat studentai gali pamiršti pasiimti su savimi LSP.
 
 \subsection{Išmanusis telefonas}
-Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota Bluetooth technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento informacija. Privalumas prieš LSP skaitymą - nereikia integruoti trečiųjų šalių paslaugų. Identifikaciniai numeriai išsaugomi ir susiejiami su studentu kuriamoje sistemoje.
+Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota Bluetooth technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento vardu ir pavarde.
 
 Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus Bluetooth ryšius galima nuskaityti visus vienu metu. Nors studentai turėtų įjungti šią technologiją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
 
-\subsection{NFC ar Bluetooth?}
-Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes: nepriklausoma nuo trečiųjų šalių paslaugų (services); auditorijose reikia įrengti mažiau skaitytuvų ir / ar greitesnis identifikavimas (nesusidaro eilės prie skaitytuvų); šie būdai papildo vienas kitą - jei tel išsikrovęs, tai tinka lsp; jei lsp pamiršai - turi telefoną.
+\subsection{LSP ar išmanusis telefonas?}
+Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes:
+
+\begin{itemize}
+	\item Auditorijose nereikia įrengti specialios įrangos
+	\item Greitesnis identifikavimas, nesusidaro eilės prie skaitytuvų
+\end{itemize}
+
+Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Jei LSP studentas pamiršo pasiimti į užsiėmimą - galime identifikuoti su studento išmaniuoju telefonu.
 
 \subsection{Sistemos naudojimo vizija}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/kursinio_component}
+	\caption{Sistemos komponentai}
+	\label{img:componentDiagram}
+\end{figure}
+
+Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai — studento ir dėstytojo telefonai, serveris bei naudotojo kompiuteris. Pažymėtina tai, kad serveris savyje turi du komponentus — saityno programų programavimo sąsają ir administravimo aplinką.
 
 \subsection{Mobilioji programėlė studentams} \label{StudentApp}
 Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
@@ -105,22 +128,23 @@ Tai yra populiariausia, apie 80 procentų rinkos užimanti \cite{MarketShareByOS
 Antra pagal populiarumą, apie 15 procentus rinkos turinti \cite{MarketShareByOS}, operacinė sistema. Ši platforma yra palaikoma ir sukurta \textit{Apple} korporacijos. Programėlės kuriamos \textit{Objective-C} arba \textit{Swift} programavimo kalbomis.
 
 \subsubsubsection{Windows Phone}
+
 Trečia pagal populiarumą, apie 3 procentus išmaniųjų įrenginių rinkos užimanti \cite{MarketShareByOS}, operacinė sistema. Tai yra \textit{Microsoft} korporacijos produktas. Operacinė sistema diegiama \textit{Nokia} korporacijos \textit{Lumia} išmaniųjų telefonų linijoje. Programavimo kalba - \textit{C\#}.
 
 \subsubsection{Viena programėlė - visoms operacinėms sistemoms}
-Dažnai poreikis yra palaikyti kuo daugiau įrenginių. Ir šiuo atveju - reikalinga, kad naudojimąsis sistema būtų kuo prieinamesnis. Būtent dėl šios priežasties buvo pradėtos kurti technologijos leisiančios rašyti vieną kodą vienai programėlei ir ji veiktų populiariausiose išmaniųjų įrenginių operacinėse sistemose. Kol kas nėra tiek išvystyta technologija, tačiau šiuo metu galime su nedidelėmis korekcijomis sukurti programėlę tinkamą populiariausioms išmaniųjų irenginių operacinėms sistemoms.
+Studentai turi daug ir skirtingų išmaniųjų telefonų, todėl sistema turi palaikyti kuo daugiau įrenginių. Mūsų atveju taip pat reikalinga, kad naudojimąsis sistema būtų kuo prieinamesnis. Neseniai pradėtos kurti technologijos leisiančios rašyti kodą vienai programėlei ir ji veiktų populiariausiose \cite{MarketShareByOS} išmaniųjų įrenginių operacinėse sistemose. Kol kas nėra tiek išvystyta technologija, tačiau šiuo metu galime su nedidelėmis korekcijomis sukurti programėlę tinkamą populiariausioms išmaniųjų irenginių operacinėms sistemoms.
 
-\subsubsubsection{Sava programėlė}
+\subsubsubsection{Savoji programėlė}
 
-Sparčiai tobulėjanti platforma, skirta kurti programėles \textit{Android}, \textit{iOS} ir \textit{Windows Phone} operacinėms sistemoms, tai \textit{Xamarin} \cite{xamarin}. Naudojantis šia platforma galima kurti visoms trims mobiliosioms operacinėms sistemoms savas (angl. \textit{native}) programėles. Šiuo atveju programėlės yra rašomos \textit{C\#} programavimo kalba, o programinė įranga, reikalinga surinkti bei vystyti programėles, yra nemokama. Vidutiniškai 75 procentai programėlės kodo yra naudojama bendrai tarp operacinių sistemų. Platforma suteikia pilną priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (visose operacinėse sistemose). Vartotojo sąsają galima kurti pagal operacinės sistemos standartus arba naudojant platformos kūrėjų įrankį \textit{Xamarin.Forms}.
+Sparčiai tobulėjanti platforma, skirta kurti programėles \textit{Android}, \textit{iOS} ir \textit{Windows Phone} operacinėms sistemoms, tai \textit{Xamarin} \cite{xamarin}. Naudojantis šia platforma galima kurti visoms trims mobiliosioms operacinėms sistemoms savąsias (angl. \textit{native}) programėles. Šiuo atveju programėlės yra rašomos \textit{C\#} programavimo kalba, o programinė įranga, reikalinga kurti programėles, yra nemokama. Vidutiniškai 75 procentai programėlės kodo yra naudojama bendrai tarp operacinių sistemų. Platforma suteikia pilną priėjimą prie įrenginio operacinės sistemos programų programavimo sąsajos (angl. \textit{Application Programming Interface, API}). Vartotojo sąsają galima kurti pagal operacinės sistemos standartus arba naudojant platformos kūrėjų įrankį \textit{Xamarin.Forms}.
 
 \subsubsubsection{Saityno programėlė} \label{webApp}
 
-Priklausomai nuo poreikių, galima sukurti tinklalapį pritaikytą mobiliesiems įrenginiams. Kuriant galima pasitelkti karkasus, skirtus kurti būtent tokias saityno programėles. Tai yra greitas ir pigus būdas, prieinamas iš visų operacinių sistemų, tačiau tinkamas tik tuomet, kai nereikia arba reikalingos elementarios (garsas, failai įrenginio atmintyje) sąsajos su įrenginiu. Dėl to šis variantas nėra tinkamas mūsų atveju - nėra galimybės pasinaudoti įrenginio \textit{Bluetooth} ryšiu.
+Priklausomai nuo poreikių, galima sukurti tinklalapį pritaikytą mobiliesiems įrenginiams. Kuriant galima pasitelkti karkasus, skirtus kurti būtent tokias saityno programėles, pavyzdžiui: \textit{Bootstrap}, \textit{Foundation} \cite{cssFrameworks}. Tai yra greitas ir pigus būdas, prieinamas iš visų operacinių sistemų, tačiau tinkamas tik tuomet, kai nereikia arba reikalingos elementarios (garsas, failai įrenginio atmintyje) sąsajos su įrenginiu. Dėl to šis variantas nėra tinkamas mūsų atveju - nėra galimybės pasinaudoti įrenginio \textit{Bluetooth} ryšiu.
 
 \subsubsubsection{Hibridinė programėlė}
 
-Hibridinė programėlė - tai saityno programėlė, tačiau integruota į 	savą programėlę. Tai suteikia galimybę priėjimą prie įrenginio operacinės sistemos aplikacijų programavimo sąsajos (angl. \textit{Application Programming Interface, API}). Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus, o šiuo atveju - mums reikalingą \textit{Bluetooth} modulį.
+Hibridinė programėlė - tai saityno programėlė, tačiau integruota į 	savą programėlę. Tai suteikia galimybę priėjimą prie įrenginio operacinės sistemos programų programavimo sąsajos. Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus, o šiuo atveju - mums reikalingą \textit{Bluetooth} modulį.
 
 Vienas iš labiausiai paplitusių karkasų yra \textit{Ionic} \cite{hybridFrameworks}. Naudojantis šiuo karkasu galime programėlę kurti kaip tinklalapį, programuojant \textit{JavaScript} programavimo kalba bei rašant \textit{HTML} ir \textit{CSS} kodą vartotojo sąsajai kurti.
 
