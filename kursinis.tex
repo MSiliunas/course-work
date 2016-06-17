@@ -18,8 +18,8 @@
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
 \papertype{Kursinis darbas}
-\title{Interaktyvios pratybos: Identifikavimas panaudojant \textit{Bluetooth} ryšio technologiją}
-\titleineng{Interactive lecture: identification via \textit{Bluetooth}}
+\title{Lankomumo žymėjimas, panaudojant studentų išmaniuosius telefonus}
+\titleineng{Attendance marking with student smartphones}
 \status{3 kurso 2 grupės studentas}
 \author{Marijus Siliūnas}
 % \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
@@ -37,13 +37,17 @@
 
 \sectionnonum{Įvadas}
 
+\subsectionnonum{Tyrimo objektas}
+
+Artimojo ryšio technologijų panaudojimas akivaizdinėse studijose.
+
 \subsectionnonum{Temos aktualumas}
 
 Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai, vedamas lankomumo žurnalas.
 
 \subsectionnonum{Darbo tikslas}
 
-Sukurti universiteto bendruomenės narių identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri sudarytų pagrindą tolimesnei sistemos plėtrai. Išvystyta sistema leis teikti kokybišką atsaką akivaizdinių studijų užsiėmimų metu bei gerins studentų ir dėstytojų bendradarbiavimą.
+Sukurti dalyvaujančių užsiėmime studentų identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri sudarytų pagrindą tolimesnei plėtrai. Išvystyta sistema leis gerinti studentų ir dėstytojų bendradarbiavimą akivaizdinių studijų užsiėmimų metu.
 
 \subsectionnonum{Uždaviniai}
 
@@ -52,8 +56,8 @@ Tikslui pasiekti keliami šie uždaviniai:
 \begin{itemize}
 	\item Apžvelgti studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes ir parinkti viena iš jų.
 	\item Apžvelgti išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus.
-	\item Sukurti studentų identifikavimo modulio vartotojų sąsajos eskizus.
 	\item Suformuluoti pagrindinius kuriamo modulio naudojimo scenarijus.
+	\item Sukurti studentų identifikavimo modulio vartotojų sąsajos eskizus.
 	\item Apibrėžti studentų lankomumo žymėjimo sistemos svarbiausius komponentus bei apžvelgti jų komunikavimo aspektus.
 \end{itemize}
 
@@ -66,22 +70,24 @@ Tikslui pasiekti keliami šie uždaviniai:
 	\item Pateikti studentų identifikavimo modulio vartotojo sąsajos eskizai.
 \end{itemize}
 
-\section{Studento identifikavimas}
+\section{Užsiėmime dalyvaujančių studentų identifikavimas}
 
-Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, jį galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia studentus identifikuoti.
+Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Taip būtų supaprastinamas dėstytojų darbas bei taupomas laikas. Lankomumo žymėjimą galima automatizuoti ne vienu būdu, tačiau pirmiausia reikia susieti studento išmanųjį telefoną su jo vardu ir pavarde, esančias dėstytojo sąraše. Yra du būdai - nfc ir bluetooth
 
-\subsection{NFC technologija}
+\subsection{Lietuvos studento pažymėjimas}
 Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
 
-Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Norint įgyvendinti tokį identifikavimo procesą dar reikalinga integracija su duomenų baze, kurioje būtų susiejamas unikalus LSP indentifikavimo numeris su LSP duomenimis. Gauti duomenys turėtų būti patikrinami ir su vidine universiteto sistema patikrinant, ar toks studentas tikrai egzistuoja, ar jis turi dalyvauti šioje paskaitoje ir t.t. Taip pat universiteto auditorijose turėtų būti įdiegti NFC skaitytuvai. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą.
+Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Norint įgyvendinti tokį identifikavimo procesą dar reikalinga integracija su duomenų baze, kurioje būtų susiejamas unikalus LSP indentifikavimo numeris su LSP duomenimis. Gauti duomenys turėtų būti patikrinami ir su vidine universiteto sistema patikrinant, ar toks studentas tikrai egzistuoja, ar jis turi dalyvauti šioje paskaitoje ir t.t. Taip pat universiteto auditorijose turėtų būti įdiegti NFC skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta NFC technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą.
 
-\subsection{Bluetooth technologija}
+\subsection{Išmanusis telefonas}
 Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota Bluetooth technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento informacija. Privalumas prieš LSP skaitymą - nereikia integruoti trečiųjų šalių paslaugų. Identifikaciniai numeriai išsaugomi ir susiejiami su studentu kuriamoje sistemoje.
 
 Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus Bluetooth ryšius galima nuskaityti visus vienu metu. Nors studentai turėtų įjungti šią technologiją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
 
 \subsection{NFC ar Bluetooth?}
-Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes: nepriklausoma nuo trečiųjų šalių paslaugų (services); auditorijose reikia įrengti mažiau skaitytuvų ir / ar greitesnis identifikavimas (nesusidaro eilės prie skaitytuvų).
+Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes: nepriklausoma nuo trečiųjų šalių paslaugų (services); auditorijose reikia įrengti mažiau skaitytuvų ir / ar greitesnis identifikavimas (nesusidaro eilės prie skaitytuvų); šie būdai papildo vienas kitą - jei tel išsikrovęs, tai tinka lsp; jei lsp pamiršai - turi telefoną.
+
+\subsection{Sistemos naudojimo vizija}
 
 \subsection{Mobilioji programėlė studentams} \label{StudentApp}
 Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
@@ -124,6 +130,28 @@ Tiek vienas, tiek kitas programėlių kūrimo būdas turi ir pliusų, ir minusų
 
 Kuriamos sistemos realizacijai reikia kuo geresnės integracijos su išmaniuoju įrenginiu. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant \textit{Xamarin} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
 
+\subsubsection{Programėlės naudojimo scenarijai}
+
+\subsubsubsection{Prisijungimas}
+
+Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:loginView} pav.). Studentas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis (arba grąžintą access token, priklausomai nuo sistemos įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
+
+\subsubsubsection{Įrenginio susiejimas}
+
+Pagrindiniame programėlės lange (\ref{img:mainView} pav.) matome pranešimą, kad nėra susietas įrenginys su paskyra. Spaudžiame „Susieti įrenginį“. Programėlė surenka reikalingą informaciją apie įrenginį (\textit{Bluetooth MAC} adresą) ir siunčia užklausą į sistemos aplikacijų programavimo sąsają. Grąžinama žinutė apie sėkmingą arba nesėkmingą įrenginio susiejimą su paskyra.
+
+\textbf{Alternatyvus scenarijus:} Prisijungus programėlėje, atidarome meniu (\ref{img:menuView} pav.) paspausdami ant meniu ikonos viršutinėje juostoje. Atsidariusiame meniu pasirenkame „Susieti įrenginį“.
+
+\subsubsubsection{Lankomumo pažymėjimas}
+
+Studentas atėjęs į paskaitą įsijungia programėlę bei įrenginio Bluetooth ryšį. Pagrindiniame lange (\ref{img:mainView} pav.) spaudžia mygtuką „Pasižymėti“. Programėlė ieško skaitytuvo ir nuskaito jo siunčiamą informaciją: paskaitos pavadinimą, dėstytojo vardą ir pavardę. Rodomas patvirtinimo langas su šia informacija. Studentas spaudžia „Taip“. Patvirtinimas siunčiamas į sistemą ir pažymimas studento dalyvavimas paskaitoje.
+
+\textbf{Alternatyvus scenarijus:} Studentui tereikia įjungti Bluetooth ryšį ir būti susiejus įrenginį su paskyra. Skaitytuvas aptikęs įrenginį automatiškai pažymi studento dalyvavimą paskaitoje.
+
+\subsubsubsection{Paskyros peržiūra}
+
+Programėlėje studentas taip pat gali peržiūrėti savo paskyrą meniu (\ref{img:menuView} pav.) spausdamas mygtuką „Paskyra“.
+
 \subsubsection{Programėlės vartoto sąsaja}
 
 Studentams skirtos programėlės pagrindinės funkcijos - pasižymėti dalyvavimą užsiėmime bei susieti įrenginį su paskyra. Projektuojant vartotojo sąsają pagrindinis dėmesys skiriamas šių veiksmų paprastumui, stengiamasi, kad užduočių atlikimui reikėtų kuo mažiau veiksmų.
@@ -157,34 +185,28 @@ Pagrindiniame lange (\ref{img:mainView} pav.), priklausomai nuo to, ar esame sus
 
 Meniu (\ref{img:menuView} pav.) pateikiamas prisijungusio naudotojo vardas ir pavardė bei nedidelė profilio nuotrauka. Meniu atidaryti galima viršutinėje juostoje paspaudus meniu ikoną.
 
-\subsubsection{Programėlės naudojimo scenarijai}
-
-\subsubsubsection{Prisijungimas}
-
-Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:loginView} pav.). Studentas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis (arba grąžintą access token, priklausomai nuo sistemos įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
-
-\subsubsubsection{Įrenginio susiejimas}
-
-Pagrindiniame programėlės lange (\ref{img:mainView} pav.) matome pranešimą, kad nėra susietas įrenginys su paskyra. Spaudžiame „Susieti įrenginį“. Programėlė surenka reikalingą informaciją apie įrenginį (\textit{Bluetooth MAC} adresą) ir siunčia užklausą į sistemos aplikacijų programavimo sąsają. Grąžinama žinutė apie sėkmingą arba nesėkmingą įrenginio susiejimą su paskyra.
-
-\textbf{Alternatyvus scenarijus:} Prisijungus programėlėje, atidarome meniu (\ref{img:menuView} pav.) paspausdami ant meniu ikonos viršutinėje juostoje. Atsidariusiame meniu pasirenkame „Susieti įrenginį“.
-
-\subsubsubsection{Lankomumo pasižymėjimas}
-
-Studentas atėjęs į paskaitą įsijungia programėlę bei įrenginio Bluetooth ryšį. Pagrindiniame lange (\ref{img:mainView} pav.) spaudžia mygtuką „Pasižymėti“. Programėlė ieško skaitytuvo ir nuskaito jo siunčiamą informaciją: paskaitos pavadinimą, dėstytojo vardą ir pavardę. Rodomas patvirtinimo langas su šia informacija. Studentas spaudžia „Taip“. Patvirtinimas siunčiamas į sistemą ir pažymimas studento dalyvavimas paskaitoje.
-
-\textbf{Alternatyvus scenarijus:} Studentui tereikia įjungti Bluetooth ryšį ir būti susiejus įrenginį su paskyra. Skaitytuvas aptikęs įrenginį automatiškai pažymi studento dalyvavimą paskaitoje.
-
-\subsubsubsection{Paskyros peržiūra}
-
-Programėlėje studentas taip pat gali peržiūrėti savo paskyrą meniu (\ref{img:menuView} pav.) spausdamas mygtuką „Paskyra“.
-
 \subsection{Skaitytuvas - išmanusis telefonas} \label{TeacherApp}
 Kitas svarbus komponentas, norint identifikuoti studentus, naudojant \textit{Bluetooth} ryšį - skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kuri būtų įdiegta dėstytojo išmaniajame telefone.
 
 Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų \textit{Bluetooth MAC} adresais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
 
 Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti kuo prieinamesnė. Todėl jos kūrimui taip pat pasirinkta \textit{Xamarin} platforma.
+
+\subsubsection{Skaitytuvo programėlės funkcijos}
+
+\subsubsubsection{Prisijungimas}
+
+Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:scannerLoginView} pav.). Dėstytojas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis arba prieigos raktą (priklausomai nuo sistemos vidinės pusės įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
+
+\subsubsubsection{Paskaitos pradžia}
+
+Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo duomenis) pagrindiniame lange (\ref{img:scannerMainView} pav.) naudotojas paspaudžia ant mygtuko „Paskaita“, atidaromas paskaitos pasirinkimo langas (\ref{img:scannerMainView} pav.), išsirenka paskaitą ir ant jos paspaudžia. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.) ir rodoma pasirinkta paskaita. Taip pat pasirenkama grupė. Parinkus paskaitą ir grupę naudotojas spaudžia „Pradėti paskaitą“. Programėlė pradeda skleisti informaciją \textit{Bluetooth} ryšiu. Rodomas paskaitos langas su pasižymėjusiais studentais.
+
+\textbf{Alternatyvus scenarijus:} Pradėjus paskaitą periodiškai ieškoma įrenginių su įjungtu \textit{Bluetooth} ryšiu. Rastų įrenginių \textit{Bluetooth MAC} adresai siunčiami į sistemą.
+
+\subsubsubsection{Paskaitos pabaiga}
+
+Paskaitos lange (\ref{img:scannerLectureView} pav.) naudotojas spaudžia „Užbaigti paskaitą“. Rodomas patvirtinimo pranešimas, spaudžia „Užbaigti“. Programėlė nusiunčia užklausą į sistemą dėl paskaitos užbaigimo. Rodomas pranešimas su sėkmingo arba nesėkmingo užbaigimo tekstu. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.).
 
 \subsubsection{Skaitytuvo programėlės vartotojo sąsaja}
 
@@ -219,22 +241,6 @@ Pagrindiniame lange (\ref{img:scannerMainView} pav.) galime pasirinkti paskaitą
 
 Iš pagrindinio lango (\ref{img:scannerMainView} pav.) patenkama į paskaitos langą (\ref{img:scannerLectureView} pav.). Šiame lange matome paskaitos pavadinimą, paskaitos užbaigimo mygtuką bei dalyvaujančių (pažymėtų) studentų sąrašą.
 
-\subsubsection{Skaitytuvo programėlės funkcijos}
-
-\subsubsubsection{Prisijungimas}
-
-Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:scannerLoginView} pav.). Dėstytojas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis arba prieigos raktą (priklausomai nuo sistemos vidinės pusės įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
-
-\subsubsubsection{Paskaitos pradžia}
-
-Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo duomenis) pagrindiniame lange (\ref{img:scannerMainView} pav.) naudotojas paspaudžia ant mygtuko „Paskaita“, atidaromas paskaitos pasirinkimo langas (\ref{img:scannerMainView} pav.), išsirenka paskaitą ir ant jos paspaudžia. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.) ir rodoma pasirinkta paskaita. Taip pat pasirenkama grupė. Parinkus paskaitą ir grupę naudotojas spaudžia „Pradėti paskaitą“. Programėlė pradeda skleisti informaciją \textit{Bluetooth} ryšiu. Rodomas paskaitos langas su pasižymėjusiais studentais.
-
-\textbf{Alternatyvus scenarijus:} Pradėjus paskaitą periodiškai ieškoma įrenginių su įjungtu \textit{Bluetooth} ryšiu. Rastų įrenginių \textit{Bluetooth MAC} adresai siunčiami į sistemą.
-
-\subsubsubsection{Paskaitos pabaiga}
-
-Paskaitos lange (\ref{img:scannerLectureView} pav.) naudotojas spaudžia „Užbaigti paskaitą“. Rodomas patvirtinimo pranešimas, spaudžia „Užbaigti“. Programėlė nusiunčia užklausą į sistemą dėl paskaitos užbaigimo. Rodomas pranešimas su sėkmingo arba nesėkmingo užbaigimo tekstu. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.).
-
 \section{Sistemos vidinė pusė}
 
 Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės naudotis sistema. Bet visa tai neveiks be pagrindinės sistemos dalies, atsakingos už duomenų saugojimą, apdorojimą ir pateikimą.
@@ -264,7 +270,7 @@ Viena svarbiausių \textit{SOAP} funkcijų ir privalumų - įtaisytas klaidų ap
 
 \subsubsubsection{REST}
 
-\textit{REST} metodas leidžia dar paprasčiau apsikeisti žinutėmis tarp programų. Dažnai užtenka pagal taisykles sudaryto universalaus adreso. Kuomet reikia pateikti daugiau informacijos dažnai naudojamas \textit{JSON (JavaScript Object Notation)} formatas. Šis būdas yra patogus tuo, kad galima siųsti ir gauti žinutes forma, kurią lengva analizuoti programavimo kalboje su kuria yra kuriama programa \cite{SoapRest}.
+\textit{REST} metodas leidžia dar paprasčiau apsikeisti žinutėmis tarp programų. Dažnai užtenka pagal taisykles sudaryto universalaus adreso. Kuomet reikia pateikti daugiau informacijos dažnai naudojamas \textit{JSON (JavaScript Object Notation)} formatas. Šis būdas yra patogus tuo, kad galima siųsti ir gauti žinutes forma, kurią lengva sintaksiškai analizuoti programavimo kalboje su kuria yra kuriama programa \cite{SoapRest}.
 
 Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodologiją nei \textit{SOAP} atveju, taip pat yra efektyvesnis veikimas (galima siųsti mažesnes žinutes) bei ištekliai yra prieinamesni, nereikalingos papildomos programinės priemonės naudojimui. Dėl šių priežasčių tai yra tinkamesnis variantas sistemos saityno programų programavimo sąsajai sukurti.
 

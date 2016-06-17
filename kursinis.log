@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  15 JUN 2016 08:54
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  17 JUN 2016 13:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,23 +1158,23 @@ Package biblatex Info: Reference segment=0 on input line 33.
 
 ] [3
 
-] [4] [5]
+] [4] [5] [6]
 File: img/kursinio_app_login.png Graphic file (type QTm)
  <use  "img/kursinio_app_login.png" >
 File: img/kursinio_app_main.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_main.png" > [6]
+<use  "img/kursinio_app_main.png" > [7]
 File: img/kursinio_app_menu.png Graphic file (type QTm)
  <use  "img/kursinio_app_menu.png" >
-[7] [8]
+[8] [9]
 File: img/kursinio_app_login.png Graphic file (type QTm)
  <use  "img/kursinio_app_login.png" >
 File: img/kursinio_app_dest_main.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_dest_main.png" > [9]
+<use  "img/kursinio_app_dest_main.png" > [10]
 File: img/kursinio_app_dest_lecture.png Graphic file (type QTm)
 
-<use  "img/kursinio_app_dest_lecture.png" > [10] [11]
+<use  "img/kursinio_app_dest_lecture.png" > [11]
 File: img/kursinio_deployment.png Graphic file (type QTm)
 
 <use  "img/kursinio_deployment.png" > [12
@@ -1184,7 +1184,7 @@ File: img/kursinio_deployment.png Graphic file (type QTm)
 ] [17
 
 ]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 340
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 346
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmtt.fd
@@ -1198,12 +1198,12 @@ Package logreq Info: Writing requests to 'kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24905 strings out of 493706
- 476365 string characters out of 6145770
- 898562 words of memory out of 5000000
- 27931 multiletter control sequences out of 15000+600000
- 16622 words of font info for 87 fonts, out of 8000000 for 9000
+ 24901 strings out of 493706
+ 476113 string characters out of 6145770
+ 898535 words of memory out of 5000000
+ 27929 multiletter control sequences out of 15000+600000
+ 16606 words of font info for 85 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 67i,12n,96p,10508b,3652s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,11n,96p,10508b,3652s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on kursinis.pdf (19 pages).
