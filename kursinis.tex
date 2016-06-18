@@ -110,7 +110,7 @@ Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Je
 	\label{img:componentDiagram}
 \end{figure}
 
-Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai — studento ir dėstytojo telefonai, serveris bei naudotojo kompiuteris. Pažymėtina tai, kad serveris savyje turi du komponentus — saityno programų programavimo sąsają ir administravimo aplinką.
+Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai – studento ir dėstytojo telefonai, serveris bei naudotojo kompiuteris. Pažymėtina tai, kad serveris savyje turi du komponentus – saityno programų programavimo sąsają ir administravimo aplinką.
 
 \subsection{Mobilioji programėlė studentams} \label{StudentApp}
 Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
@@ -129,9 +129,9 @@ Antra pagal populiarumą, apie 15 procentus rinkos turinti \cite{MarketShareByOS
 
 \subsubsubsection{Windows Phone}
 
-Trečia pagal populiarumą, apie 3 procentus išmaniųjų įrenginių rinkos užimanti \cite{MarketShareByOS}, operacinė sistema. Tai yra \textit{Microsoft} korporacijos produktas. Operacinė sistema diegiama \textit{Nokia} korporacijos \textit{Lumia} išmaniųjų telefonų linijoje. Programavimo kalba - \textit{C\#}.
+Trečia pagal populiarumą, apie 3 procentus išmaniųjų įrenginių rinkos užimanti \cite{MarketShareByOS}, operacinė sistema. Tai yra \textit{Microsoft} korporacijos produktas. Operacinė sistema diegiama \textit{Nokia} korporacijos \textit{Lumia} išmaniųjų telefonų linijoje. Programavimo kalba – \textit{C\#}.
 
-\subsubsection{Viena programėlė - visoms operacinėms sistemoms}
+\subsubsection{Viena programėlė – visoms operacinėms sistemoms}
 Studentai turi daug ir skirtingų išmaniųjų telefonų, todėl sistema turi palaikyti kuo daugiau įrenginių. Mūsų atveju taip pat reikalinga, kad naudojimąsis sistema būtų kuo prieinamesnis. Neseniai pradėtos kurti technologijos leisiančios rašyti kodą vienai programėlei ir ji veiktų populiariausiose \cite{MarketShareByOS} išmaniųjų įrenginių operacinėse sistemose. Kol kas nėra tiek išvystyta technologija, tačiau šiuo metu galime su nedidelėmis korekcijomis sukurti programėlę tinkamą populiariausioms išmaniųjų irenginių operacinėms sistemoms.
 
 \subsubsubsection{Savoji programėlė}
@@ -140,47 +140,69 @@ Sparčiai tobulėjanti platforma, skirta kurti programėles \textit{Android}, \t
 
 \subsubsubsection{Saityno programėlė} \label{webApp}
 
-Priklausomai nuo poreikių, galima sukurti tinklalapį pritaikytą mobiliesiems įrenginiams. Kuriant galima pasitelkti karkasus, skirtus kurti būtent tokias saityno programėles, pavyzdžiui: \textit{Bootstrap}, \textit{Foundation} \cite{cssFrameworks}. Tai yra greitas ir pigus būdas, prieinamas iš visų operacinių sistemų, tačiau tinkamas tik tuomet, kai nereikia arba reikalingos elementarios (garsas, failai įrenginio atmintyje) sąsajos su įrenginiu. Dėl to šis variantas nėra tinkamas mūsų atveju - nėra galimybės pasinaudoti įrenginio \textit{Bluetooth} ryšiu.
+Priklausomai nuo poreikių, galima sukurti tinklalapį pritaikytą mobiliesiems įrenginiams. Kuriant galima pasitelkti karkasus, skirtus kurti būtent tokias saityno programėles, pavyzdžiui: \textit{Bootstrap}, \textit{Foundation} \cite{cssFrameworks}. Tai yra greitas ir pigus būdas, prieinamas iš visų operacinių sistemų. Tačiau tinkamas tik tuomet, kai nereikia arba reikalingos elementarios (garsas, failai įrenginio atmintyje) sąsajos su įrenginiu. Taip pat programėlė laikoma serveryje ir yra parsiunčiama į telefoną kiekvienos užklausos metu, todėl gali sukelti nepatogumų, nes naudojant mobilųjį internetą dažniausiai duomenų kiekis yra ribojamas.
 
 \subsubsubsection{Hibridinė programėlė}
 
-Hibridinė programėlė - tai saityno programėlė, tačiau integruota į 	savą programėlę. Tai suteikia galimybę priėjimą prie įrenginio operacinės sistemos programų programavimo sąsajos. Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus, o šiuo atveju - mums reikalingą \textit{Bluetooth} modulį.
+Hibridinė programėlė – tai saityno programėlė, tačiau integruota į 	savą programėlę. Tai suteikia galimybę priėjimą prie įrenginio operacinės sistemos programų programavimo sąsajos. Tokiu būdu mes galime pasiekti išmaniojo įrenginio resursus.
 
 Vienas iš labiausiai paplitusių karkasų yra \textit{Ionic} \cite{hybridFrameworks}. Naudojantis šiuo karkasu galime programėlę kurti kaip tinklalapį, programuojant \textit{JavaScript} programavimo kalba bei rašant \textit{HTML} ir \textit{CSS} kodą vartotojo sąsajai kurti.
 
-\subsubsubsection{Hibridinė ar sava programėlė?}
+\subsubsubsection{Tinkamiausio būdo parinkimas}
 
-Tiek vienas, tiek kitas programėlių kūrimo būdas turi ir pliusų, ir minusų. Hibridines programėles galima kurti greičiau ir paprasčiau, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti įrenginio ir jo operacinės sistemos teikiamas funkcijas, pasiekiamas per aplikacijų programavimo sąsaja. Vis dėlto tai yra geresnis variantas nei rašyti kiekvienai operacinei sistemai atskirą programėlę, laiko ir kainos atžvilgiu.
+Mūsų kuriamos sistemos atveju svarbiausia gera programėlės integracija su įrenginio komponentais, o konkrečiau – įrenginio \textit{Bluetooth} ryšio moduliu. Taip pat labai svarbu, kad programėlė būtų kuo prieinamesnė – turi būti palaikomos populiariausios išmaniųjų telefonų operacinės sistemos.
 
-Kuriamos sistemos realizacijai reikia kuo geresnės integracijos su išmaniuoju įrenginiu. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant \textit{Xamarin} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | r | c | c | c | }
+		\hline
+		& Savoji & Saityno & Hibridinė \\
+		\hline
+		\textbf{Prieinamas \textit{Bluetooth} ryšys} & + &  & + \\
+		\hline
+		Veikia visose populiariausiose operacinėse sistemose & + & + & + \\
+		\hline
+		Kūrimo įrankiai yra nemokami & + & + & + \\
+		\hline
+	\end{tabular}
+	\caption{Programėlių kūrimo būdų palyginimas}
+	\label{appCompare}
+\end{table}
 
-\subsubsection{Programėlės naudojimo scenarijai}
+Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti įrenginio ir jo operacinės sistemos teikiamas funkcijas, pasiekiamas per aplikacijų programavimo sąsaja. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant \textit{Xamarin} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
+
+\subsubsection{Savosios programėlės detalieji naudojimo scenarijai}
 
 \subsubsubsection{Prisijungimas}
 
-Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:loginView} pav.). Studentas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlė išsisaugo prisijungimo duomenis (arba grąžintą access token, priklausomai nuo sistemos įgyvendinimo). Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
+Įdiegus ir pirmą kartą programėlę paleidus naudotojui atidaromas prisijungimo langas (\ref{img:loginView} pav.). Studentas suveda prisijungimo vardą bei slaptažodį. Spaudžia prisijungti. Sistemai grąžinus sėkmingą pranešimą, programėlėje išsaugomi prisijungimo duomenis. Kitą kartą paleidus programėlę prisijungimas vyksta automatiškai.
 
 \subsubsubsection{Įrenginio susiejimas}
 
 Pagrindiniame programėlės lange (\ref{img:mainView} pav.) matome pranešimą, kad nėra susietas įrenginys su paskyra. Spaudžiame „Susieti įrenginį“. Programėlė surenka reikalingą informaciją apie įrenginį (\textit{Bluetooth MAC} adresą) ir siunčia užklausą į sistemos aplikacijų programavimo sąsają. Grąžinama žinutė apie sėkmingą arba nesėkmingą įrenginio susiejimą su paskyra.
 
-\textbf{Alternatyvus scenarijus:} Prisijungus programėlėje, atidarome meniu (\ref{img:menuView} pav.) paspausdami ant meniu ikonos viršutinėje juostoje. Atsidariusiame meniu pasirenkame „Susieti įrenginį“.
+\textbf{Alternatyvus scenarijus:} Prisijungus programėlėje, atidarome meniu (\ref{img:menuView} pav.) paspausdami ant meniu piktogramos viršutinėje juostoje. Atsidariusiame meniu pasirenkame „Susieti įrenginį“.
 
 \subsubsubsection{Lankomumo pažymėjimas}
 
-Studentas atėjęs į paskaitą įsijungia programėlę bei įrenginio Bluetooth ryšį. Pagrindiniame lange (\ref{img:mainView} pav.) spaudžia mygtuką „Pasižymėti“. Programėlė ieško skaitytuvo ir nuskaito jo siunčiamą informaciją: paskaitos pavadinimą, dėstytojo vardą ir pavardę. Rodomas patvirtinimo langas su šia informacija. Studentas spaudžia „Taip“. Patvirtinimas siunčiamas į sistemą ir pažymimas studento dalyvavimas paskaitoje.
+\textbf{Rankinis scenarijus:} Studentas atėjęs į paskaitą įsijungia programėlę bei įrenginio Bluetooth ryšį. Pagrindiniame lange (\ref{img:mainView} pav.) spaudžia mygtuką „Dalyvauju“. Programėlė ieško skaitytuvo ir nuskaito jo siunčiamą informaciją: paskaitos pavadinimą, dėstytojo vardą ir pavardę. Rodomas patvirtinimo langas su šia informacija. Studentas spaudžia „Taip“. Patvirtinimas siunčiamas į sistemą ir pažymimas studento dalyvavimas paskaitoje.
 
-\textbf{Alternatyvus scenarijus:} Studentui tereikia įjungti Bluetooth ryšį ir būti susiejus įrenginį su paskyra. Skaitytuvas aptikęs įrenginį automatiškai pažymi studento dalyvavimą paskaitoje.
+\textbf{Automatizuotas scenarijus:} Jei studentas išmaniajame telefone įjungęs \textit{Bluetooth} ryšį ir yra susiejęs įrenginį su paskyra, skaitytuvas aptikęs įrenginį automatiškai pažymi studento dalyvavimą užsiėmime.
 
 \subsubsubsection{Paskyros peržiūra}
 
 Programėlėje studentas taip pat gali peržiūrėti savo paskyrą meniu (\ref{img:menuView} pav.) spausdamas mygtuką „Paskyra“.
 
-\subsubsection{Programėlės vartoto sąsaja}
+\subsubsection{Savosios programėlės vartotojo sąsaja}
 
-Studentams skirtos programėlės pagrindinės funkcijos - pasižymėti dalyvavimą užsiėmime bei susieti įrenginį su paskyra. Projektuojant vartotojo sąsają pagrindinis dėmesys skiriamas šių veiksmų paprastumui, stengiamasi, kad užduočių atlikimui reikėtų kuo mažiau veiksmų.
+Studentams skirtos programėlės pagrindinės funkcijos – pasižymėti dalyvavimą užsiėmime bei susieti įrenginį su studento vardu ir pavarde. Projektuojant vartotojo sąsają pagrindinis dėmesys skiriamas šių veiksmų paprastumui, stengiamasi, kad užduočių atlikimui reikėtų kuo mažiau veiksmų. Vartotojo sąsają, naudojant \textit{Xamarin} platformą, galima kurti dviem būdais:
 
-Vartotojo sąsaja kuriama naudojant \textit{Xamarin Forms} įrankį, todėl visuose įrenginiuose, nepriklausomai nuo operacinės sistemos, vartotojo sąsaja bus atvaizduojama ta pati. Šio įrankio naudojimas pagreitina įgyvendinimą, nes nebereikia atskirai kurti kiekvienai operacinei sistemai vartotojo sąsajos atskirai. Tuo pačiu reikia atsižvelgti į tai, jog dėl tos pačios priežasties įrenginių ekrano dydžiai labai skirtingi.
+\begin{itemize}
+	\item Kiekvienos operacinės sistemos vartotojo sąsajos kūrimo įrankiu
+	\item \textit{Xamarin} platformos kūrėjų kurtu įrankiu \textit{Xamarin Forms}
+\end{itemize}
+
+Kuriant vartotojo sąsają kiekvienos operacinės sistemos vartotojo sąsajos kūrimo įrankiu kyla nepatogumas, kad reikia tuos pačius langus aprašyti tris kartus. Vartotojo sąsaja kuriant \textit{Xamarin Forms} įrankiu, visuose įrenginiuose, nepriklausomai nuo operacinės sistemos, vartotojo sąsaja bus atvaizduojama ta pati ir aprašoma vieną kartą. Šio įrankio naudojimas pagreitina įgyvendinimą, nes nebereikia atskirai kurti kiekvienai operacinei sistemai vartotojo sąsajos atskirai. Tuo pačiu reikia atsižvelgti į tai, jog dėl tos pačios priežasties įrenginių ekrano dydžiai labai skirtingi.
 
 \begin{figure}[H]
 	\centering
@@ -209,8 +231,8 @@ Pagrindiniame lange (\ref{img:mainView} pav.), priklausomai nuo to, ar esame sus
 
 Meniu (\ref{img:menuView} pav.) pateikiamas prisijungusio naudotojo vardas ir pavardė bei nedidelė profilio nuotrauka. Meniu atidaryti galima viršutinėje juostoje paspaudus meniu ikoną.
 
-\subsection{Skaitytuvas - išmanusis telefonas} \label{TeacherApp}
-Kitas svarbus komponentas, norint identifikuoti studentus, naudojant \textit{Bluetooth} ryšį - skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kuri būtų įdiegta dėstytojo išmaniajame telefone.
+\subsection{Skaitytuvas – išmanusis telefonas} \label{TeacherApp}
+Kitas svarbus komponentas, norint identifikuoti studentus, naudojant \textit{Bluetooth} ryšį – skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kuri būtų įdiegta dėstytojo išmaniajame telefone.
 
 Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų \textit{Bluetooth MAC} adresais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
 
@@ -236,11 +258,11 @@ Paskaitos lange (\ref{img:scannerLectureView} pav.) naudotojas spaudžia „Užb
 
 Projektuojant skaitytuvo programėlės vartotojo sąsają stengtąsi pateikti taip, kad reikėtų kuo mažiau veiksmų norint atlikti pagrindines užduotis. Svarbiausios programėlės funkcijos yra paskaitos pasirinkimas bei studentų įrenginių aptikimas, todėl šioms užduotims skirtas pagrindinis dėmesys.
 
-Programėlėje išlaikomas ta pati struktūra, kaip ir studentų programėlėje. Kad nebūtų maišomos tarpusavyje, naudojamos kitos spalvos.
+Programėlėje išlaikomas ta pati struktūra, kaip ir studentų programėlėje. Kad nebūtų painiojamos tarpusavyje, naudojamos kitos spalvos.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{img/kursinio_app_login}
+	\includegraphics[scale=0.5]{img/kursinio_app_dest_login}
 	\caption{Prisijungimo langas}
 	\label{img:scannerLoginView}
 \end{figure}
@@ -254,7 +276,7 @@ Prisijungimo langas (\ref{img:scannerLoginView} pav.) toks pat kaip ir studentų
 	\label{img:scannerMainView}
 \end{figure}
 
-Pagrindiniame lange (\ref{img:scannerMainView} pav.) galime pasirinkti paskaitą ir grupę. Grupės pasirinkimo langas yra analogiškas paskaitos pasirinkimo langui (\ref{img:scannerMainView} pav.) - taip pat pateikiama paieška ir dėstytojų grupių sąrašas. Verta pažymėti, kad grupės pasirinkimo lange pateikiamas sąrašas grupių, kurios yra priskirtos pasirinktai paskaitai.
+Pagrindiniame lange (\ref{img:scannerMainView} pav.) galime pasirinkti paskaitą ir grupę. Grupės pasirinkimo langas yra analogiškas paskaitos pasirinkimo langui (\ref{img:scannerMainView} pav.) – taip pat pateikiama paieška ir dėstytojų grupių sąrašas. Verta pažymėti, kad grupės pasirinkimo lange pateikiamas sąrašas grupių, kurios yra priskirtos pasirinktai paskaitai.
 
 \begin{figure}[H]
 	\centering
@@ -280,7 +302,14 @@ Pagal pateiktą diegimo diagramą (\ref{img:deployment} pav.) matome, kad visą 
 
 \subsection{Saityno programų programavimo sąsaja} \label{webApi}
 
-Visas bendravimas tarp programėlių ir pagrindinio sistemos modulio vyksta per aplikacijų programavimo sąsają. Šis sistemos modulis turi būti sukurtas taip, kad būtų galima nesunkiai įtraukti naują modulį į sistemos architektūrą. Saityno programų programavimo sąsaja (angl. \textit{Web Application Programming Interface}) yra dažnas sprendimas tokioms sistemoms įgyvendinti. Tai yra sąsaja, susidedanti iš vieno ar daugiau viešai pasiekiamų prieigos taškų (angl. \textit{endpoint}), su apibrėžta užklausos - atsakymo žinučių sistema. Yra du pagrindiniai saityno programų programavimo sąsajų tipai: \textit{SOAP (Simple Object Access Protocol)} saityno paslaugos ir \textit{REST (Representational State Transfer)} saityno ištekliai.
+Visas bendravimas tarp programėlių ir pagrindinio sistemos modulio vyksta per programų programavimo sąsają. Šis sistemos modulis turi būti sukurtas taip, kad būtų galima nesunkiai įtraukti naują modulį į sistemos architektūrą. Taip pat svarbūs kriterijai renkantis sprendimą:
+
+\begin{itemize}
+	\item Maža duomenų apsikeitimo apimtis – turi būti taupomi tinklo ištekliai
+	\item Užklausų apdorojimo ir atsakymo siuntimo sparta
+\end{itemize}
+
+Saityno programų programavimo sąsaja (angl. \textit{Web Application Programming Interface}) yra dažnas sprendimas tokioms sistemoms įgyvendinti. Tai yra sąsaja, susidedanti iš vieno ar daugiau viešai pasiekiamų prieigos taškų (angl. \textit{endpoint}), su apibrėžta užklausos – atsakymo žinučių sistema. Yra du pagrindiniai saityno programų programavimo sąsajų tipai: \textit{SOAP (Simple Object Access Protocol)} saityno paslaugos ir \textit{REST (Representational State Transfer)} saityno ištekliai.
 
 \subsubsection{Saityno programų programavimo sąsajų tipai}
 
@@ -288,15 +317,15 @@ Visas bendravimas tarp programėlių ir pagrindinio sistemos modulio vyksta per 
 
 Tai supaprastintas protokolas skirtas apsikeisti struktūrizuota informacija decentralizuotoje aplinkoje. Šis protokolas naudoja \textit{XML (EXtended Markup Language)} technologiją apibrėžti žinučių karkasą leidžiantį kurti žinutes, kuriomis galima apsikeisti su daugybe kitų protokolų. \textit{SOAP} projektuotas taip, kad būtų nepriklausomas nuo jokios programavimo kalbos ar modelio \cite{SoapDocs}.
 
-Kaip rašoma straipsnyje \cite{SoapRest} - nors modelis kurtas, kad bendravimas tarp sistemų būtų paprastesnis, tačiau naudojant \textit{XML} technologiją užklausų siuntimas gali tapti labai sudėtingas. Priklausomai nuo programavimo kalbos, gali tekti visą užklausą sukurti rankiniu būdu. Kita vertus, protokolas yra sukurtas \textit{Microsoft} korporacijos, todėl implementuojant \textit{SOAP C\#} programavimo kalboje, \textit{XML} kodo beveik netenka matyti.
+Kaip rašoma straipsnyje \cite{SoapRest} – nors modelis kurtas, kad bendravimas tarp sistemų būtų paprastesnis, tačiau naudojant \textit{XML} technologiją užklausų siuntimas gali tapti labai sudėtingas. Priklausomai nuo programavimo kalbos, gali tekti visą užklausą sukurti rankiniu būdu. Kita vertus, protokolas yra sukurtas \textit{Microsoft} korporacijos, todėl implementuojant \textit{SOAP C\#} programavimo kalboje, \textit{XML} kodo beveik netenka matyti.
 
-Viena svarbiausių \textit{SOAP} funkcijų ir privalumų - įtaisytas klaidų apdorojimas. Jei siunčiamoje užklausoje yra klaida, gautame atsakyme pateikiama informacija, kuri gali padėti greitai rasti ir ištaisyti klaidą.
+Viena svarbiausių \textit{SOAP} funkcijų ir privalumų – įtaisytas klaidų apdorojimas. Jei siunčiamoje užklausoje yra klaida, gautame atsakyme pateikiama informacija, kuri gali padėti greitai rasti ir ištaisyti klaidą.
 
 \subsubsubsection{REST}
 
 \textit{REST} metodas leidžia dar paprasčiau apsikeisti žinutėmis tarp programų. Dažnai užtenka pagal taisykles sudaryto universalaus adreso. Kuomet reikia pateikti daugiau informacijos dažnai naudojamas \textit{JSON (JavaScript Object Notation)} formatas. Šis būdas yra patogus tuo, kad galima siųsti ir gauti žinutes forma, kurią lengva sintaksiškai analizuoti programavimo kalboje su kuria yra kuriama programa \cite{SoapRest}.
 
-Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodologiją nei \textit{SOAP} atveju, taip pat yra efektyvesnis veikimas (galima siųsti mažesnes žinutes) bei ištekliai yra prieinamesni, nereikalingos papildomos programinės priemonės naudojimui. Dėl šių priežasčių tai yra tinkamesnis variantas sistemos saityno programų programavimo sąsajai sukurti.
+Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodą nei \textit{SOAP} atveju, taip pat yra efektyvesnis veikimas (galima siųsti mažesnes žinutes) bei ištekliai yra prieinamesni, nereikalingos papildomos programinės priemonės naudojimui. Dėl šių priežasčių tai yra tinkamesnis variantas sistemos saityno programų programavimo sąsajai sukurti.
 
 \subsubsection{Saugumas}
 
@@ -304,15 +333,15 @@ Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmen
 
 \subsubsubsection{Prieigos taškų apsauga}
 
-Tai yra išorinės apsaugos sluoksnis - suteikti priėjimą prie saityno programų programavimo sąsajos prieigos taškų tik šios sistemos komponentams. Dažnai šiam tikslui naudojami programų programavimo sąsajos raktas (angl. \textit{API key}).
+Tai yra išorinės apsaugos sluoksnis – suteikti priėjimą prie saityno programų programavimo sąsajos prieigos taškų tik šios sistemos komponentams. Dažnai šiam tikslui naudojami programų programavimo sąsajos raktas (angl. \textit{API key}).
 
 Sistemos komponentui, kuriam norime suteikti prieigą sugeneruojame unikalų raktą. Norint užtikrinti unikalumą galima pasinaudoti universaliai unikalaus identifikatoriaus kūrimo standartu (angl. \textit{universally unique identifier, UUID}) RFC 4122 aprašytu \cite{uuidRef}. Kadangi sistemos komponentai į saityno programų programavimo sąsają kreipsis \textit{HTTP} protokolu, įgyvendinant tokią apsaugą yra priimta šį raktą dėti į užklausos \textit{Authentication} antraštę. Raktas tikrinamas kiekvienos užklausos metu todėl yra kreipiamasi į sistemos duomenų bazę.
 
 \subsubsubsection{Sistemos duomenų apsauga}
 
-Kuomet pasirūpinta, kad prieigos taškai yra prieinami tik šios sistemos komponentams, dar svarbu užtikrinti, kad skirtingos naudotojų grupės (mūsų atveju - dėstytojai ir studentai) galėtų pasiekti tik jiems skirtus išteklius ir atvirkščiai - negalėtų pasiekti išteklių, kurie yra neskirti tai naudotojų grupei.
+Kuomet pasirūpinta, kad prieigos taškai yra prieinami tik šios sistemos komponentams, dar svarbu užtikrinti, kad skirtingos naudotojų grupės (mūsų atveju – dėstytojai ir studentai) galėtų pasiekti tik jiems skirtus išteklius ir atvirkščiai – negalėtų pasiekti išteklių, kurie yra neskirti tai naudotojų grupei.
 
-Naujas būdas tokioms užduotims spręsti - \textit{JSON Web Token (JWT)}  apibrėžtas RFC 7519 standartu \cite{jwtRef}. Tai yra savarankiškas ir kompaktiškas būdas perduoti informaciją tarp sistemos komponentų. Dėl nedidelio naudingos apkrovos (angl. \textit{payload}) dydžio, ją galima perduoti tiesiog universaliu adresu ar įdėti į \textit{HTTP} užklausos antraštę.
+Naujas būdas tokioms užduotims spręsti – \textit{JSON Web Token (JWT)}  apibrėžtas RFC 7519 standartu \cite{jwtRef}. Tai yra savarankiškas ir kompaktiškas būdas perduoti informaciją tarp sistemos komponentų. Dėl nedidelio naudingos apkrovos (angl. \textit{payload}) dydžio, ją galima perduoti tiesiog universaliu adresu ar įdėti į \textit{HTTP} užklausos antraštę.
 
 \textit{JWT} susideda iš trijų dalių: antraštės, naudingos apkrovos bei parašo. Antraštėje įprastai nurodomas prieigos rakto tipas bei maišymo (angl. \textit{hashing}) algoritmas. Naudingą apkrovą sudaro informacija apie naudotoją: asmeniniai duomenys, naudotojų grupė ir pan. Paraše yra \textit{HMAC SHA256} arba \textit{RSA} algoritmu užšifruojama maišos reikšmė, kuri susideda iš \textit{Base64} būdu užkoduotos antraštės ir naudingos apkrovos.
 
@@ -320,19 +349,19 @@ Naudojant \textit{JWT} nebereikia kiekvienos užklausos metu kreiptis į duomen�
 
 \subsection{Administravimo aplinka}
 
-Sistemai taip pat reikalinga administravimo aplinka, kurioje galima būtų valdyti naudotojus, įrenginius ar suteikti prieigą naujiems sistemos komponentams. Kaip jau minėta \ref{webApi} poskyryje - visi sistemos komponentai gali prieiti prie duomenų ir juos valdyti tik per saityno programų programavimo sąsają. Administravimo modulis ne išimtis. Taip pat svarbu, kad administravimo aplinka būtų pasiekiama iš įvairių įrenginių. Kaip jau \ref{webApp} poskyryje buvo apžvelgta, jei mums nereikia prieigos prie įrenginio funkcijų, galime kurti saityno programą.
+Sistemai taip pat reikalinga administravimo aplinka, kurioje galima būtų valdyti naudotojus, įrenginius ar suteikti prieigą naujiems sistemos komponentams. Kaip jau minėta \ref{webApi} poskyryje – visi sistemos komponentai gali prieiti prie duomenų ir juos valdyti tik per saityno programų programavimo sąsają. Administravimo modulis ne išimtis. Taip pat svarbu, kad administravimo aplinka būtų pasiekiama iš įvairių įrenginių. Kaip jau \ref{webApp} poskyryje buvo apžvelgta, jei mums nereikia prieigos prie įrenginio funkcijų, galime kurti saityno programą.
 
-Sparčiai populiarėjantis saityno programų kūrimo būdas yra vieno puslapio programa (angl. \textit{Single Page Application, SPA}). Tai kūrimo metodas, kuomet visas turinys sutalpinamas viename saityno lape. Reikalinga informacija, kodas yra užkraunamas viena užklausa arba dinamiškai, kai to reikia. Tai pagerina naudotojo patirtį, naudojimas yra vientisesnis, nes nereikia perkrauti naršyklės. Taip pat vieno puslapio programa tinka mūsų atveju, nes yra sukurti karkasai labai palengvinantys integravimą su saityno programų programavimo sąsaja \cite{spa}.
+Sparčiai populiarėjantis saityno programų kūrimo būdas yra vieno puslapio programa (angl. \textit{Single Page Application, SPA}). Tai kūrimo metodas, kuomet visas turinys sutalpinamas viename saityno puslapyje. Reikalinga informacija, kodas yra užkraunamas viena užklausa arba dinamiškai, kai to reikia. Tai pagerina naudotojo patirtį, naudojimas yra vientisesnis, nes nereikia perkrauti naršyklės. Taip pat vieno puslapio programa tinka mūsų atveju, nes yra sukurti karkasai labai palengvinantys integravimą su saityno programų programavimo sąsaja \cite{spa}.
 
 Atsižvelgiant į tai, kad administravimo moduliu nebus naudojamąsi kasdien, galima kurti klasikinę saityno programą. Šiuo būdu modulis bus sukurtas greičiau. Kadangi sistemos saityno programų programavimo sąsajai kurti naudojame plačiai naudojamą \textit{REST} metodą, nepriklausomai nuo pasirinktos technologijos ar karkaso administravimo modulio įgyvendinimui, yra sukurtas pagalbinis įrankis užklausų siuntimui bei apdorojimui.
 
-\subsubsection{Naudojimo scenarijai}
+\subsubsection{Administravimo aplinkos naudojimo scenarijai}
 
 \subsubsubsection{Naudotojo sukūrimas, redagavimas ir ištrynimas}
 
-Galimybė sukurti sistemos naudotojus. Sistemoje turime du tipus naudotojų - naudotojas, kaip sistemos komponentas (programėlė, administravimo aplinka) ir naudotojas, kaip asmuo. Kuriant naudotoją, kaip sistemos komponentą, būtina nurodyti arba sugeneruoti priegos raktą, kuris bus naudojamas jungiantis prie saityno programų programavimo sąsajos. Naudotojai, kaip asmenys, skirstomi į dvi grupes: studentai ir dėstytojai. Pagal šias grupes bus suteikiamos teisės sistemos išteklius. Taip pat sistemoje turi būti galimybė sukurtus naudotojus redaguoti.
+Galimybė sukurti sistemos naudotojus. Sistemoje turime dviejų tipų agentus – sistemos komponentus (programėlė, administravimo aplinka) ir naudotojus (studentai, dėstytojai). Kuriant naudotoją, kaip sistemos komponentą, būtina nurodyti arba sugeneruoti priegos raktą, kuris bus naudojamas jungiantis prie saityno programų programavimo sąsajos. Naudotojai, kaip asmenys, skirstomi į dvi grupes: studentai ir dėstytojai. Pagal šias grupes bus suteikiamos teisės sistemos išteklius. Taip pat sistemoje turi būti galimybė sukurtus naudotojus redaguoti.
 
-Sistema turi saugoti istoriją, todėl turi būti implementuotas \textit{Soft Delete} duomenų trynimo metodas. Tai trynimo būdas, kuomet vietoj to, kad būtų fiziškai pašalinamas įrašas iš duomenų bazės, yra uždedamas poyžmis, kad tas įrašas yra panaikintas ir nurodoma panaikinimo data. Šiuo metodu trinami įrašai išlaiko ryšius su kitomis esybėmis ir tuo pačiu išlaikome istorinius duomenis.
+Sistema turi saugoti istoriją, todėl turi būti realizuotas \textit{Soft Delete} duomenų trynimo metodas. Tai trynimo būdas, kuomet vietoj to, kad būtų fiziškai pašalinamas įrašas iš duomenų bazės, yra uždedamas poyžmis, kad tas įrašas yra panaikintas ir nurodoma panaikinimo data. Šiuo metodu trinami įrašai išlaiko ryšius su kitomis esybėmis ir tuo pačiu išlaikome istorinius duomenis.
 
 \subsubsubsection{Studentų grupės sukūrimas, redagavimas ir ištrynimas}
 
@@ -340,17 +369,17 @@ Kuriant studentų grupes turi būti galimybė iškart priskirti studentus į gru
 
 \subsubsubsection{Paskaitos sukūrimas, redagavimas ir ištrynimas}
 
-Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką - dieną, valandą, minutę, taip pat priskirti grupes ar grupę, kuriai vedama paskaita. Pagal priskirtas grupes paskaitai bus žymimas lankomumas. Jei studentas nepriklauso grupei, į kurios paskaitą atėjo - jo lankomumas nėra pažymimas. Paskaitos trynimui taip pat taikomas \textit{Soft Delete} metodas.
+Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – dieną, valandą, minutę, taip pat priskirti grupes ar grupę, kuriai vedama paskaita. Pagal priskirtas grupes paskaitai bus žymimas lankomumas. Jei studentas nepriklauso grupei, į kurios paskaitą atėjo – jo lankomumas nėra pažymimas. Paskaitos trynimui taip pat taikomas \textit{Soft Delete} metodas.
 
 \sectionnonum{Rezultatai ir išvados}
 
 Šio darbo metu pasiekti šie rezultatai:
 
 \begin{itemize}
-	\item Sukurtas automatizuotas studentų lankomumo žymėjimo modelis paremtas \textit{Bluetooth} ryšio technologija.
-	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys.
-	\item Sukurtas sistemos diegimo vaizdas, kuriame pavaizduota sistemos komponentų išdėstymas ir jų komunikacijos būdai.
-	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai.
+	\item Sukurtas koncepcinis automatizuoto lankomumo žymėjimo naudojimo scenarijus, pagrįstas \textit{Bluetooth} ryšio technologija
+	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys
+	\item Suprojektuotas komponentų išsidėstymas sistemoje
+	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai
 \end{itemize}
 
 Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas, nereikalaujantis specialios įrangos identifikuojant studentus yra pasitelkiant \textit{Bluetooth} ryšio technologiją. Šis būdas pasirinktas, atsižvelgiant į tai, jog didžioji dalis studentų turi įrenginius su įdiegta \textit{Bluetooth} ryšio technologija.
@@ -363,7 +392,7 @@ Aptariant sistemos komponentų komunikavimo būdus pastebėta, jog tinkamas būd
 
 \begin{itemize}
 	\item Sukurti duomenų apsikeitimo sąsają su universiteto informacine sistema. Sąsajos pagalba galima būtų importuoti duomenis apie studentus, kuriant naudotojus nereikėtų informacijos suvedinėti rankomis.
-	\item Reikėtų aptarti studentų aktyvaus dalyvavimo užsiėmimuose skatinimo modelį ir modulio įgyvendinimo galimybes. Modulio tikslas - skatinti studentų dalyvavimą apdovanojant sistemoje už kiekvieną veiksmą.
+	\item Pritaikyti žaidimizavimo skatinimo modelį sistemoje, skatinantį studentus aktyviai dalyvauti užsiėmime. Modulio tikslas – skatinti studentų dalyvavimą apdovanojant sistemoje už kiekvieną veiksmą.
 	\item Apžvelgti galimybę įgyvendinti studentų darbų recenzavimo užsiėmimų metu modulį sistemoje. Studentų darbus, šio modulio pagalba, būtų lengviau sekti, teikti pastabas ir įvertinti. 
 \end{itemize}
 
