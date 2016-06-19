@@ -331,7 +331,7 @@ Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodą nei 
 
 Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmenys, kuriems nėra suteika teisė naudotis saityno programų programavimo sąsaja. Sagumas šiame modulyje įgyvendinamas dviem lygiais: sąsajos prieigos taškų apsauga ir sistemos duomenų apsauga.
 
-\subsubsubsection{Prieigos taškų apsauga}
+\subsubsubsection{Prieigos taškų apsauga} \label{apiKeySecurity}
 
 Tai yra išorinės apsaugos sluoksnis – suteikti priėjimą prie saityno programų programavimo sąsajos prieigos taškų tik šios sistemos komponentams. Dažnai šiam tikslui naudojami programų programavimo sąsajos raktas (angl. \textit{API key}).
 
@@ -341,11 +341,13 @@ Sistemos komponentui, kuriam norime suteikti prieigą sugeneruojame unikalų rak
 
 Kuomet pasirūpinta, kad prieigos taškai yra prieinami tik šios sistemos komponentams, dar svarbu užtikrinti, kad skirtingos naudotojų grupės (mūsų atveju – dėstytojai ir studentai) galėtų pasiekti tik jiems skirtus išteklius ir atvirkščiai – negalėtų pasiekti išteklių, kurie yra neskirti tai naudotojų grupei.
 
+Vienas iš būdų prisijungimo duomenis siųsti užklausos antraštėjė, panašiai kaip aprašyta \ref{apiKeySecurity} poskyryje. Saityno programų programavimo sąsaja gavusi užklausą kreipiasi į duomenų bazę, kad patikrintų, ar toks naudotojas egzistuoja. Tai kartojama kiekvienos užklausos metu.
+
 Naujas būdas tokioms užduotims spręsti – \textit{JSON Web Token (JWT)}  apibrėžtas RFC 7519 standartu \cite{jwtRef}. Tai yra savarankiškas ir kompaktiškas būdas perduoti informaciją tarp sistemos komponentų. Dėl nedidelio naudingos apkrovos (angl. \textit{payload}) dydžio, ją galima perduoti tiesiog universaliu adresu ar įdėti į \textit{HTTP} užklausos antraštę.
 
 \textit{JWT} susideda iš trijų dalių: antraštės, naudingos apkrovos bei parašo. Antraštėje įprastai nurodomas prieigos rakto tipas bei maišymo (angl. \textit{hashing}) algoritmas. Naudingą apkrovą sudaro informacija apie naudotoją: asmeniniai duomenys, naudotojų grupė ir pan. Paraše yra \textit{HMAC SHA256} arba \textit{RSA} algoritmu užšifruojama maišos reikšmė, kuri susideda iš \textit{Base64} būdu užkoduotos antraštės ir naudingos apkrovos.
 
-Naudojant \textit{JWT} nebereikia kiekvienos užklausos metu kreiptis į duomenų bazę, todėl atsakymas yra išsiunčiamas greičiau. Taip pat yra taupomi serverio resursai. 
+Naudojant \textit{JWT}, priešingai nei pridedant tik prisijungimo duomenis į užklausos antraštę, nebereikia gavus kiekvieną užklausą kreiptis į duomenų bazę patikrinti, ar toks naudotojas egzistuoja, todėl atsakymas yra išsiunčiamas greičiau. Taip pat yra taupomi serverio resursai. 
 
 \subsection{Administravimo aplinka}
 
@@ -382,11 +384,11 @@ Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – di
 	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai
 \end{itemize}
 
-Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas, nereikalaujantis specialios įrangos identifikuojant studentus yra pasitelkiant \textit{Bluetooth} ryšio technologiją. Šis būdas pasirinktas, atsižvelgiant į tai, jog didžioji dalis studentų turi įrenginius su įdiegta \textit{Bluetooth} ryšio technologija.
+Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas identifikuoti studentus yra pasitelkiant studentų išmaniuosius telefonus su \textit{Bluetooth} ryšio technologija. Įgyvendinant šį būdą nereikia įrengti specialios įrangos auditorijose. Taip pat toks identifikavimas yra greitesnis nei naudojant LSP – nesusidaro eilės prie skaitytuvų.
 
-Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus pastebėta, jog sava programėlė yra tinkamas būdas įgyvendinimui. Šis būdas leidžia lengvai panaudoti išmaniojo įrenginio operacinės sistemos programų programavimo sąsają, kurios pagalba galima naudoti įrenginyje įdiegtą \textit{Bluetooth} ryšio technologiją.
+Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus nustatyta, kad savoji programėlė tenkina keliamus kriterijus, todėl yra tinkamas būdas įgyvendinimui. Šis būdas leidžia lengvai panaudoti išmaniojo įrenginio operacinės sistemos programų programavimo sąsają, kurios pagalba galima naudoti įrenginyje įdiegtą \textit{Bluetooth} ryšio technologiją.
 
-Aptariant sistemos komponentų komunikavimo būdus pastebėta, jog tinkamas būdas vykdyti komunikavimą tarp komponentų yra per apibrėžtas saityno programų programavimo sąsają. Taip pat išskirtas \textit{REST} sąsajos kūrimo metodas kaip tinkamas kuriamai sistemai.
+Aptariant sistemos komponentų komunikavimo būdus nustatyta, kad tinkamas būdas vykdyti komunikavimą tarp komponentų yra per apibrėžtą saityno programų programavimo sąsają. Taip pat išskirtas \textit{REST} sąsajos kūrimo metodas kaip tinkamas kuriamai sistemai. Šiuo metodu sukurta saityno programų programavimo sąsaja leidžia siųsti ir gauti mažos apimties užklausas, tuo pačiu – greičiau apdorojamos užklausos.
 
 \sectionnonum{Darbo plėtojimo galimybės}
 

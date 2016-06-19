@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  18 JUN 2016 15:01
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.5.8)  19 JUN 2016 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,7 +1187,7 @@ File: img/kursinio_deployment.png Graphic file (type QTm)
 ] [18
 
 ]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 399
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 401
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmtt.fd
@@ -1201,10 +1201,10 @@ Package logreq Info: Writing requests to 'kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24912 strings out of 493706
- 476438 string characters out of 6145770
- 899566 words of memory out of 5000000
- 27937 multiletter control sequences out of 15000+600000
+ 24913 strings out of 493706
+ 476454 string characters out of 6145770
+ 899581 words of memory out of 5000000
+ 27938 multiletter control sequences out of 15000+600000
  16614 words of font info for 86 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  67i,11n,96p,10508b,3652s stack positions out of 5000i,500n,10000p,200000b,80000s
