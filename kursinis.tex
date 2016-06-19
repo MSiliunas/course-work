@@ -18,8 +18,8 @@
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
 \papertype{Kursinis darbas}
-\title{Lankomumo žymėjimas, panaudojant studentų išmaniuosius telefonus}
-\titleineng{Attendance marking with student smartphones}
+\title{Užsiėmimų lankomumo žymėjimas, panaudojant studentų išmaniuosius telefonus}
+\titleineng{Attendance marking in lectures using students' smartphones}
 \status{3 kurso 2 grupės studentas}
 \author{Marijus Siliūnas}
 % \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
@@ -43,7 +43,7 @@ Artimojo ryšio technologijų panaudojimas akivaizdinėse studijose.
 
 \subsectionnonum{Temos aktualumas}
 
-Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą, nes nėra bendros sistemos universitete.  Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai, vedamas lankomumo žurnalas.
+Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė – gali būti pažymėtas ne tas studentas ir pan. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą. Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai, vedamas lankomumo žurnalas.
 
 \subsectionnonum{Darbo tikslas}
 
@@ -99,7 +99,7 @@ Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas ident
 	\item Greitesnis identifikavimas, nesusidaro eilės prie skaitytuvų
 \end{itemize}
 
-Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Jei LSP studentas pamiršo pasiimti į užsiėmimą - galime identifikuoti su studento išmaniuoju telefonu.
+Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Tokiu atveju turėtų būti įrengti \textit{NFC} technologijos skaitytuvai.
 
 \subsection{Sistemos naudojimo vizija}
 
@@ -110,7 +110,7 @@ Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Je
 	\label{img:componentDiagram}
 \end{figure}
 
-Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai – studento ir dėstytojo telefonai, serveris bei naudotojo kompiuteris. Pažymėtina tai, kad serveris savyje turi du komponentus – saityno programų programavimo sąsają ir administravimo aplinką.
+Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai – studento ir dėstytojo telefonai, saityno programų programavimo sąsają ir administravimo aplinką.
 
 \subsection{Mobilioji programėlė studentams} \label{StudentApp}
 Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
