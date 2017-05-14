@@ -17,10 +17,10 @@
 \university{Vilniaus universitetas}
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
-\papertype{Kursinis darbas}
+\papertype{Bakalaurinis darbas}
 \title{Užsiėmimų lankomumo žymėjimas, panaudojant studentų išmaniuosius telefonus}
 \titleineng{Lecture attendance marking using students' smartphones}
-\status{3 kurso 2 grupės studentas}
+\status{4 kurso 2 grupės studentas}
 \author{Marijus Siliūnas}
 % \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
 \supervisor{Dr. Kristina Lapin}
@@ -82,7 +82,7 @@ Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima vis
 Automatizavus lankomumo žymėjimo procesą, pasitelkiant vieną iš pateiktų priemonių, būtų supaprastinamas dėstytojų darbas bei taupomas užsiėmimo laikas. 
 
 \subsection{Lietuvos studento pažymėjimas}
-Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento įdentifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
+Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento identifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
 
 Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Pagrindinis trūkumas, kad universiteto auditorijose turėtų būti įdiegti \textit{NFC} skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta \textit{NFC} technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą. Taip pat studentai gali pamiršti pasiimti su savimi LSP.
 
@@ -110,7 +110,7 @@ Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Je
 	\label{img:componentDiagram}
 \end{figure}
 
-Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai – studento ir dėstytojo telefonai, saityno programų programavimo sąsają ir administravimo aplinką.
+Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai – studento ir dėstytojo telefonai, saityno programų programavimo sąsają ir administravimo aplinka.
 
 \subsection{Mobilioji programėlė studentams} \label{StudentApp}
 Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
@@ -300,6 +300,73 @@ Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės na
 
 Pagal pateiktą diegimo diagramą (\ref{img:deployment} pav.) matome, kad visą sistemą sudaro trys pagrindiniai moduliai: mobiliosios programėlės (aprašytos \ref{StudentApp} ir \ref{TeacherApp} poskyriuose), programų kūrimo sąsaja bei administravimo aplinka.
 
+\subsection{Sistemos esybės}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/Bakalauro-ER.png}
+	\caption{Sistemos esybių ryšiai}
+	\label{img:er-diagram}
+\end{figure}
+
+Kaip matome pateiktoje esybių ryšių diagramoje (\ref{img:er-diagram} pav.) sistemos numatytoms funkcijos įgyvendinti reikalingos išvardintos esybės su nurodytais laukais:
+
+\begin{itemize}
+    \item Naudotojas
+    \begin{itemize}
+        \item Identifikatorius
+        \item Pilnas vardas
+        \item Rolė (studentas, dėstytojas)
+        \item Unikalus identifikatorius
+        \item Grupių, kurioms priklauso, sąrašas
+        \item Slaptažodis
+        \item Įrenginiai
+    \end{itemize}
+    \item Grupė
+    \begin{itemize}
+        \item Identifikatorius
+        \item Pavadinimas
+        \item Tėvinė grupė
+        \item Naudotojai
+    \end{itemize}
+    \item Įrenginys
+    \begin{itemize}
+        \item Identifikatorius
+        \item \textit{MAC} adresas
+        \item Naudotojas
+    \end{itemize}
+    \item Paskaita
+    \begin{itemize}
+        \item Identifikatorius
+        \item Pavadinimas
+        \item Dėstytojas
+        \item Paskaitos laikas
+        \item Grupių sąrašas
+    \end{itemize}
+    \item Paskaitos laikas
+    \begin{itemize}
+        \item Identifikatorius
+        \item Paskaita
+        \item Savaitės diena
+        \item Paskaitos laikas
+    \end{itemize}
+    \item Dalyvavimo įrašas
+    \begin{itemize}
+        \item Identifikatorius
+        \item Naudotojas
+        \item Paskaita
+        \item Įrašo laikas
+    \end{itemize}
+\end{itemize}
+
+Naudotojas turi roles – \textit{studento} arba \textit{dėstytojo}. Jei naudotojo rolė \textit{studentas}, tai lietuvos studento pažymėjimo numeris įvedamas kaip unikalus identifikatorius, kitu atveju – įvedamas dėstytojo darbuotojo numeris.
+
+Grupės gali turėti tėvines grupes, todėl tai gali atstoti universiteto kursus ir kurso grupes. Paskaita gali būti sukurta visam kursui ar net keliems kursams arba kurso grupei ar kelioms grupėms.
+
+Paskaitai priskiriamos grupės, dėstytojas. Taip pat sukuriami ir priskiriami paskaitos laikai – nurodoma savaitės diena bei dienos laikas. Ši informacija padės automatizuoti paskaitų lankomumo sekimo aktyvavimo automatizavimą.
+
+Dalyvavimo įrašas sukuriamas, kuomet dėstytojo programėlė arba skaitytuvas aptinka studento telefoną ir atsiunčią užklausą serveriui. Priskiriamas naudotojas (su \textit{studentas} role), paskaita bei pažymima, kokiu laiku studentas atvyko į paskaitą.
+
 \subsection{Saityno programų programavimo sąsaja} \label{webApi}
 
 Visas bendravimas tarp programėlių ir pagrindinio sistemos modulio vyksta per programų programavimo sąsają. Šis sistemos modulis turi būti sukurtas taip, kad būtų galima nesunkiai įtraukti naują modulį į sistemos architektūrą. Taip pat svarbūs kriterijai renkantis sprendimą:
@@ -327,6 +394,26 @@ Viena svarbiausių \textit{SOAP} funkcijų ir privalumų – įtaisytas klaidų 
 
 Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodą nei \textit{SOAP} atveju, taip pat yra efektyvesnis veikimas (galima siųsti mažesnes žinutes) bei ištekliai yra prieinamesni, nereikalingos papildomos programinės priemonės naudojimui. Dėl šių priežasčių tai yra tinkamesnis variantas sistemos saityno programų programavimo sąsajai sukurti.
 
+\subsubsection{Programų programavimo sąsajos valdikliai}
+
+Kuriant programų programavimo sąsają vadovaujantis \textit{REST} nesunku numatyti reikalingus valdiklius kartu su prieigos taškais. Kiekviena esybė turi savo atskirą valdiklį. Šios sistemos atveju atskiras valdiklis nekuriamas paskaitos laiko esybei, nes ji neturės atskiros logikos ir yra glaudžiai susijusi su paskaitos esybe.
+
+\subsubsubsection{Naudotojo valdiklis}
+
+Naudotojo valdiklis skirtas naudotojų sukūrimui, ištrynimui, redagavimui bei skaitymui. Taip pat šis valdiklis atsakingas už naudotojo įrenginių valdymą. Naudotojai su role \textit{studentas} gali tik skaityti duomenis (ne visus) apie kitus naudotojus ir valdyti savo įrenginius.
+
+\subsubsubsection{Grupės valdiklis}
+
+Grupės valdiklis leidžia naudotojams, kurių rolė yra \textit{dėstytojas}, kurti naujas grupes, jas redaguoti ir trinti. Skaityti grupės informaciją gali ir naudotojai su role \textit{studentas}, tačiau šie naudotojai gali matyti tik tų grupių, kurioms priklauso, duomenis. \textit{Dėstytojai} gali sukurti pogrupius (priskirti grupei tėvinę grupę) ir pridėti arba išimti naudotojus iš grupės.
+
+\subsubsubsection{Paskaitos valdiklis}
+
+Šis valdiklis naudotojams su role \textit{dėstytojas} leidžia sukurti naujas paskaitas bei laikus, modifikuoti ir ištrinti. Taip pat gali priskirti grupes. \textit{Studentai} gali tik skaityti informaciją apie paskaitą – koks dėstytojas veda užsiėmimą bei kokiu laiku vyks užsiėmimas.
+
+\subsubsubsection{Dalyvavimo įrašo valdiklis}
+
+Dalyvavimo įrašo valdiklis \textit{studentams} leidžia tik gauti duomenis apie įrašus, kurie yra susiję su jais. Kurti naujus įrašus gali tik naudotojai su \textit{dėstytojo} role. Pagal sistemos dizainą dėstytojo telefonas nuskaito studento telefono \textit{MAC} adresą ir jį siunčia į programų programavimo sąsają naudojantis savo naudotoju.
+
 \subsubsection{Saugumas}
 
 Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmenys, kuriems nėra suteika teisė naudotis saityno programų programavimo sąsaja. Sagumas šiame modulyje įgyvendinamas dviem lygiais: sąsajos prieigos taškų apsauga ir sistemos duomenų apsauga.
@@ -348,6 +435,10 @@ Naujas būdas tokioms užduotims spręsti – \textit{JSON Web Token (JWT)}  api
 \textit{JWT} susideda iš trijų dalių: antraštės, naudingos apkrovos bei parašo. Antraštėje įprastai nurodomas prieigos rakto tipas bei maišymo (angl. \textit{hashing}) algoritmas. Naudingą apkrovą sudaro informacija apie naudotoją: asmeniniai duomenys, naudotojų grupė ir pan. Paraše yra \textit{HMAC SHA256} arba \textit{RSA} algoritmu užšifruojama maišos reikšmė, kuri susideda iš \textit{Base64} būdu užkoduotos antraštės ir naudingos apkrovos.
 
 Naudojant \textit{JWT}, priešingai nei pridedant tik prisijungimo duomenis į užklausos antraštę, nebereikia gavus kiekvieną užklausą kreiptis į duomenų bazę patikrinti, ar toks naudotojas egzistuoja, todėl atsakymas yra išsiunčiamas greičiau. Taip pat yra taupomi serverio resursai. 
+
+\subsection{Technologinio rinkinio sudarymas}
+
+
 
 \subsection{Administravimo aplinka}
 
