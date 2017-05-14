@@ -398,6 +398,8 @@ Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodą nei 
 
 Kuriant programų programavimo sąsają vadovaujantis \textit{REST} nesunku numatyti reikalingus valdiklius kartu su prieigos taškais. Kiekviena esybė turi savo atskirą valdiklį. Šios sistemos atveju atskiras valdiklis nekuriamas paskaitos laiko esybei, nes ji neturės atskiros logikos ir yra glaudžiai susijusi su paskaitos esybe.
 
+// TODO: DIAGRAMA kontrolerių (klasių arba šiaip entities – controllers)
+
 \subsubsubsection{Naudotojo valdiklis}
 
 Naudotojo valdiklis skirtas naudotojų sukūrimui, ištrynimui, redagavimui bei skaitymui. Taip pat šis valdiklis atsakingas už naudotojo įrenginių valdymą. Naudotojai su role \textit{studentas} gali tik skaityti duomenis (ne visus) apie kitus naudotojus ir valdyti savo įrenginius.
@@ -408,11 +410,13 @@ Grupės valdiklis leidžia naudotojams, kurių rolė yra \textit{dėstytojas}, k
 
 \subsubsubsection{Paskaitos valdiklis}
 
-Šis valdiklis naudotojams su role \textit{dėstytojas} leidžia sukurti naujas paskaitas bei laikus, modifikuoti ir ištrinti. Taip pat gali priskirti grupes. \textit{Studentai} gali tik skaityti informaciją apie paskaitą – koks dėstytojas veda užsiėmimą bei kokiu laiku vyks užsiėmimas.
+Šis valdiklis naudotojams su role \textit{dėstytojas} leidžia sukurti naujas paskaitas, jas modifikuoti ir ištrinti. Šis valdiklis dar atsakingas už paskaitos laikų kūrimą – kuriant paskaitą sukuriami ir nurodyti paskaitos vykimo laikai. \textit{Dėstytojai} taip pat gali valdyti užsiėmimui priskirtas grupes. \textit{Studentai} gali tik skaityti informaciją apie paskaitą – koks dėstytojas veda užsiėmimą bei kokiu laiku vyks užsiėmimas.
 
 \subsubsubsection{Dalyvavimo įrašo valdiklis}
 
 Dalyvavimo įrašo valdiklis \textit{studentams} leidžia tik gauti duomenis apie įrašus, kurie yra susiję su jais. Kurti naujus įrašus gali tik naudotojai su \textit{dėstytojo} role. Pagal sistemos dizainą dėstytojo telefonas nuskaito studento telefono \textit{MAC} adresą ir jį siunčia į programų programavimo sąsają naudojantis savo naudotoju.
+
+Valdiklis gavęs užklausą pirmiausia patikrina, ar užklausos gavimo metu yra vykstanti nurodyta paskaita – patikrinami ar duotojo laiko savaitės diena bei laikas sutampa su bent vienu užsiėmimo vykimo laiku. Naujas dalyvavimo įrašas sukuriamas tik tada, kai nurodyta paskaita vyksta užklausos gavimo metu ir studentas, kurio \textit{MAC} adresas yra gautas priklauso vienai iš užsiėmimui priskirtų grupių.
 
 \subsubsection{Saugumas}
 
@@ -438,7 +442,7 @@ Naudojant \textit{JWT}, priešingai nei pridedant tik prisijungimo duomenis į u
 
 \subsection{Technologinio rinkinio sudarymas}
 
-
+// TODO:
 
 \subsection{Administravimo aplinka}
 
@@ -447,6 +451,18 @@ Sistemai taip pat reikalinga administravimo aplinka, kurioje galima būtų valdy
 Sparčiai populiarėjantis saityno programų kūrimo būdas yra vieno puslapio programa (angl. \textit{Single Page Application, SPA}). Tai kūrimo metodas, kuomet visas turinys sutalpinamas viename saityno puslapyje. Reikalinga informacija, kodas yra užkraunamas viena užklausa arba dinamiškai, kai to reikia. Tai pagerina naudotojo patirtį, naudojimas yra vientisesnis, nes nereikia perkrauti naršyklės. Taip pat vieno puslapio programa tinka mūsų atveju, nes yra sukurti karkasai labai palengvinantys integravimą su saityno programų programavimo sąsaja \cite{spa}.
 
 Atsižvelgiant į tai, kad administravimo moduliu nebus naudojamąsi kasdien, galima kurti klasikinę saityno programą. Šiuo būdu modulis bus sukurtas greičiau. Kadangi sistemos saityno programų programavimo sąsajai kurti naudojame plačiai naudojamą \textit{REST} metodą, nepriklausomai nuo pasirinktos technologijos ar karkaso administravimo modulio įgyvendinimui, yra sukurtas pagalbinis įrankis užklausų siuntimui bei apdorojimui.
+
+\subsubsection{Duomenų apie studentus įkėlimas}
+
+// TODO:
+
+\subsubsubsection{Įkėlimas iš failo}
+
+// TODO:
+
+\subsubsubsection{Įkėlimas per integraciją su universiteto informacine sistema}
+
+// TODO:
 
 \subsubsection{Administravimo aplinkos naudojimo scenarijai}
 
