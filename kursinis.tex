@@ -404,6 +404,8 @@ Kuriant programų programavimo sąsają vadovaujantis \textit{REST} nesunku numa
 
 Naudotojo valdiklis skirtas naudotojų sukūrimui, ištrynimui, redagavimui bei skaitymui. Taip pat šis valdiklis atsakingas už naudotojo įrenginių valdymą. Naudotojai su role \textit{studentas} gali tik skaityti duomenis (ne visus) apie kitus naudotojus ir valdyti savo įrenginius.
 
+Dar viena svarbi šio valdiklio atsakomybė – duomenų įkėlimas. \textit{Dėstytojai} gali įkelti duomenis apie studentus ir taip iškart sukurti \textit{studentų} paketą. Duomenys gali būti įkeliami iš failo arba per integraciją su universiteto informacine sistema. Apie tai plačiau \ref{data-import} skyriuje.
+
 \subsubsubsection{Grupės valdiklis}
 
 Grupės valdiklis leidžia naudotojams, kurių rolė yra \textit{dėstytojas}, kurti naujas grupes, jas redaguoti ir trinti. Skaityti grupės informaciją gali ir naudotojai su role \textit{studentas}, tačiau šie naudotojai gali matyti tik tų grupių, kurioms priklauso, duomenis. \textit{Dėstytojai} gali sukurti pogrupius (priskirti grupei tėvinę grupę) ir pridėti arba išimti naudotojus iš grupės.
@@ -440,10 +442,6 @@ Naujas būdas tokioms užduotims spręsti – \textit{JSON Web Token (JWT)}  api
 
 Naudojant \textit{JWT}, priešingai nei pridedant tik prisijungimo duomenis į užklausos antraštę, nebereikia gavus kiekvieną užklausą kreiptis į duomenų bazę patikrinti, ar toks naudotojas egzistuoja, todėl atsakymas yra išsiunčiamas greičiau. Taip pat yra taupomi serverio resursai. 
 
-\subsection{Technologinio rinkinio sudarymas}
-
-// TODO:
-
 \subsection{Administravimo aplinka}
 
 Sistemai taip pat reikalinga administravimo aplinka, kurioje galima būtų valdyti naudotojus, įrenginius ar suteikti prieigą naujiems sistemos komponentams. Kaip jau minėta \ref{webApi} poskyryje – visi sistemos komponentai gali prieiti prie duomenų ir juos valdyti tik per saityno programų programavimo sąsają. Administravimo modulis ne išimtis. Taip pat svarbu, kad administravimo aplinka būtų pasiekiama iš įvairių įrenginių. Kaip jau \ref{webApp} poskyryje buvo apžvelgta, jei mums nereikia prieigos prie įrenginio funkcijų, galime kurti saityno programą.
@@ -452,7 +450,7 @@ Sparčiai populiarėjantis saityno programų kūrimo būdas yra vieno puslapio p
 
 Atsižvelgiant į tai, kad administravimo moduliu nebus naudojamąsi kasdien, galima kurti klasikinę saityno programą. Šiuo būdu modulis bus sukurtas greičiau. Kadangi sistemos saityno programų programavimo sąsajai kurti naudojame plačiai naudojamą \textit{REST} metodą, nepriklausomai nuo pasirinktos technologijos ar karkaso administravimo modulio įgyvendinimui, yra sukurtas pagalbinis įrankis užklausų siuntimui bei apdorojimui.
 
-\subsubsection{Duomenų apie studentus įkėlimas}
+\subsubsection{Duomenų apie studentus įkėlimas} \label{data-import}
 
 // TODO:
 
@@ -479,6 +477,14 @@ Kuriant studentų grupes turi būti galimybė iškart priskirti studentus į gru
 \subsubsubsection{Paskaitos sukūrimas, redagavimas ir ištrynimas}
 
 Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – dieną, valandą, minutę, taip pat priskirti grupes ar grupę, kuriai vedama paskaita. Pagal priskirtas grupes paskaitai bus žymimas lankomumas. Jei studentas nepriklauso grupei, į kurios paskaitą atėjo – jo lankomumas nėra pažymimas. Paskaitos trynimui taip pat taikomas \textit{Soft Delete} metodas.
+
+\subsubsection{Administravimo aplinkos naudotojo sąsaja}
+
+// TODO: Ar reikalinga / naudinga?
+
+\subsection{Technologinio rinkinio sudarymas}
+
+// TODO: Serverio stack'o parinkimas remiantis anskčiau aprašytais dalykais – reikalavimai, modulių (JWT, etc) prieinamumas, scalability; Administravimo aplinkos karkasų parinkimas (tikriausiai React).
 
 \sectionnonum{Rezultatai ir išvados}
 
