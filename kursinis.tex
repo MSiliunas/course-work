@@ -80,11 +80,9 @@ Tikslui pasiekti keliami šie uždaviniai:
 
 \subsection{Situacijos analizė}
 
-Šiuo metu studentų užsiėmimų lankomumo sekimas yra dėstytojų atsakomybė. Jie patys turi rasti sprendimą, kaip pažymėti atvykusius į paskaitą studentus. Kaip vieną iš būdų renkasi atspausdintą studentų sąrašą, kuriame pasižymi užsiėmimo vykimo dieną bei atvykusius į užsiėmimą studentus.
+Šiuo metu studentų užsiėmimų lankomumo sekimas yra dėstytojų atsakomybė. Jie patys turi rasti sprendimą, kaip pažymėti atvykusius į paskaitą studentus. Kaip vieną iš būdų renkasi atspausdintą studentų sąrašą, kuriame pasižymi užsiėmimo vykimo dieną bei atvykusius į užsiėmimą studentus. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskai-toje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė – galibūti pažymėtas ne tas studentas.
 
-Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors ji yra skirtas medžiagos pateikimui bei testų vykdymui, pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai – prašoma įvesti tik lietuvos studento pažymėjimo numerį arba vardą ir pavardę. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau neužtikrina duomenų teisingumo. Studentai gali prisijungti ir užpildyti testą būdami ne užsiėmimo vykimo vietoje.
-
-// TODO: Esamos situacijos palyginimas, kas vyksta (Esami scenarijai), problemas numeruoti, neišnaudotos galimybės numeruotos ir paskui parašom, ką pataisėm, iš ko padarėm tokias išvadas
+Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors ji yra skirtas medžiagos pateikimui bei testų vykdymui, pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai – prašoma įvesti tik lietuvos studento pažymėjimo numerį arba vardą ir pavardę. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau neužtikrina duomenų teisingumo. Studentai gali prisijungti ir užpildyti testą būdami ne užsiėmimo vykimo vietoje. Taip pat \textit{VMA} nėra patogu naudotis telefone.
 
 Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Lengviausiai prieinamos studentams priemonės yra:
 
@@ -103,13 +101,13 @@ Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas
 \subsection{Išmanusis telefonas}
 Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota Bluetooth technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento vardu ir pavarde.
 
-Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus Bluetooth ryšius galima nuskaityti visus vienu metu. Nors studentai turėtų įjungti šią technologiją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
+Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus \textit{Bluetooth} ryšiu galima nuskaityti visus vienu metu. Kaip skaitytuvo alternatyva galėtų būti dėstytojo telefonas. Sukuriama programėlė, kuri atlieka skaitytuvo funkciją. Nors studentai turėtų įjungti šią \textit{Bluetooth} funkciją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
 
 \subsection{LSP ar išmanusis telefonas?}
 Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes:
 
 \begin{itemize}
-	\item Auditorijose nereikia įrengti specialios įrangos
+	\item Auditorijose nebūtina įrengti specialios įrangos
 	\item Greitesnis identifikavimas, nesusidaro eilės prie skaitytuvų
 \end{itemize}
 
