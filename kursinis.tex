@@ -33,6 +33,10 @@
 \begin{document}
 \maketitle
 
+\sectionnonum{Santrauka}
+
+\sectionnonum{Summary}
+
 \tableofcontents
 
 \sectionnonum{Įvadas}
@@ -44,6 +48,8 @@ Artimojo ryšio technologijų panaudojimas akivaizdinėse studijose.
 \subsectionnonum{Temos aktualumas}
 
 Užsiėmimų metu yra žymimas studentų lankomumas. Šį darbą atlieka dėstytojas kiekvieno užsiėmimo metu. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė – gali būti pažymėtas ne tas studentas ir pan. Tai ypač svarbu, kuomet galutinis įvertinimas priklauso ir nuo lankomumo. Dėstytojams tai papildoma atsakomybė ir jie turi patys pasirūpinti priemone, kurioje galėtų vesti studentų lankomumo žurnalą. Reikalinga sistema, kurioje būtų suvedami dėstomi dalykai, dėstantys dėstytojai bei studentų grupės ir studentai, vedamas lankomumo žurnalas.
+
+Dar lankomumo žymėjimui kartais yra pasitelkiamas įrankis \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors jis yra skirtas medžiagos pateikimui bei testų vykdymui pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau neužtikrina duomenų teisingumo. Studentai gali prisijungti ir užpildyti testą būdami ne užsiėmimo vykimo vietoje.
 
 \subsectionnonum{Darbo tikslas}
 
@@ -71,6 +77,14 @@ Tikslui pasiekti keliami šie uždaviniai:
 \end{itemize}
 
 \section{Užsiėmime dalyvaujančių studentų identifikavimas}
+
+\subsection{Situacijos analizė}
+
+Šiuo metu studentų užsiėmimų lankomumo sekimas yra dėstytojų atsakomybė. Jie patys turi rasti sprendimą, kaip pažymėti atvykusius į paskaitą studentus. Kaip vieną iš būdų renkasi atspausdintą studentų sąrašą, kuriame pasižymi užsiėmimo vykimo dieną bei atvykusius į užsiėmimą studentus.
+
+Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors ji yra skirtas medžiagos pateikimui bei testų vykdymui, pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai – prašoma įvesti tik lietuvos studento pažymėjimo numerį arba vardą ir pavardę. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau neužtikrina duomenų teisingumo. Studentai gali prisijungti ir užpildyti testą būdami ne užsiėmimo vykimo vietoje.
+
+// TODO: Esamos situacijos palyginimas, kas vyksta (Esami scenarijai), problemas numeruoti, neišnaudotos galimybės numeruotos ir paskui parašom, ką pataisėm, iš ko padarėm tokias išvadas
 
 Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Lengviausiai prieinamos studentams priemonės yra:
 
@@ -289,6 +303,8 @@ Iš pagrindinio lango (\ref{img:scannerMainView} pav.) patenkama į paskaitos la
 
 \section{Sistemos vidinė pusė}
 
+// TODO: Diegimo instrukcija serverio
+
 Apžvelgėme, kokiu būdu ir kokiomis priemonėmis sistemos naudotojai galės naudotis sistema. Bet visa tai neveiks be pagrindinės sistemos dalies, atsakingos už duomenų saugojimą, apdorojimą ir pateikimą.
 
 \begin{figure}[H]
@@ -396,15 +412,27 @@ Naudojant \textit{REST} saityno išteklius yra lengviau įsisavinti metodą nei 
 
 \subsubsection{Programų programavimo sąsajos valdikliai}
 
-Kuriant programų programavimo sąsają vadovaujantis \textit{REST} nesunku numatyti reikalingus valdiklius kartu su prieigos taškais. Kiekviena esybė turi savo atskirą valdiklį. Šios sistemos atveju atskiras valdiklis nekuriamas paskaitos laiko esybei, nes ji neturės atskiros logikos ir yra glaudžiai susijusi su paskaitos esybe.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{img/api-class.png}
+	\caption{Programų programavimo sąsajos valdikliai}
+	\label{img:api-class-diagram}
+\end{figure}
 
-// TODO: DIAGRAMA kontrolerių (klasių arba šiaip entities – controllers)
+Kuriant programų programavimo sąsają vadovaujantis \textit{REST} metodu nesunku numatyti reikalingus valdiklius kartu su prieigos taškais. Kiekviena esybė arba jų rinkinys turi savo atskirą valdiklį. Pagal pateiktą klasių diagramą (\ref{img:api-class-diagram} pav.) matome, kad sistemos funkcionalumui įgyvendinti reikalingi keturi valdikliai:
+
+\begin{itemize}
+    \item Naudotojo valdiklis
+    \item Grupės valdiklis
+    \item Paskaitos valdiklis
+    \item Dalyvavimo įrašo valdiklis
+\end{itemize}
 
 \subsubsubsection{Naudotojo valdiklis}
 
 Naudotojo valdiklis skirtas naudotojų sukūrimui, ištrynimui, redagavimui bei skaitymui. Taip pat šis valdiklis atsakingas už naudotojo įrenginių valdymą. Naudotojai su role \textit{studentas} gali tik skaityti duomenis (ne visus) apie kitus naudotojus ir valdyti savo įrenginius.
 
-Dar viena svarbi šio valdiklio atsakomybė – duomenų įkėlimas. \textit{Dėstytojai} gali įkelti duomenis apie studentus ir taip iškart sukurti \textit{studentų} paketą. Duomenys gali būti įkeliami iš failo arba per integraciją su universiteto informacine sistema. Apie tai plačiau \ref{data-import} skyriuje.
+Dar viena svarbi šio valdiklio atsakomybė – duomenų įkėlimas. \textit{Dėstytojai} gali įkelti duomenis apie studentus ir taip iškart sukurti \textit{studentų} paketą. Duomenys gali būti įkeliami iš failo. Apie tai plačiau \ref{data-import} skyriuje.
 
 \subsubsubsection{Grupės valdiklis}
 
@@ -422,7 +450,7 @@ Valdiklis gavęs užklausą pirmiausia patikrina, ar užklausos gavimo metu yra 
 
 \subsubsection{Saugumas}
 
-Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmenys, kuriems nėra suteika teisė naudotis saityno programų programavimo sąsaja. Sagumas šiame modulyje įgyvendinamas dviem lygiais: sąsajos prieigos taškų apsauga ir sistemos duomenų apsauga.
+Kaip ir kiekvienoje sistemoje labai svarbu, kad prie išteklių neprieitų asmenys, kuriems nėra suteikta teisė naudotis saityno programų programavimo sąsaja. Sagumas šiame modulyje įgyvendinamas dviem lygiais: sąsajos prieigos taškų apsauga ir sistemos duomenų apsauga.
 
 \subsubsubsection{Prieigos taškų apsauga} \label{apiKeySecurity}
 
@@ -454,13 +482,7 @@ Atsižvelgiant į tai, kad administravimo moduliu nebus naudojamąsi kasdien, ga
 
 // TODO:
 
-\subsubsubsection{Įkėlimas iš failo}
-
-// TODO:
-
-\subsubsubsection{Įkėlimas per integraciją su universiteto informacine sistema}
-
-// TODO:
+Įkėlimas iš failo
 
 \subsubsection{Administravimo aplinkos naudojimo scenarijai}
 
@@ -485,6 +507,14 @@ Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – di
 \subsection{Technologinio rinkinio sudarymas}
 
 // TODO: Serverio stack'o parinkimas remiantis anskčiau aprašytais dalykais – reikalavimai, modulių (JWT, etc) prieinamumas, scalability; Administravimo aplinkos karkasų parinkimas (tikriausiai React).
+
+// TODO: Konkretumo įvesti. Iš kur parsisiųsti, kokias funkcijas naudoti, kokius karkasus ir t.t. Įdėti kodo fragmentų (appso, serverio irgi; labai tiks bluetooth identifikavimas). 
+
+// TODO: Kompakte turi būti kodas pateiktas. Video iki 2 min demo.
+
+// TODO: Praplėsti įvadą (2 - 4 psl). Reikalavimuose parašyta ką reikia atsakyti.
+
+// TODO: Diegimo procedūrą aprašyti, self-hosted arba centralizuota.
 
 \sectionnonum{Rezultatai ir išvados}
 
