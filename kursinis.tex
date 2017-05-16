@@ -79,11 +79,23 @@ Tikslui pasiekti keliami šie uždaviniai:
 
 \section{Užsiėmime dalyvaujančių studentų identifikavimas}
 
-\subsection{Situacijos analizė}
+\subsection{Esamų priemonių apžvalga}
 
-Šiuo metu studentų užsiėmimų lankomumo sekimas yra dėstytojų atsakomybė. Jie patys turi rasti sprendimą, kaip pažymėti atvykusius į paskaitą studentus. Kaip vieną iš būdų renkasi atspausdintą studentų sąrašą, kuriame pasižymi užsiėmimo vykimo dieną bei atvykusius į užsiėmimą studentus. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskai-toje. Taip nereikalingai užimamas paskaitos laikas bei atsiranda žmogiškos klaidos tikimybė – galibūti pažymėtas ne tas studentas.
+Šiuo metu studentų užsiėmimų lankomumo sekimas yra dėstytojų atsakomybė. Jie patys turi rasti sprendimą, kaip pažymėti atvykusius į paskaitą studentus. Kaip vieną iš būdų renkasi atspausdintą studentų sąrašą, kuriame pasižymi užsiėmimo vykimo dieną bei atvykusius į užsiėmimą studentus. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Galime išskirti kylančias problemas:
 
-Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors ji yra skirtas medžiagos pateikimui bei testų vykdymui, pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai – prašoma įvesti tik lietuvos studento pažymėjimo numerį arba vardą ir pavardę. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau neužtikrina duomenų teisingumo. Studentai gali prisijungti ir užpildyti testą būdami ne užsiėmimo vykimo vietoje. Taip pat \textit{VMA} nėra patogu naudotis telefone ir reikalauja atlikti daug nereikalingų veiksmų.
+\begin{itemize}
+    \item[P1.] Užima daug laiko
+    \item[P2.] Žmogiškos klaidos tikimybė – pažymimas ne tas studentas
+    \item[P3.] Duomenys nėra prieinami vienoje vietoje
+\end{itemize}
+
+Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors ji yra skirta medžiagos pateikimui bei testų vykdymui, pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai – prašoma įvesti tik lietuvos studento pažymėjimo numerį arba vardą ir pavardę. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau taip pat nėra geras:
+
+\begin{itemize}
+    \item[P4.] Studentai gali prisijungti ir užpildyti testą būdami bet kur
+    \item[P5.] Sistema neturi lankomumo žymėjimo funkcijos, todėl reikia ją naudoti ne pagal paskirtį
+    \item[P6.] Norint užpildyti testą studentai turi atlikti nemažai veiksmų, todėl gaištamas paskaitos laikas
+\end{itemize}
 
 Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Lengviausiai prieinamos studentams priemonės yra:
 
@@ -520,7 +532,19 @@ Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – di
 
 \subsection{Technologinio rinkinio sudarymas}
 
-// TODO: Serverio stack'o parinkimas remiantis anskčiau aprašytais dalykais – reikalavimai, modulių (JWT, etc) prieinamumas, scalability; Administravimo aplinkos karkasų parinkimas (tikriausiai React).
+Technologinį rinkinį sudarant atsižvelgiama į iškeltus reikalavimus sistemai bendrai ir atskirai sistemos komponentams.
+
+// TODO: ALTERNATYVOS
+
+Programų programavimo sąsają nuspręsta kurti naudojant \textit{JavaScript Express} žiniatinklio programų kūrimo karkasą. Šis karkasas paleidžiamas \textit{NodeJS} \textit{JavaScript} kodo vykdymo serveryje aplinkoje.
+
+Privalumas naudojant \textit{NodeJS} vykdymo aplinką tai modulių valdymas. \textit{NodeJS Package Manager (NPM)} įrankio pagalba nesunkiai galima valdyti tiek mūsų kurtus modulius, tiek trečiųjų šalių integruojamus modulius. Taip pat palengvina diegimą, nes nereikia rūpintis ar visi moduliai įdiegti bei dėl modulių versijų neatitikimo.
+
+// TODO: APRAŠYTI KOKIUS NAUDOSIU MODULIUS (NPM). JWT, MONGO, ETC
+
+Duomenims saugoti ir valdyti pasirinkta \textit{MongoDB} dokumentinė, \textit{NoSQL} tipo, duomenų bazių valdymo sistema. Ją lengva integruoti su \textit{NodeJS} aplinka, nes yra palaikomas ir nuolat atnaujinamas modulis sujungiantis duomenų bazių valdymo sistemą su kuriama sistema.
+
+Pagal turimą patirtį ir iškeltus reikalavimus administravimo aplinkai, ją nuspręsta kurti naudojant \textit{React} išorinės pusės (angl. \textit{frontend}) karkasą. Jis leidžia kurti sistemą susidedančią iš daug komponentų. Tokios architektūros privalumas – sukurtus komponentus galima panaudoti keliose vietose nedubliuojant kodo.
 
 // TODO: Konkretumo įvesti. Iš kur parsisiųsti, kokias funkcijas naudoti, kokius karkasus ir t.t. Įdėti kodo fragmentų (appso, serverio irgi; labai tiks bluetooth identifikavimas). 
 
