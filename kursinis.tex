@@ -53,7 +53,7 @@ Dar lankomumo žymėjimui kartais yra pasitelkiamas įrankis \textit{Vilniaus un
 
 \subsectionnonum{Darbo tikslas}
 
-Sukurti dalyvaujančių užsiėmime studentų identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri sudarytų pagrindą tolimesnei plėtrai. Išvystyta sistema leis gerinti studentų ir dėstytojų bendradarbiavimą akivaizdinių studijų užsiėmimų metu.
+Sukurti dalyvaujančių užsiėmime studentų identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri pagerintų lankomumo žymėjimo procesą bei sudarytų pagrindą tolimesnei plėtrai.
 
 \subsectionnonum{Uždaviniai}
 
@@ -71,7 +71,7 @@ Tikslui pasiekti keliami šie uždaviniai:
 \subsectionnonum{Siekiami rezultatai}
 
 \begin{itemize}
-	\item Sukurtas automatizuotas studentų lankomumo žymėjimo modelis.
+	\item Sukurta sistema, automatizuojanti studentų lankomumo žymėjimą.
 	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys.
 	\item Sukurtas sistemos diegimo vaizdas.
 	\item Pateikti studentų identifikavimo modulio vartotojo sąsajos eskizai.
@@ -93,11 +93,11 @@ Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus u
 
 \begin{itemize}
     \item[P4.] Studentai gali prisijungti ir užpildyti testą būdami bet kur
-    \item[P5.] Sistema neturi lankomumo žymėjimo funkcijos, todėl reikia ją naudoti ne pagal paskirtį
+    \item[P5.] Sistema neturi užsiėmimų lankomumo ataskaitų
     \item[P6.] Norint užpildyti testą studentai turi atlikti nemažai veiksmų, todėl gaištamas paskaitos laikas
 \end{itemize}
 
-Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Lengviausiai prieinamos studentams priemonės yra:
+Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Kelios lengvai prieinamos studentams priemonės yra:
 
 \begin{itemize}
 	\item Lietuvos studento pažymėjimas
@@ -109,10 +109,10 @@ Automatizavus lankomumo žymėjimo procesą, pasitelkiant vieną iš pateiktų p
 \subsection{Lietuvos studento pažymėjimas}
 Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento identifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
 
-Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Pagrindinis trūkumas, kad universiteto auditorijose turėtų būti įdiegti \textit{NFC} skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta \textit{NFC} technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas, nes pažymėti galima tik po vieną studentą. Taip pat studentai gali pamiršti pasiimti su savimi LSP.
+Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Pagrindinis trūkumas, kad universiteto auditorijose turėtų būti įdiegti \textit{NFC} skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta \textit{NFC} technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas skaitytuvas, nes pažymėti galima tik po vieną studentą. Taip pat studentai gali pamiršti pasiimti su savimi LSP.
 
 \subsection{Išmanusis telefonas}
-Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota Bluetooth technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento vardu ir pavarde.
+Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota \textit{Bluetooth} technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento vardu ir pavarde.
 
 Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus \textit{Bluetooth} ryšiu galima nuskaityti visus vienu metu. Kaip skaitytuvo alternatyva galėtų būti dėstytojo telefonas. Sukuriama programėlė, kuri atlieka skaitytuvo funkciją. Nors studentai turėtų įjungti šią \textit{Bluetooth} funkciją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
 
@@ -126,7 +126,9 @@ Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas ident
 
 Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Tokiu atveju turėtų būti įrengti \textit{NFC} technologijos skaitytuvai.
 
-\subsection{Sistemos naudojimo vizija}
+// TODO: kažkur darbe jei išeina reiktų pastraipos apie šitą išvadą: Taip pat toks identifikavimas yra greitesnis nei naudojant LSP ž nesusidaro eilės prie skaitytuvų
+
+\subsection{Numatomi sistemos komponentai}
 
 \begin{figure}[H]
 	\centering
@@ -138,7 +140,8 @@ Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Je
 Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentDiagram} pav.) matome, kad sistemą sudaro keturi pagrindiniai komponentai – studento ir dėstytojo telefonai, saityno programų programavimo sąsają ir administravimo aplinka.
 
 \section{Mobilioji programėlė studentams} \label{StudentApp}
-Toks proceso įgyvendinimas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
+
+Užsiėmimų lankomumo žymėjimo automatizavimo procesas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
 
 Kiekvienas įrenginys turintis integruotą Bluetooth technologiją turi ir unikalų MAC (angl. \textit{Media Access Control}) adresą, dar vadinamą fiziniu adresu. Kadangi šis adresas kievienam įrenginiui yra unikalus, tai juo galime naudotis norint identifikuoti studentus. Norint susieti studento mobilųjį telefoną su jo paskyra sistemoje studentas įsidiegia programėlę. Programėlėje studentas prisijungia prie savo paskyros ir susieja mobilųjį telefoną. Programėlė nuskaito telefono Bluetooth MAC adresą ir kartu su studento identifikavimo numeriu (gaunamas prisijungus prie paskyros) siunčia į sistemą. Sistema gautą MAC adresą priskiria tam studentui. Programėlės pagrindinė funkcija yra susieti telefoną su paskyra. Tuo pačiu galima pateikti studento tvarkaraštį, lankomumo ataskaitą.
 
@@ -194,7 +197,7 @@ Mūsų kuriamos sistemos atveju svarbiausia gera programėlės integracija su į
 	\label{appCompare}
 \end{table}
 
-Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti įrenginio ir jo operacinės sistemos teikiamas funkcijas, pasiekiamas per aplikacijų programavimo sąsaja. Todėl tinkamiausias būdas kurti programėlę sistemai yra naudojant \textit{Xamarin} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
+Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti įrenginio ir jo operacinės sistemos teikiamas funkcijas, pasiekiamas per aplikacijų programavimo sąsaja. Todėl vienas iš galimų būdų kurti programėlę sistemai yra naudojant \textit{Xamarin} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
 
 \subsection{Savosios programėlės detalieji naudojimo scenarijai}
 
@@ -556,6 +559,8 @@ Pagal turimą patirtį ir iškeltus reikalavimus administravimo aplinkai, ją nu
 
 \sectionnonum{Rezultatai ir išvados}
 
+// TODO: Kurias problemas išsprendžia parašyti
+
 Šio darbo metu pasiekti šie rezultatai:
 
 \begin{itemize}
@@ -565,7 +570,9 @@ Pagal turimą patirtį ir iškeltus reikalavimus administravimo aplinkai, ją nu
 	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai
 \end{itemize}
 
-Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas identifikuoti studentus yra pasitelkiant studentų išmaniuosius telefonus su \textit{Bluetooth} ryšio technologija. Įgyvendinant šį būdą nereikia įrengti specialios įrangos auditorijose. Taip pat toks identifikavimas yra greitesnis nei naudojant LSP – nesusidaro eilės prie skaitytuvų.
+Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas identifikuoti studentus yra pasitelkiant studentų išmaniuosius telefonus su \textit{Bluetooth} ryšio technologija. Įgyvendinant šį būdą nereikia įrengti specialios įrangos auditorijose. 
+
+// TODO: REPHRASE: Taip pat toks identifikavimas yra greitesnis nei naudojant LSP – nesusidaro eilės prie skaitytuvų.
 
 Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus nustatyta, kad savoji programėlė tenkina keliamus kriterijus, todėl yra tinkamas būdas įgyvendinimui. Šis būdas leidžia lengvai panaudoti išmaniojo įrenginio operacinės sistemos programų programavimo sąsają, kurios pagalba galima naudoti įrenginyje įdiegtą \textit{Bluetooth} ryšio technologiją.
 
