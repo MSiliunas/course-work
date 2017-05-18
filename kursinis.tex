@@ -79,7 +79,9 @@ Tikslui pasiekti keliami šie uždaviniai:
 
 \section{Užsiėmime dalyvaujančių studentų identifikavimas}
 
-\subsection{Esamų priemonių apžvalga}
+\subsection{Esamų identifikavimo būdų apžvalga}
+
+\subsubsection{Identifikavimas pasižymint popieriuje}
 
 Šiuo metu studentų užsiėmimų lankomumo sekimas yra dėstytojų atsakomybė. Jie patys turi rasti sprendimą, kaip pažymėti atvykusius į paskaitą studentus. Kaip vieną iš būdų renkasi atspausdintą studentų sąrašą, kuriame pasižymi užsiėmimo vykimo dieną bei atvykusius į užsiėmimą studentus. Studentai kviečiami vardu ir atsiliepę yra pažymimi kaip dalyvaujantys paskaitoje. Galime išskirti kylančias problemas:
 
@@ -89,6 +91,10 @@ Tikslui pasiekti keliami šie uždaviniai:
     \item[P3.] Duomenys nėra prieinami vienoje vietoje
 \end{itemize}
 
+\subsubsection{Identifikavimas per \textit{VMA}}
+
+// TODO: Paskaičiuoti kiek veiksmų užtrunka, kad galima būtų palyginti
+
 Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus universiteto virtuali mokymosi aplinka (VMA)}. Nors ji yra skirta medžiagos pateikimui bei testų vykdymui, pasitaiko, kad sužymėti studentų lankomumui sukuriami tušti testai – prašoma įvesti tik lietuvos studento pažymėjimo numerį arba vardą ir pavardę. Toks sprendimas kaip ir įvykdo keliamą tikslą – sekti studentų lankomumą, tačiau taip pat nėra geras:
 
 \begin{itemize}
@@ -96,6 +102,8 @@ Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus u
     \item[P5.] Sistema neturi užsiėmimų lankomumo ataskaitų
     \item[P6.] Norint užpildyti testą studentai turi atlikti nemažai veiksmų, todėl gaištamas paskaitos laikas
 \end{itemize}
+
+\subsection{Neišnaudotos galimybės}
 
 Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima visiškai automatizuoti. Norint automatizuoti lankomumo žymėjimo procesą, pirmiausia reikia pasirinkti priemonę, kurią galime unikaliai identifikuoti ir susieti su studento vardu ir pavarde, esančias dėstytojo sąraše. Kelios lengvai prieinamos studentams priemonės yra:
 
@@ -106,17 +114,24 @@ Lankomumo žymėjimas yra pasikartojantis ir toks pat procesas, kurį galima vis
 
 Automatizavus lankomumo žymėjimo procesą, pasitelkiant vieną iš pateiktų priemonių, būtų supaprastinamas dėstytojų darbas bei taupomas užsiėmimo laikas. 
 
-\subsection{Lietuvos studento pažymėjimas}
+\subsubsection{Lietuvos studento pažymėjimas}
 Vienas iš būdų yra Lietuvos studento pažymėjimo (toliau - LSP) panaudojimas studento identifikavimui. Naujo pavyzdžio LSP turi integruotą NFC (angl. \textit{Near Field Communication}) technologiją.  Jos pagalba galime nuskaityti LSP unikalų identifikavimo numerį ir pagal jį identifikuoti studentą. Identifikavus studentą sistemoje pažymimas jo dalyvavimas paskaitoje.
 
 Visi studentai pradėję studijuoti įsigyja LSP todėl studentams toks procesas nesukeltų jokių nepatogumų. Pagrindinis trūkumas, kad universiteto auditorijose turėtų būti įdiegti \textit{NFC} skaitytuvai arba dėstytojai turi turėti išmaniuosius telefonus su įdiegta \textit{NFC} technologija. Norint efektyviai atlikti žymėjimą turėtų būti įrengtas ne vienas skaitytuvas, nes pažymėti galima tik po vieną studentą. Taip pat studentai gali pamiršti pasiimti su savimi LSP.
 
-\subsection{Išmanusis telefonas}
+\subsubsection{Išmanusis telefonas}
 Kitas būdas galėtų būti panaudojant Bluetooth technologiją. Pati technologija nėra nauja, tačiau vis tobulinama. Beveik visi šiuo metu naudojami mobilieji telefonai turi integruotą šią technologiją. Mobiliuosius telefonus turi visi studentai. Kiekvienas įrenginys, kuriame yra integruota \textit{Bluetooth} technologija, turi savo unikalų identifikavimo numerį, kurį galima nuskaityti. Kaip ir prieš tai pateiktu būdu - šį numerį reikėtų susieti su studento vardu ir pavarde.
 
 Universiteto auditorijose taip pat turėtų būti įdiegiami skaitytuvai, kurie nuskaitytų studentų mobiliųjų telefonų unikalius identifikacinius numerius. Tokio skaitytuvo tereikėtų vieno auditorijoje, nes mobiliųjų telefonų siunčiamus signalus \textit{Bluetooth} ryšiu galima nuskaityti visus vienu metu. Kaip skaitytuvo alternatyva galėtų būti dėstytojo telefonas. Sukuriama programėlė, kuri atlieka skaitytuvo funkciją. Nors studentai turėtų įjungti šią \textit{Bluetooth} funkciją telefone, pats procesas vyktų žymiai efektyviau ir paprasčiau.
 
-\subsection{LSP ar išmanusis telefonas?}
+// TODO: Mokslinis paminėjimas iš straipsnio m-health
+
+\subsection{Identifikavimo būdo pasirinkimas}
+
+Kuo mažesni fiziniai pakeitimai
+Studento būvimo vieta
+
+
 Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas identifikuoti studentus yra pasitelkus Bluetooth technologiją, nes:
 
 \begin{itemize}
@@ -127,6 +142,22 @@ Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas ident
 Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Tokiu atveju turėtų būti įrengti \textit{NFC} technologijos skaitytuvai.
 
 // TODO: kažkur darbe jei išeina reiktų pastraipos apie šitą išvadą: Taip pat toks identifikavimas yra greitesnis nei naudojant LSP ž nesusidaro eilės prie skaitytuvų
+
+\subsection{Būsimos sistemos konceptinis naudojimo scenarijus}
+
+\subsubsection{Dėstytojo}
+
+\subsubsection{Studento}
+
+\subsection{Naudotojų siekiai}
+
+Dėstytojas – pradėti žymėjimą, matyti ataskaitas, negaišti laiko
+
+Studentas – pasižymėti, matyti ar pasižymėjo, matyti retrospektyvą
+
+Panaudojamumas – Aiškumas ir našumas
+
+// TODO: Problemos / siekiai matrica, kad va išsprendžiam problemas (lyginti Popierinis, VMA, mano)
 
 \subsection{Numatomi sistemos komponentai}
 
@@ -531,7 +562,7 @@ Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – di
 
 \subsubsection{Administravimo aplinkos naudotojo sąsaja}
 
-// TODO: Ar reikalinga / naudinga?
+// TODO: Ar reikalinga / naudinga? Žr. priedus.
 
 \subsection{Technologinio rinkinio sudarymas}
 
