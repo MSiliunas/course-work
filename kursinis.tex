@@ -201,7 +201,7 @@ Pagal pateiktą \textit{UML} sistemos komponentų diagramą (\ref{img:componentD
 
 Užsiėmimų lankomumo žymėjimo automatizavimo procesas prasideda nuo programėlės sukūrimo išmaniesiems telefonams. Taip pat svarbu, kad programėlė ne tik padėtų identifikuoti studentą, tačiau būtų kuo paprastesnė (reikėtų atlikti kuo mažiau veiksmų) naudotojui.
 
-Kiekvienas įrenginys turintis integruotą Bluetooth technologiją turi ir unikalų MAC (angl. \textit{Media Access Control}) adresą, dar vadinamą fiziniu adresu. Kadangi šis adresas kievienam įrenginiui yra unikalus, tai juo galime naudotis norint identifikuoti studentus. Norint susieti studento mobilųjį telefoną su jo paskyra sistemoje studentas įsidiegia programėlę. Programėlėje studentas prisijungia prie savo paskyros ir susieja mobilųjį telefoną. Programėlė nuskaito telefono Bluetooth MAC adresą ir kartu su studento identifikavimo numeriu (gaunamas prisijungus prie paskyros) siunčia į sistemą. Sistema gautą MAC adresą priskiria tam studentui. Programėlės pagrindinė funkcija yra susieti telefoną su paskyra. Tuo pačiu galima pateikti studento tvarkaraštį, lankomumo ataskaitą.
+Kiekvienas įrenginys turintis integruotą \textit{Bluetooth} technologiją turi ir unikalų identifikatorių. Kadangi šis identifikatorius kievienam įrenginiui yra unikalus, tai juo galime naudotis norint identifikuoti studentus. Norint susieti studento mobilųjį telefoną su jo paskyra sistemoje studentas įsidiegia programėlę. Programėlėje studentas prisijungia prie savo paskyros ir susieja mobilųjį telefoną. Programėlė nuskaito telefono \textit{Bluetooth} unikalų identifikatorių ir kartu su studento identifikavimo numeriu (gaunamas prisijungus prie paskyros) siunčia į sistemą. Sistema gautą identifikatorių priskiria tam studentui. Programėlės pagrindinė funkcija yra susieti telefoną su paskyra. Tuo pačiu galima pateikti studento tvarkaraštį, lankomumo ataskaitą.
 
 Norint, kad sistema galėtų naudotis kuo daugiau studentų, programėlė turi būti palaikoma skirtingose įrenginiuose bei operacinėse sistemose. Pačios populiariausios išmaniųjų įrenginių operacinės sistemos yra \textit{Android} ir \textit{iOS}. Taip pat gana plačiai naudojama \textit{Windows Phone} operacinė sistema \cite{MarketShareByOS}.
 
@@ -222,7 +222,7 @@ Studentai turi daug ir skirtingų išmaniųjų telefonų, todėl sistema turi pa
 
 \subsubsection{Savoji programėlė}
 
-Sparčiai tobulėjanti platforma, skirta kurti programėles \textit{Android}, \textit{iOS} ir \textit{Windows Phone} operacinėms sistemoms, tai \textit{Xamarin} \cite{xamarin}. Naudojantis šia platforma galima kurti visoms trims mobiliosioms operacinėms sistemoms savąsias (angl. \textit{native}) programėles. Šiuo atveju programėlės yra rašomos \textit{C\#} programavimo kalba, o programinė įranga, reikalinga kurti programėles, yra nemokama. Vidutiniškai 75 procentai programėlės kodo yra naudojama bendrai tarp operacinių sistemų. Platforma suteikia pilną priėjimą prie įrenginio operacinės sistemos programų programavimo sąsajos (angl. \textit{Application Programming Interface, API}). Vartotojo sąsają galima kurti pagal operacinės sistemos standartus arba naudojant platformos kūrėjų įrankį \textit{Xamarin.Forms}.
+Sparčiai tobulėjanti platforma, skirta kurti programėles \textit{Android} ir \textit{iOS} operacinėms sistemoms, tai \textit{React Native} \cite{reactNative}. Naudojantis šia platforma galima kurti abiems mobiliosioms operacinėms sistemoms savąsias (angl. \textit{native}) programėles. Šiuo atveju programėlės yra rašomos \textit{JavaScript} programavimo kalba, o programinė įranga, reikalinga kurti programėles, yra nemokama. Platforma suteikia priėjimą prie įrenginio operacinės sistemos programų programavimo sąsajos (angl. \textit{Application Programming Interface, API}). Vartotojo sąsają kuriama naudojant sukurtus naudotojo sąsajos komponentus. Nors programėlės rašomos \textit{JavaScript} programavimo kalba, tačiau visas kodas yra kompiliuojamas į savąjį kodą.
 
 \subsubsection{Saityno programėlė} \label{webApp}
 
@@ -255,7 +255,7 @@ Mūsų kuriamos sistemos atveju svarbiausia gera programėlės integracija su į
 	\label{appCompare}
 \end{table}
 
-Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Taip pat yra sudėtingiau išnaudoti įrenginio ir jo operacinės sistemos teikiamas funkcijas, pasiekiamas per aplikacijų programavimo sąsaja. Todėl vienas iš galimų būdų kurti programėlę sistemai yra naudojant \textit{Xamarin} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
+Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Todėl vienas iš galimų būdų kurti programėlę sistemai yra naudojant \textit{React Native} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
 
 \subsection{Savosios programėlės detalieji naudojimo scenarijai}
 
@@ -265,7 +265,7 @@ Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programė
 
 \subsubsection{Įrenginio susiejimas}
 
-Pagrindiniame programėlės lange (\ref{img:mainView} pav.) matome pranešimą, kad nėra susietas įrenginys su paskyra. Spaudžiame „Susieti įrenginį“. Programėlė surenka reikalingą informaciją apie įrenginį (\textit{Bluetooth MAC} adresą) ir siunčia užklausą į sistemos aplikacijų programavimo sąsają. Grąžinama žinutė apie sėkmingą arba nesėkmingą įrenginio susiejimą su paskyra.
+Pagrindiniame programėlės lange (\ref{img:mainView} pav.) matome pranešimą, kad nėra susietas įrenginys su paskyra. Spaudžiame „Susieti įrenginį“. Programėlė surenka reikalingą informaciją apie įrenginį ir siunčia užklausą į sistemos aplikacijų programavimo sąsają. Grąžinama žinutė apie sėkmingą arba nesėkmingą įrenginio susiejimą su paskyra.
 
 \textbf{Alternatyvus scenarijus:} Prisijungus programėlėje, atidarome meniu (\ref{img:menuView} pav.) paspausdami ant meniu piktogramos viršutinėje juostoje. Atsidariusiame meniu pasirenkame „Susieti įrenginį“.
 
@@ -281,14 +281,7 @@ Programėlėje studentas taip pat gali peržiūrėti savo paskyrą meniu (\ref{i
 
 \subsection{Savosios programėlės vartotojo sąsaja}
 
-Studentams skirtos programėlės pagrindinės funkcijos – pasižymėti dalyvavimą užsiėmime bei susieti įrenginį su studento vardu ir pavarde. Projektuojant vartotojo sąsają pagrindinis dėmesys skiriamas šių veiksmų paprastumui, stengiamasi, kad užduočių atlikimui reikėtų kuo mažiau veiksmų. Vartotojo sąsają, naudojant \textit{Xamarin} platformą, galima kurti dviem būdais:
-
-\begin{itemize}
-	\item Kiekvienos operacinės sistemos vartotojo sąsajos kūrimo įrankiu
-	\item \textit{Xamarin} platformos kūrėjų kurtu įrankiu \textit{Xamarin Forms}
-\end{itemize}
-
-Kuriant vartotojo sąsają kiekvienos operacinės sistemos vartotojo sąsajos kūrimo įrankiu kyla nepatogumas, kad reikia tuos pačius langus aprašyti tris kartus. Vartotojo sąsaja kuriant \textit{Xamarin Forms} įrankiu, visuose įrenginiuose, nepriklausomai nuo operacinės sistemos, vartotojo sąsaja bus atvaizduojama ta pati ir aprašoma vieną kartą. Šio įrankio naudojimas pagreitina įgyvendinimą, nes nebereikia atskirai kurti kiekvienai operacinei sistemai vartotojo sąsajos atskirai. Tuo pačiu reikia atsižvelgti į tai, jog dėl tos pačios priežasties įrenginių ekrano dydžiai labai skirtingi.
+Studentams skirtos programėlės pagrindinės funkcijos – pasižymėti dalyvavimą užsiėmime bei susieti įrenginį su studento vardu ir pavarde. Projektuojant vartotojo sąsają pagrindinis dėmesys skiriamas šių veiksmų paprastumui, stengiamasi, kad užduočių atlikimui reikėtų kuo mažiau veiksmų.
 
 \begin{figure}[H]
 	\centering
@@ -320,9 +313,9 @@ Meniu (\ref{img:menuView} pav.) pateikiamas prisijungusio naudotojo vardas ir pa
 \section{Skaitytuvas – išmanusis telefonas} \label{TeacherApp}
 Kitas svarbus komponentas, norint identifikuoti studentus, naudojant \textit{Bluetooth} ryšį – skaitytuvas. Tai galėtų būti atskiras prietaisas arba tiesiog išmanusis telefonas. Reikalinga sukurti atskirą programėlę, kuri būtų įdiegta dėstytojo išmaniajame telefone.
 
-Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų \textit{Bluetooth MAC} adresais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
+Paskaitos metu programėlė nuskaito įrenginius esančius patalpoje ir siunčia įrenginių sąrašą su jų \textit{Bluetooth} unikaliais identifikatoriais į sistemą, kur gautas unikalus identifikatorius susiejamas su studento paskyra ir pažymimas jo dalyvavimas paskaitoje. Norint tai įgyvendint, dėstytojas taip pat turi turėti savo paskyrą sistemoje. Paskyroje pridedamos paskaitos, priskiriamos grupės bei studentai.
 
-Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti kuo prieinamesnė. Todėl jos kūrimui taip pat pasirinkta \textit{Xamarin} platforma.
+Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti kuo prieinamesnė. Todėl jos kūrimui taip pat pasirinkta \textit{React Native} platforma.
 
 \subsection{Skaitytuvo programėlės funkcijos}
 
@@ -334,7 +327,7 @@ Kaip ir programėlė skirta studentams, taip ir skirta dėstytojams turi būti k
 
 Paleidus programėlę ir prisijungus (automatiškai arba suvedus prisijungimo duomenis) pagrindiniame lange (\ref{img:scannerMainView} pav.) naudotojas paspaudžia ant mygtuko „Paskaita“, atidaromas paskaitos pasirinkimo langas (\ref{img:scannerMainView} pav.), išsirenka paskaitą ir ant jos paspaudžia. Atidaromas pagrindinis langas (\ref{img:scannerMainView} pav.) ir rodoma pasirinkta paskaita. Taip pat pasirenkama grupė. Parinkus paskaitą ir grupę naudotojas spaudžia „Pradėti paskaitą“. Programėlė pradeda skleisti informaciją \textit{Bluetooth} ryšiu. Rodomas paskaitos langas su pasižymėjusiais studentais.
 
-\textbf{Alternatyvus scenarijus:} Pradėjus paskaitą periodiškai ieškoma įrenginių su įjungtu \textit{Bluetooth} ryšiu. Rastų įrenginių \textit{Bluetooth MAC} adresai siunčiami į sistemą.
+\textbf{Alternatyvus scenarijus:} Pradėjus paskaitą periodiškai ieškoma įrenginių su įjungtu \textit{Bluetooth} ryšiu. Rastų įrenginių \textit{Bluetooth} unikalūs identifikatoriai siunčiami į sistemą.
 
 \subsubsection{Paskaitos pabaiga}
 
@@ -373,9 +366,9 @@ Pagrindiniame lange (\ref{img:scannerMainView} pav.) galime pasirinkti paskaitą
 
 Iš pagrindinio lango (\ref{img:scannerMainView} pav.) patenkama į paskaitos langą (\ref{img:scannerLectureView} pav.). Šiame lange matome paskaitos pavadinimą, paskaitos užbaigimo mygtuką bei dalyvaujančių (pažymėtų) studentų sąrašą.
 
-\subsection{Studentų telefonų unikalių adresų nuskaitymas}
+\subsection{Studentų telefonų unikalių identifikatorių nuskaitymas}
 
-// TODO: Įdėti kodo, kaip pasiimam MAC adresus, koks frameworkas, trumpai apie funkcionalumą
+// TODO: Įdėti kodo, kaip pasiimam bluetooth uid, koks frameworkas, trumpai apie funkcionalumą
 
 \section{Sistemos vidinė pusė}
 
@@ -470,9 +463,9 @@ Grupės valdiklis leidžia naudotojams, kurių rolė yra \textit{dėstytojas}, k
 
 \subsubsubsection{Dalyvavimo įrašo valdiklis}
 
-Dalyvavimo įrašo valdiklis \textit{studentams} leidžia tik gauti duomenis apie įrašus, kurie yra susiję su jais. Kurti naujus įrašus gali tik naudotojai su \textit{dėstytojo} role. Pagal sistemos dizainą dėstytojo telefonas nuskaito studento telefono \textit{MAC} adresą ir jį siunčia į programų programavimo sąsają naudojantis savo naudotoju.
+Dalyvavimo įrašo valdiklis \textit{studentams} leidžia tik gauti duomenis apie įrašus, kurie yra susiję su jais. Kurti naujus įrašus gali tik naudotojai su \textit{dėstytojo} role. Pagal sistemos dizainą dėstytojo telefonas nuskaito studento telefono unikalų identifikatorių ir jį siunčia į programų programavimo sąsają naudojantis savo naudotoju.
 
-Valdiklis gavęs užklausą pirmiausia patikrina, ar užklausos gavimo metu yra vykstanti nurodyta paskaita – patikrinami ar duotojo laiko savaitės diena bei laikas sutampa su bent vienu užsiėmimo vykimo laiku. Naujas dalyvavimo įrašas sukuriamas tik tada, kai nurodyta paskaita vyksta užklausos gavimo metu ir studentas, kurio \textit{MAC} adresas yra gautas priklauso vienai iš užsiėmimui priskirtų grupių.
+Valdiklis gavęs užklausą pirmiausia patikrina, ar užklausos gavimo metu yra vykstanti nurodyta paskaita – patikrinami ar duotojo laiko savaitės diena bei laikas sutampa su bent vienu užsiėmimo vykimo laiku. Naujas dalyvavimo įrašas sukuriamas tik tada, kai nurodyta paskaita vyksta užklausos gavimo metu ir studentas, kurio unikalus identifikatorius yra gautas priklauso vienai iš užsiėmimui priskirtų grupių.
 
 \subsubsection{Saugumas}
 
