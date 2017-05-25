@@ -1,4 +1,4 @@
-\documentclass{VUMIFPSkursinis}
+\documentclass{VUMIFPSbakalaurinis}
 \usepackage{algorithmicx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
@@ -17,13 +17,14 @@
 \university{Vilniaus universitetas}
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
-\papertype{Bakalaurinis darbas}
+\papertype{Bakalauro baigiamasis darbas}
 \title{Užsiėmimų lankomumo žymėjimas, panaudojant studentų išmaniuosius telefonus}
 \titleineng{Lecture attendance marking using students' smartphones}
 \status{4 kurso 2 grupės studentas}
 \author{Marijus Siliūnas}
 % \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
 \supervisor{Dr. Kristina Lapin}
+\reviewer{Dr. Vytautas Čyras}
 \date{Vilnius – \the\year}
 
 % Nustatymai
@@ -35,7 +36,16 @@
 
 \sectionnonum{Santrauka}
 
+Darbe apžvelgiamos ir lyginamos artimųjų ryšio technologijų, kurios užtikrintų fizinį studento dalyvavimą užsiėmime, panaudojimas akivaizdinėse studijose. Dabartinės priemonės yra nepatogios ir užima daug užsiėmimo laiko. Kaip sprendimas yra siūloma panaudoti studentų išmaniuosius telefonus. Didžioji dalis telefonų turi įdiegtą \textit{Bluetooth} technologiją, o norint pritaikyti šią technologiją lankomumo žymėjimui nereikia daug pakeitimų auditorijose, pasirinkta sukurti sistemą, kuri identifikuoja studentus panaudojant \textit{Bluetooth} technologiją. Sistema sudaro keturi komponentai – studento programėlė, dėstytojo programėlė, saityno programų programavimo sąsaja ir administravimo aplinka. Darbe pateikiama sistemos diegimo diagrama, nurodanti sistemos komponentų komunikaciją. Taip pat pateikiami programėlių naudotojo sąsajos eskizai. Darbe apžvelgiami ir palyginami savosios (angl. \textit{native}), saityno bei hibdridinės programėlės kūrimo būdai. Nuspręsta kurti savąją programėlę panaudojant \textit{React Native} karkasą.
+
+Raktiniai žodžiai: artimojo ryšio technologijos, lankomumo žymėjimas, programėlių panaudojamumas, išmaniųjų telefonų programėlių kūrimas.
+
 \sectionnonum{Summary}
+
+The paper provides an overview and comparison of close communication technologies which ensures physical student participation in universities workshops.
+Existing tools are cumbersome and takes a lot of workshop's time. Using students' smart phones is proposed as a solution. Most of the phones have built-in \textit{Bluetooth} technology and to adapt this technology for marking attendance does not require a lot of changes in the classroom. Decided to create a system that identifies students using \textit{Bluetooth} technology. The system consists of four components - student app, lecturer app, web applications programming interface and administrative environment. The paper contains system's deployment view showing component relations. It also provides apps' user interface sketches. The paper provides an overview and comparison of native, web and hybrid app development techniques. It was decided to create native app using \textit{React Native} framework.
+
+Keywords: close communication technologies, attendance marking, application usability, smart phones' application development.
 
 \tableofcontents
 
@@ -43,7 +53,7 @@
 
 \subsectionnonum{Tyrimo objektas}
 
-Artimojo ryšio technologijų panaudojimas akivaizdinėse studijose.
+Artimojo ryšio technologijų, kurios užtikrintų fizinį studento dalyvavimą užsiėmime, panaudojimas akivaizdinėse studijose.
 
 \subsectionnonum{Temos aktualumas}
 
@@ -53,7 +63,7 @@ Dar lankomumo žymėjimui kartais yra pasitelkiamas įrankis \textit{Vilniaus un
 
 \subsectionnonum{Darbo tikslas}
 
-Sukurti dalyvaujančių užsiėmime studentų identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri pagerintų lankomumo žymėjimo procesą bei sudarytų pagrindą tolimesnei plėtrai.
+Sukurti dalyvaujančių užsiėmime studentų identifikavimo modulį ir juo paremtą studentų lankomumo žymėjimo sistemą, kuri pagreitintų lankomumo žymėjimo procesą bei sudarytų pagrindą tolimesnei plėtrai.
 
 \subsectionnonum{Uždaviniai}
 
@@ -77,6 +87,36 @@ Tikslui pasiekti keliami šie uždaviniai:
 	\item Pateikti studentų identifikavimo modulio vartotojo sąsajos eskizai.
 \end{itemize}
 
+\subsectionnonum{Darbe naudojama literatūra}
+
+Atliekant darbą naudotos tiriamų technologijų dokumentacijos. Renkantis technologijas projekto įgyvendinimui remtasi publikacijomis internete, kurios palygina technologijas. Tiriant naudotojų poreikius remtasi tyrimu apie sėkmingą išmaniųjų įrenginių panaudojimą medicinoje \cite{mhealth}.
+
+\subsectionnonum{Darbo atlikimo tvarka}
+
+Darbas buvo atliekamas nurodyta tvarka:
+
+\begin{enumerate}
+    \item Dalykinės srities analizė
+    \item Ištirti naudotojų siekiai sistemoje
+    \item Parenkamos technologijos sistemos įgyvendinimui
+    \item Sistemos realizavimas
+\end{enumerate}
+
+\subsectionnonum{Darbo atlikimo aplinkybės}
+
+Šis darbas yra mano kursinio darbo tęsinys. Darbe remiamasi šaltiniais, akademine bei profesine patirtimi tiriamoje srityje.
+
+\subsectionnonum{Naudojami instrumentai}
+
+Sistemoje naudojami intrumentai:
+
+\begin{itemize}
+    \item \textit{React Native} – išmaniųjų telefonų programėlių kūrimo karkasas
+    \item \textit{Node.js} – \textit{JavaScript} kodo vykdymo aplinka serveryje
+    \item \textit{Express} – saityno programų kūrimo karkasas
+    \item \textit{MongoDB} – dokumentinė, \textit{NoSQL} tipo, duomenų bazių valdymo sistema
+\end{itemize}
+
 \section{Užsiėmime dalyvaujančių studentų identifikavimas}
 
 \subsection{Esamų identifikavimo būdų apžvalga}
@@ -98,7 +138,7 @@ Kita lankomumo žymėjimui kartais pasitelkiama priemonė yra \textit{Vilniaus u
 \begin{itemize}
     \item[P4.] Studentai gali prisijungti ir užpildyti testą būdami bet kur
     \item[P5.] Sistema neturi užsiėmimų lankomumo ataskaitų
-    \item[P6.] Norint užpildyti testą studentai turi atlikti 7 veiksmus, todėl gaištamas paskaitos laikas
+    \item[P6.] Norint pradėti pildyti testą studentai turi atlikti 6 veiksmus, todėl gaištamas paskaitos laikas
 \end{itemize}
 
 \subsection{Neišnaudotos galimybės}
@@ -133,7 +173,7 @@ Pagal \textit{PwC} atliktą tyrimą apie sėkmingas \textit{mHealth} sprendimus 
     \item Įtraukimas – įtraukti naudotojus pateikiant momentinį grįžtamąjį ryšį
 \end{itemize}
 
-Šiuos principus galima pritaikyti ir mokymosi srityje. Taip pat remtis vystant ir šį automatinį užsiėmimų lankomumo žymėjimo būdą.
+Šiuos principus galima pritaikyti ir mokymosi srityje. Išskirti principai yra universalūs, fokusuojasi ne į medicinos sritį, o į išmaniųjų įrenginių programėlių panaudojamumą. Šiais principais galima remtis vystant ir šį automatinį užsiėmimų lankomumo žymėjimo būdą.
 
 \subsection{Identifikavimo būdo pasirinkimas}
 
@@ -147,19 +187,32 @@ Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas ident
 
 Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Tokiu atveju turėtų būti įrengti \textit{NFC} technologijos skaitytuvai.
 
-\subsection{Būsimos sistemos konceptinis naudojimo scenarijus}
+\subsection{Būsimos sistemos koncepcinis naudojimo scenarijus}
+
+// TODO: Parašyti tikslus po scenarijais
 
 \subsubsection{Dėstytojo}
 
-Duomenys apie vykstančius užsiėmimus, jų laiką bei dalyvaujančius studentus mokslo metų pradžioje suvedami į sistemą. Mokslo metų eigoje dėstytojas atėjęs į paskaitą savo išmaniajame telefone įjungia dėstytojo programėlę. Pasirenka paskaitą (siūlomą pagal laiką arba iš savo paskaitų sąrašo), kurios žymėjimą nori pradėti. Spaudžia pradėti žymėjimą ir padeda telefoną ant stalo. Pasibaigus paskaitai arba norint anksčiau sustabdyti žymėjimą dėstytojas paspaudžia mygtuką programėlėje \textit{stabdyti žymėjimą}. Vėliau atėję studentai nebepažymimi kaip dalyvaujantys užsiėmime.
+Duomenys apie vykstančius užsiėmimus, jų laiką bei dalyvaujančius studentus mokslo metų pradžioje suvedami į sistemą. Mokslo metų eigoje dėstytojas atėjęs į paskaitą savo išmaniajame telefone įjungia dėstytojo programėlę. Pasirenka paskaitą (siūlomą pagal laiką arba iš savo paskaitų sąrašo), kurios žymėjimą nori pradėti. Spaudžia pradėti žymėjimą ir padeda telefoną ant stalo. Pasibaigus paskaitai arba norint anksčiau sustabdyti žymėjimą dėstytojas paspaudžia mygtuką programėlėje \textit{stabdyti žymėjimą}. Jei dėstytojas pamiršta sustabdyti žymėjimą, programėlė pati sustabdo lankomumo žymėjimą. Vėliau atėję studentai nebepažymimi kaip dalyvaujantys užsiėmime.
 
-Norėdamas matyti koks studentas kiek užsiėmimų dalyvavo ar kokiame užsiėmime kokie studentai dalyvavo dėstytojas atsidaro sistemą ir pasirenka norimą ataskaitą. Taip negaišdamas laiko peržiūrėdamas kiekvienos paskaitos lankomumą atskirai (tiek žymint popieriuje, tiek naudojant \textit{VMA}). 
+Norėdamas matyti koks studentas kiek užsiėmimų dalyvavo ar kokiame užsiėmime kokie studentai dalyvavo dėstytojas atsidaro sistemą ir pasirenka norimą ataskaitą. Taip negaišdamas laiko peržiūrėdamas kiekvienos paskaitos lankomumą atskirai (tiek žymint popieriuje, tiek naudojant \textit{VMA}).
+
+Iš šių scenarijų galime išskirti dėstytojo siekius naudojantis sistema:
+
+\begin{itemize}
+    \item[S1.] Paprastai žymėti lankomumą
+    \item[S2.] Išlaikyti korektiškus duomenis
+    \item[S3.] Matyti lankomumo retrospektyvą
+    \item[S4.] Taupyti laiką
+\end{itemize}
 
 \subsubsection{Studento}
 
 Studentas atėjęs į universitetą savo išmaniajame telefone įjungia \textit{Bluetooth} ryšį. Atėjus į paskaitą dėstytojo telefonas nuskaito studento telefono unikalų identifikatorių ir jį siunčia į sistemą. Studentui atsiunčiamas pranešimas, kad jo dalyvavimas užsiėmime pažymėtas.
 
 Pranešimo negavęs studentas visada gali įsijungti programėlę ir pasitikrinti, ar jo dalyvavimas pažymėtas. Taip pat gali matyti savo visų paskaitų lankomumą.
+
+Iš studento naudojimo scenarijaus išryškėjantys siekiai sutampa su dėstytojo \textit{S1. Paprastai žymėti lankomumą} ir \textit{S3. Matyti lankomumo retrospektyvą} siekiais.
 
 \subsection{Naudotojų siekiai}
 
@@ -173,20 +226,20 @@ Galime sudaryti matricą, kuri parodys, ar išskirtos problemos su esamomis prie
 		\hline
 		& P1 & P2 & P3 & P4 & P5 & P6 \\
 		\hline
-		Paprastai žymėti lankomumą &  & + &  &  &  & \\
+		S1. Paprastai žymėti lankomumą &  & + &  &  &  & \\
 		\hline
-		Išlaikyti korektiškus duomenis &  & + &  & + &  & \\
+		S2. Išlaikyti korektiškus duomenis &  & + &  & + &  & \\
 		\hline
-		Matyti lankomumo retrospektyvą &  &  & + &  & + & \\
+		S3. Matyti lankomumo retrospektyvą &  &  & + &  & + & \\
 		\hline
-		Taupyti laiką & + &  &  &  &  & + \\
+		S4. Taupyti laiką & + &  &  &  &  & + \\
 		\hline
 	\end{tabular}
 	\caption{Problemų ir naudotojų siekių matrica}
 	\label{problemTable}
 \end{table}
 
-\subsection{Numatomi sistemos komponentai}
+\subsection{Kuriamos sistemos komponentai}
 
 \begin{figure}[H]
 	\centering
@@ -255,7 +308,7 @@ Mūsų kuriamos sistemos atveju svarbiausia gera programėlės integracija su į
 	\label{appCompare}
 \end{table}
 
-Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Todėl vienas iš galimų būdų kurti programėlę sistemai yra naudojant \textit{React Native} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
+Norint identifikuoti studentus panaudojant jų išmaniuosius telefonus programėlei būtinas priėjimas prie įrenginio \textit{Bluetooth} ryšio modulio, todėl saityno programėlė mums netinka. Hibridines programėles galima kurti greičiau ir paprasčiau nei savąsias, tačiau jų veikimo sparta bei vientisumas gali kelti nepatogumų naudotojams. Todėl nuspręsta kurti \textbf{savąją} programėlę, naudojant \textit{React Native} platformą. Ji leis sukurti intuityvesnę, vientisesnę bei patikimesnę programėlę.
 
 \subsection{Savosios programėlės detalieji naudojimo scenarijai}
 
@@ -562,9 +615,11 @@ Pagal turimą patirtį ir iškeltus reikalavimus administravimo aplinkai, ją nu
 
 	\item Sukurtas konceptinis automatizuoto lankomumo žymėjimo naudojimo scenarijus, pagrįstas \textit{Bluetooth} ryšio technologija
 	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys
-	\item Suprojektuotas komponentų išsidėstymas sistemoje
+	\item Suprojektuotas sistemų komponentų išsidėstymas sistemoje
 	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai
-	\item Sukurta sistema automatizuojanti studentų lankomumo žymėjimą užsiėmimuose
+	\item Sukurtos dvi programėlės – studento programėlė ir dėstytojo programėlė
+	\item Sukurta administravimo aplinka
+	\item Sukurta saityno programų programavimo sąsaja
 \end{itemize}
 
 Apžvelgti dabartiniai studentų lankomumo žymėjimo scenarijai: žymėjimas popieriuje ir žymėjimas per \textit{VMA}. Išskirtos kylančios problemos su apžvelgtais scenarijais:
@@ -588,9 +643,9 @@ Visas išvardintas problemas sistema išsprendžia. Projektuojant sistemą buvo 
 
 Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas identifikuoti studentus yra pasitelkiant studentų išmaniuosius telefonus su \textit{Bluetooth} ryšio technologija. Įgyvendinant šį būdą nereikia įrengti specialios įrangos auditorijose. Taip pat toks identifikavimas yra greitesnis nei naudojant LSP – nesusidaro eilės prie skaitytuvų (jei yra įrengta tik po vieną skaitytuvą auditorijoje).
 
-Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus nustatyta, kad savoji programėlė tenkina keliamus kriterijus, todėl yra tinkamas būdas įgyvendinimui. Šis būdas leidžia lengvai panaudoti išmaniojo įrenginio operacinės sistemos programų programavimo sąsają, kurios pagalba galima naudoti įrenginyje įdiegtą \textit{Bluetooth} ryšio technologiją.
+Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo būdus nustatyta, kad savoji programėlė tenkina keliamus kriterijus, todėl yra tinkamas būdas įgyvendinimui. Šis būdas leidžia panaudoti išmaniojo įrenginio operacinės sistemos programų programavimo sąsają, kurios pagalba galima naudoti įrenginyje įdiegtą \textit{Bluetooth} ryšio technologiją.
 
-Aptariant sistemos komponentų komunikavimo būdus nustatyta, kad tinkamas būdas vykdyti komunikavimą tarp komponentų yra per apibrėžtą saityno programų programavimo sąsają. Taip pat išskirtas \textit{REST} sąsajos kūrimo metodas kaip tinkamas kuriamai sistemai. Šiuo metodu sukurta saityno programų programavimo sąsaja leidžia siųsti ir gauti mažos apimties užklausas, tuo pačiu – greičiau apdorojamos užklausos.
+Aptariant sistemos komponentų tarpusavio komunikavimo būdus nustatyta, kad tinkamas būdas vykdyti komunikavimą tarp komponentų yra per apibrėžtą saityno programų programavimo sąsają. Taip pat išskirtas \textit{REST} sąsajos kūrimo metodas kaip tinkamas kuriamai sistemai. Šiuo metodu sukurta saityno programų programavimo sąsaja leidžia siųsti ir gauti mažos apimties užklausas, tuo pačiu – greičiau apdorojamos užklausos.
 
 \sectionnonum{Darbo plėtojimo galimybės}
 
