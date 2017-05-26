@@ -18,7 +18,7 @@
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
 \papertype{Bakalauro baigiamasis darbas}
-\title{Užsiėmimų lankomumo žymėjimas, panaudojant studentų išmaniuosius telefonus}
+\title{Užsiėmimų lankomumo žymėjimas,\break panaudojant studentų išmaniuosius telefonus}
 \titleineng{Lecture attendance marking using students' smartphones}
 \status{4 kurso 2 grupės studentas}
 \author{Marijus Siliūnas}
@@ -188,8 +188,6 @@ Pateikti būdai turi ir privalumų, ir trūkumų. Visgi tinkamesnis būdas ident
 Verta paminėti, kad šie būdai nėra priešinami, o laikomi alternatyvomis. Jei telefonas išsikrovęs, galima būtų identifikuoti su LSP. Tokiu atveju turėtų būti įrengti \textit{NFC} technologijos skaitytuvai.
 
 \subsection{Būsimos sistemos koncepcinis naudojimo scenarijus}
-
-// TODO: Parašyti tikslus po scenarijais
 
 \subsubsection{Dėstytojo}
 
@@ -591,9 +589,12 @@ Technologinį rinkinį sudarant atsižvelgiama į iškeltus reikalavimus sistema
 
 Programų programavimo sąsają nuspręsta kurti naudojant \textit{JavaScript Express} žiniatinklio programų kūrimo karkasą. Šis karkasas paleidžiamas \textit{NodeJS} \textit{JavaScript} kodo vykdymo serveryje aplinkoje.
 
-Privalumas naudojant \textit{NodeJS} vykdymo aplinką tai modulių valdymas. \textit{NodeJS Package Manager (NPM)} įrankio pagalba nesunkiai galima valdyti tiek mūsų kurtus modulius, tiek trečiųjų šalių integruojamus modulius. Taip pat palengvina diegimą, nes nereikia rūpintis ar visi moduliai įdiegti bei dėl modulių versijų neatitikimo.
+Privalumas naudojant \textit{NodeJS} vykdymo aplinką tai modulių valdymas. \textit{NodeJS Package Manager (NPM)} įrankio pagalba nesunkiai galima valdyti tiek mūsų kurtus modulius, tiek trečiųjų šalių integruojamus modulius. Taip pat palengvina diegimą, nes nereikia rūpintis ar visi moduliai įdiegti bei dėl modulių versijų neatitikimo. Funkcionalumo įgyvendinimo palengvinimui pasitelktos bibliotekos:
 
-// TODO: APRAŠYTI KOKIUS NAUDOSIU MODULIUS (NPM). JWT, MONGO, ETC
+\begin{itemize}
+    \item \textit{jsonwebtoken} – \textit{NPM} biblioteka įgyvendinanti \textit{JSON Web Token (JWT)} autentifikaciją;
+    \item \textit{Mongoose} – \textit{MongoDB} objektų modeliavimo įrankis skirtas naudoti asinchroninėje aplinkoje;
+\end{itemize}
 
 Duomenims saugoti ir valdyti pasirinkta \textit{MongoDB} dokumentinė, \textit{NoSQL} tipo, duomenų bazių valdymo sistema. Ją lengva integruoti su \textit{NodeJS} aplinka, nes yra palaikomas ir nuolat atnaujinamas modulis sujungiantis duomenų bazių valdymo sistemą su kuriama sistema.
 
@@ -639,7 +640,7 @@ Apžvelgti dabartiniai studentų lankomumo žymėjimo scenarijai: žymėjimas po
     \end{itemize}
 \end{itemize}
 
-Visas išvardintas problemas sistema išsprendžia. Projektuojant sistemą buvo iškelti naudotojų siekiai ir įsitikinta, kad jie išspręs šias problemas.
+Sukurta sistema studentams leidžia pasižymėti užsiėmime greičiau. Automatizuota sistema panaikina žmogiškosios klaidos tikimybė bei saugo duomenis vienoje centralizuotoje duomenų bazėje, o tai leidžia generuoti lankomumo ataskaitas. Naudojant studentų mobiliuosius telefonus kaip identifikavimo įrankį sumažinama sukčiavimo riziką. Projektuojant sistemą buvo iškelti naudotojų siekiai ir įsitikinta, kad jie išspręs šias problemas.
 
 Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas identifikuoti studentus yra pasitelkiant studentų išmaniuosius telefonus su \textit{Bluetooth} ryšio technologija. Įgyvendinant šį būdą nereikia įrengti specialios įrangos auditorijose. Taip pat toks identifikavimas yra greitesnis nei naudojant LSP – nesusidaro eilės prie skaitytuvų (jei yra įrengta tik po vieną skaitytuvą auditorijoje).
 
