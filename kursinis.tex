@@ -36,7 +36,7 @@
 
 \sectionnonum{Santrauka}
 
-Darbe apžvelgiamos ir lyginamos artimųjų ryšio technologijų, kurios užtikrintų fizinį studento dalyvavimą užsiėmime, panaudojimas akivaizdinėse studijose. Dabartinės priemonės yra nepatogios ir užima daug užsiėmimo laiko. Kaip sprendimas yra siūloma panaudoti studentų išmaniuosius telefonus. Didžioji dalis telefonų turi įdiegtą \textit{Bluetooth} technologiją, o norint pritaikyti šią technologiją lankomumo žymėjimui nereikia daug pakeitimų auditorijose, pasirinkta sukurti sistemą, kuri identifikuoja studentus panaudojant \textit{Bluetooth} technologiją. Sistema sudaro keturi komponentai – studento programėlė, dėstytojo programėlė, saityno programų programavimo sąsaja ir administravimo aplinka. Darbe pateikiama sistemos diegimo diagrama, nurodanti sistemos komponentų komunikaciją. Taip pat pateikiami programėlių naudotojo sąsajos eskizai. Darbe apžvelgiami ir palyginami savosios (angl. \textit{native}), saityno bei hibdridinės programėlės kūrimo būdai. Nuspręsta kurti savąją programėlę panaudojant \textit{React Native} karkasą.
+Darbe apžvelgiamos ir lyginamos artimųjų ryšio technologijų, kurios užtikrintų fizinį studento dalyvavimą užsiėmime, panaudojimas akivaizdinėse studijose. Dabartinės priemonės yra nepatogios ir užima daug užsiėmimo laiko. Kaip sprendimas yra siūloma panaudoti studentų išmaniuosius telefonus. Didžioji dalis telefonų turi įdiegtą \textit{Bluetooth} technologiją, o norint pritaikyti šią technologiją lankomumo žymėjimui nereikia daug pakeitimų auditorijose, pasirinkta sukurti sistemą, kuri identifikuoja studentus panaudojant \textit{Bluetooth} technologiją. Sistemą sudaro keturi komponentai – studento programėlė, dėstytojo programėlė, saityno programų programavimo sąsaja ir administravimo aplinka. Darbe pateikiama sistemos diegimo diagrama, nurodanti sistemos komponentų komunikaciją. Taip pat pateikiami programėlių naudotojo sąsajos eskizai. Darbe apžvelgiami ir palyginami savosios (angl. \textit{native}), saityno bei hibdridinės programėlės kūrimo būdai. Nuspręsta kurti savąją programėlę panaudojant \textit{React Native} karkasą.
 
 Raktiniai žodžiai: artimojo ryšio technologijos, lankomumo žymėjimas, programėlių panaudojamumas, išmaniųjų telefonų programėlių kūrimas.
 
@@ -89,7 +89,7 @@ Tikslui pasiekti keliami šie uždaviniai:
 
 \subsectionnonum{Darbe naudojama literatūra}
 
-Atliekant darbą naudotos tiriamų technologijų dokumentacijos. Renkantis technologijas projekto įgyvendinimui remtasi publikacijomis internete, kurios palygina technologijas. Tiriant naudotojų poreikius remtasi tyrimu apie sėkmingą išmaniųjų įrenginių panaudojimą medicinoje \cite{mhealth}.
+Atliekant darbą naudotos tiriamų technologijų dokumentacijos. Renkantis technologijas projekto įgyvendinimui remtasi publikacijomis internete, kurios palygina technologijas. Tiriant naudotojų poreikius remtasi tyrimu apie sėkmingą išmaniųjų įrenginių panaudojimą \cite{mhealth}.
 
 \subsectionnonum{Darbo atlikimo tvarka}
 
@@ -101,6 +101,10 @@ Darbas buvo atliekamas nurodyta tvarka:
     \item Parenkamos technologijos sistemos įgyvendinimui
     \item Sistemos realizavimas
 \end{enumerate}
+
+\subsectionnonum{Teorinės darbo prielaidos ir metodika}
+
+// TODO: Aprašyti kokiu būdu pamatytos problemos – tiriama stebint, kalbant su suinteresuotais asmenimis
 
 \subsectionnonum{Darbo atlikimo aplinkybės}
 
@@ -585,7 +589,7 @@ Galimybė kurti bei redaguoti paskaitas. Svarbu nurodyti paskaitos laiką – di
 
 Technologinį rinkinį sudarant atsižvelgiama į iškeltus reikalavimus sistemai bendrai ir atskirai sistemos komponentams.
 
-// TODO: ALTERNATYVOS
+// TODO: KODĖL PASIRINKAU TOKIAS TECHNOLOGIJAS PRIDĖTI DAR
 
 Programų programavimo sąsają nuspręsta kurti naudojant \textit{JavaScript Express} žiniatinklio programų kūrimo karkasą. Šis karkasas paleidžiamas \textit{NodeJS} \textit{JavaScript} kodo vykdymo serveryje aplinkoje.
 
@@ -608,13 +612,21 @@ Pagal turimą patirtį ir iškeltus reikalavimus administravimo aplinkai, ją nu
 
 // TODO: Diegimo procedūrą aprašyti, self-hosted arba centralizuota.
 
+\sectionnonum{Darbo plėtojimo galimybės}
+
+\begin{itemize}
+	\item Sukurti duomenų apsikeitimo sąsają su universiteto informacine sistema. Sąsajos pagalba galima būtų importuoti duomenis apie studentus, kuriant naudotojus nereikėtų informacijos suvedinėti rankomis.
+	\item Pritaikyti žaidimizavimo skatinimo modelį sistemoje, skatinantį studentus aktyviai dalyvauti užsiėmime. Modulio tikslas – skatinti studentų dalyvavimą apdovanojant sistemoje už kiekvieną veiksmą.
+	\item Apžvelgti galimybę įgyvendinti studentų darbų recenzavimo užsiėmimų metu modulį sistemoje. Studentų darbus, šio modulio pagalba, būtų lengviau sekti, teikti pastabas ir įvertinti. 
+\end{itemize}
+
 \sectionnonum{Rezultatai ir išvados}
 
 Šio darbo metu pasiekti šie rezultatai:
 
 \begin{itemize}
 
-	\item Sukurtas konceptinis automatizuoto lankomumo žymėjimo naudojimo scenarijus, pagrįstas \textit{Bluetooth} ryšio technologija
+	\item Sukurtas koncepcinis automatizuoto lankomumo žymėjimo naudojimo scenarijus, pagrįstas \textit{Bluetooth} ryšio technologija
 	\item Sukurtos sistemos įgyvendinimo gairės ir sudarytas technologijų rinkinys
 	\item Suprojektuotas sistemų komponentų išsidėstymas sistemoje
 	\item Sukurti mobiliosios programėlės skirtos studentams vartotojo sąsajos eskizai bei sukurti dėstytojams skirtos skaitytuvo programėlės vartotojo sąsajos eskizai
@@ -640,7 +652,7 @@ Apžvelgti dabartiniai studentų lankomumo žymėjimo scenarijai: žymėjimas po
     \end{itemize}
 \end{itemize}
 
-Sukurta sistema studentams leidžia pasižymėti užsiėmime greičiau. Automatizuota sistema panaikina žmogiškosios klaidos tikimybė bei saugo duomenis vienoje centralizuotoje duomenų bazėje, o tai leidžia generuoti lankomumo ataskaitas. Naudojant studentų mobiliuosius telefonus kaip identifikavimo įrankį sumažinama sukčiavimo riziką. Projektuojant sistemą buvo iškelti naudotojų siekiai ir įsitikinta, kad jie išspręs šias problemas.
+Sukurta sistema studentams leidžia pasižymėti užsiėmime greičiau – pirmą kartą N veiksmų, o vėliau studentų žymėjimas vyksta automatiškai. Automatizuota sistema panaikina žmogiškosios klaidos tikimybę bei saugo duomenis vienoje centralizuotoje duomenų bazėje, todėl galima generuoti lankomumo ataskaitas. Naudojant studentų mobiliuosius telefonus kaip identifikavimo įrankį sumažinama sukčiavimo rizika. Projektuojant sistemą buvo iškelti naudotojų siekiai ir įsitikinta, kad jie išspręs šias problemas.
 
 Analizuojant studentų automatizuoto identifikavimo, panaudojant išmaniuosius telefonus, technologines galimybes pastebėta, jog patogus būdas identifikuoti studentus yra pasitelkiant studentų išmaniuosius telefonus su \textit{Bluetooth} ryšio technologija. Įgyvendinant šį būdą nereikia įrengti specialios įrangos auditorijose. Taip pat toks identifikavimas yra greitesnis nei naudojant LSP – nesusidaro eilės prie skaitytuvų (jei yra įrengta tik po vieną skaitytuvą auditorijoje).
 
@@ -648,13 +660,9 @@ Apžvelgiant išmaniųjų telefonų programėlių technologinius įgyvendinimo b
 
 Aptariant sistemos komponentų tarpusavio komunikavimo būdus nustatyta, kad tinkamas būdas vykdyti komunikavimą tarp komponentų yra per apibrėžtą saityno programų programavimo sąsają. Taip pat išskirtas \textit{REST} sąsajos kūrimo metodas kaip tinkamas kuriamai sistemai. Šiuo metodu sukurta saityno programų programavimo sąsaja leidžia siųsti ir gauti mažos apimties užklausas, tuo pačiu – greičiau apdorojamos užklausos.
 
-\sectionnonum{Darbo plėtojimo galimybės}
 
-\begin{itemize}
-	\item Sukurti duomenų apsikeitimo sąsają su universiteto informacine sistema. Sąsajos pagalba galima būtų importuoti duomenis apie studentus, kuriant naudotojus nereikėtų informacijos suvedinėti rankomis.
-	\item Pritaikyti žaidimizavimo skatinimo modelį sistemoje, skatinantį studentus aktyviai dalyvauti užsiėmime. Modulio tikslas – skatinti studentų dalyvavimą apdovanojant sistemoje už kiekvieną veiksmą.
-	\item Apžvelgti galimybę įgyvendinti studentų darbų recenzavimo užsiėmimų metu modulį sistemoje. Studentų darbus, šio modulio pagalba, būtų lengviau sekti, teikti pastabas ir įvertinti. 
-\end{itemize}
+// TODO: PERVADINTI LITERATŪRA Į ŠALTINIAI
+// TODO: PRIEDUOSE APRAŠYTI KAS PATEIKIAMA KOMPAKTE
 
 \printbibliography[heading=bibintoc]  % Šaltinių sąraše nurodoma panaudota
 % literatūra, kitokie šaltiniai. Abėcėlės tvarka išdėstomi darbe panaudotų
