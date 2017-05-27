@@ -1,48 +1,37 @@
 import React from 'react'
 import { Text, View, Picker, Button } from 'react-native';
 import {DrawerNavigator, StackNavigator} from 'react-navigation'
-import ActiveLecture from './ActiveLecture'
 const Item = Picker.Item
 
 class Home extends React.Component {
     static navigationOptions = {
-        title: 'Welcome',
-        drawerLabel: 'Test Drawer'
+        title: 'Studentas'
     }
 
-    onLectureChange = (value, index) => {
-
-    }
-
-    onLectureStart = () => {
-        this.props.navigation.navigate('activeLecture', {
-            lecture: {
-                title: 'Paskaita va'
-            }
-        })
+    getLectureStatus = () => {
+        return false
     }
 
     render = () => {
         return (
             <View style={{ padding: 10 }}>
-                <Text style={{ paddingVertical: 20, fontWeight: 'bold', fontSize: 20, textAlign: 'center' }}>
-                    Pradėti paskaitą
-                </Text>
+                <View style={{ paddingVertical: 20 }}>
+                    <Text style={{ textAlign: 'center', fontSize: 16 }}>Paskaita:</Text>
+                    <Text style={{ textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>
+                        Taikomoji informatika
+                    </Text>
+                </View>
                 <View>
-                    <Text>Paskaita</Text>
-                    <Picker onValueChange={this.onLectureChange} mode='dropdown'>
-                        <Item label='hello' value='key0' />
-                        <Item label='world' value='key1' />
-                    </Picker>
+                    {this.getLectureStatus() ? (
+                        <Text style={{ textAlign: 'center', fontSize: 16, fontWeight: 'bold', color: 'green' }}>
+                            Pažymėta
+                        </Text>
+                    ) : (
+                        <Text style={{ textAlign: 'center', fontSize: 16, fontWeight: 'bold', color: 'red' }}>
+                            Nepažymėta
+                        </Text>
+                    )}
                 </View>
-                <View style={{ paddingBottom: 20 }}>
-                    <Text>Grupė</Text>
-                    <Picker onValueChange={this.onLectureChange} mode='dropdown'>
-                        <Item label='hello' value='key0' />
-                        <Item label='world' value='key1' />
-                    </Picker>
-                </View>
-                <Button title={'Pradėti paskaitą'} onPress={this.onLectureStart} />
             </View>
         )
     }
@@ -51,9 +40,6 @@ class Home extends React.Component {
 const HomeDrawerNavigator = StackNavigator({
     home: {
         screen: Home
-    },
-    activeLecture: {
-        screen: ActiveLecture
     }
 })
 

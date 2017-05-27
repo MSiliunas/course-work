@@ -11,7 +11,7 @@ if (!window.Promise) {
 
 const store = configureStore()
 
-class LecturerApp extends React.Component {
+class StudentApp extends React.Component {
     render() {
         return (
             <Provider store={store}>
@@ -21,4 +21,4 @@ class LecturerApp extends React.Component {
     }
 }
 
-AppRegistry.registerComponent('LecturerApp', () => LecturerApp);
+AppRegistry.registerComponent('StudentApp', () => StudentApp);

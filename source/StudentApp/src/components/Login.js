@@ -30,15 +30,12 @@ class Login extends React.Component {
 
     render = () => {
         return (
-            <View style={{flexDirection: 'column', justifyContent: 'center', flex: 1}}>
+            <View style={{ flexDirection: 'column', justifyContent: 'center', flex: 1, padding: 10 }}>
                 <View style={{flex: 1, alignItems: 'center', flexDirection: 'row'}}>
                     <View style={{flex: 1}}/>
                     <Image style={{resizeMode: 'contain', flex: 1}}
-                           source={require('../assets/img/icon-antenna.png')}/>
+                           source={require('../assets/img/icon-react.png')}/>
                     <View style={{flex: 1}}/>
-                </View>
-                <View style={{flex: 1}}>
-                    <Text>Skaitytuvas</Text>
                 </View>
                 <View style={{flex: 1}}>
                     <TextInput onChangeText={this.onUsernameChange}

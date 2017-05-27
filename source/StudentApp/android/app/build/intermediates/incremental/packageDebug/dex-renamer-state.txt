@@ -1,4 +1,4 @@
-#Sat May 27 19:09:57 EEST 2017
-base.0=/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Sat May 27 21:00:04 EEST 2017
+base.0=/home/marijus/Documents/Uni/course-work/source/StudentApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/home/marijus/Documents/Uni/course-work/source/StudentApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

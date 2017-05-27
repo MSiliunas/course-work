@@ -2,5 +2,9 @@
     {
         "merged": "/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
         "source": "/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/marijus/Documents/Uni/course-work/source/StudentApp/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/home/marijus/Documents/Uni/course-work/source/StudentApp/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }
 ]
