@@ -423,7 +423,36 @@ Iš pagrindinio lango (\ref{img:scannerMainView} pav.) patenkama į paskaitos la
 
 \subsection{Studentų telefonų unikalių identifikatorių nuskaitymas}
 
-// TODO: Įdėti kodo, kaip pasiimam bluetooth uid, koks frameworkas, trumpai apie funkcionalumą
+Mūsų naudojamam karkasui \textit{React Native} yra sukurtas modulis \textit{react-native-ble-plx}, kuris suteikia karkasui prieigą prie įrenginio \textit{Bluetooth} programų programavimo sąsajos. Programėlė, naudotojui pasirinkus pradėti žymėjimą, kviečia funkciją \verb|scanNearDevices()|. Funkcija pradeda skanuoti įrenginius, esančius netoliese. Aptikus įrenginį patikriname, ar jis nebuvo anksčiau aptiktas. Jei įrenginys jau buvo aptiktas, tuomet jį ignoruojame, kitu atveju – kviečiama \verb|newDeviceDiscovered(device)| funkcija į ją perduodant aptiktą įrenginį.
+
+\begin{verbatim}
+scanNearDevices = () => {
+    this.manager.startDeviceScan(null, null, (error, device) => {
+        if (error) {
+            this.onEndLecture()
+            return
+        }
+        if (!this.state.discoveredDevices.includes(device.id)) {
+            this.newDeviceDiscovered(device)
+        }
+    })
+}
+\end{verbatim}
+
+Tuomet įrenginio unikalus identifikatorius išsaugomas aptiktų įrenginių sąraše ir perduodamas į sistemos programų programavimo sąsają.
+
+\begin{verbatim}
+newDeviceDiscovered = (device) => {
+    let newDeviceList = this.state.discoveredDevices.splice()
+    newDeviceList.push(device.id)
+    this.setState({
+        discoveredDevices: newDeviceList
+    })
+    this.postStudentToAPI(device)
+}
+\end{verbatim}
+
+Sistemos programų programavimo sąsaja patikrina, ar toks identifikatorius yra susietas su kokiu nors studentu. Jei taip – pažymi studentą kaip dalyvaujantį užsiėmime ir grąžina studento vardą bei pavardę. Programėlėje studentas įtraukiamas į dalyvaujančių paskaitoje studentų sąrašą.
 
 \section{Sistemos vidinė pusė}
 
