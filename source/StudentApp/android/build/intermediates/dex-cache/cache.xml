@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_5a59f3d6b3a8aaa20a8d289b6ca19c84d76bb1b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.1_1ff72d918d5f8aa6c711a0f20d821aedc804e795.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_47c8ca283b4eebdbff74ff0422511ab23366013c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_bbb1d5b29af282713c74633ffe5ebe33b2260cea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_16710bea306798f208cf3c57efcda6752275456c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_d027e019c2e346a9e7d413b5af7fde2f29214beb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.polidea.rxandroidble/rxandroidble/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f910f65b90f5b08c2c4bb10fac1160275091bed0">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.polidea.rxandroidble-rxandroidble-1.1.0_c1ede2673d2adf62b86a3cbd7f08bdb43edac599.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/LecturerApp/react-native-ble-plx/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e0826d4eb9b60241ef365c608ce7c7ae10ed96f7">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/LecturerApp-react-native-ble-plx-unspecified_0573ea6720743e3314206cbf1ad99801e2518eea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_1a19747304944d5be829d957940ded222de755a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.44.0_4be3a76933409063ff26c5ff9f4a4f9710f19aee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_cbf7aee69d8f99f281aa5eff508b3f9bf8b08a5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.2.2/5b083e2a33225bc1c7b11678b7608e2bead4e417/rxjava-1.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5b083e2a33225bc1c7b11678b7608e2bead4e417">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/rxjava-1.2.2_143ef124a505b9fe5195efe7249e423d07831c61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_b597a30cf82875b0a24999a9a1c897a33ffb9dbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_fd8cd2bf6d1f7222d362df0e2f1d9852f2de7d63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_8b788f0faad0931301d96fd4cc7f6b5a752382b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_f6e7c795f2a8503545e730bf5eac6ed5bbe97cf8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c7b754be5f554498ce54304f969704b58c4aa98f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_2008d1b8cee8eaa07115a18ff6498b6df4553706.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_a73c6106d73b21c95ffb417a00c0ffae21391162.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_dfb147099a4a1eb3c5c7aedf00bccfd5b5165933.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_1e18b23554167c0bbbc78ec91e7ebe50b88e8ee4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_2ecb06485b3e29a104700342a8baf5ade5b8d6a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_251a4b1a6099d0e238d4197ae8b08d53af82dc87.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_03dee098e1f77d239e6fc00e8948959c5f08b599.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_d706ed4f84dae8d4563eeff4c2df1fde47a083fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/home/marijus/Documents/Uni/course-work/source/StudentAppFresh/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_a184b67cbc74cafd4d7bced86dffe3f7d07d85f1.jar" />
+    </item>
+
+</items>
