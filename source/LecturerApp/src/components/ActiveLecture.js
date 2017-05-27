@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View, ListView, Button } from 'react-native'
 import { BleManager } from 'react-native-ble-plx'
+import HttpClient from './utils/HttpClient'
 
 class ActiveLecture extends React.Component {
     static navigationOptions = {
@@ -11,7 +12,8 @@ class ActiveLecture extends React.Component {
         super(props)
         this.manager = new BleManager()
         this.state = {
-            discoveredDevices: []
+            discoveredDevices: [],
+            attendingStudents: []
         }
     }
 
@@ -47,11 +49,33 @@ class ActiveLecture extends React.Component {
         this.setState({
             discoveredDevices: newDeviceList
         })
+        this.postStudentToAPI(device)
+    }
+
+    postStudentToAPI = (device) => {
+        HttpClient.post(
+            '/lecture/attend',
+            {
+                deviceId: device.id
+            }
+        ).then(response => {
+            if (response.fullName) {
+                let newList = this.state.attendingStudents.splice()
+                newList.push(response.fullName)
+                this.setState({
+                    attendingStudents: newList
+                })
+            }
+        }).catch(error => {
+            if (error) {
+                console.log(error)
+            }
+        })
     }
 
     getDataSource = () => {
         let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
-        return ds.cloneWithRows(this.state.discoveredDevices)
+        return ds.cloneWithRows(this.state.attendingStudents)
     }
 
     onEndLecture = () => {
