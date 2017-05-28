@@ -1,18 +1,80 @@
+let User = require('../models/user');
+let Device = require('../models/device')
+
 let users = {
-  init: function (db) {
-    this.db = db
+
+  getUsers: (req, res) => {
+    User.find((err, users) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send(users);
+      }
+    })
   },
 
-  getUser: function (req, res) {
-    const id = req.params.id;
-    const details = { '_id': id };
-    this.db.collection('users').findOne(details, (err, item) => {
+  getUser: (req, res) => {
+    const id = req.params.user_id;
+    User.findById(id, (err, user) => {
       if (err) {
-        res.send({'error': 'User not found'});
+        res.send(err);
       } else {
-        res.send(item);
+        res.send(user);
       }
-    });
+    })
+  },
+
+  createUser: (req, res) => {
+    const data = req.body
+    let user = User()
+    user.fullName = data.fullName
+    user.role = data.role
+    user.uid = data.uid
+    user.password = data.password
+
+    user.save((err) => {
+      if (err) {
+        res.send(err)
+      }
+      res.json(user)
+    })
+  },
+
+  addDeviceForUser: (req, res) => {
+    const userId = req.params.user_id
+
+    let data = req.body
+
+    if (!data.deviceId) {
+      res.sendStatus(400)
+    }
+
+    User.findById(userId)
+      .then(user => {
+        let device = Device()
+        device.uniqueDeviceId = data.deviceId
+        device.user = user
+        device.save((err) => {
+          if (err) {
+            res.send(err)
+          }
+          user.devices.push(device)
+          user.save((err) => {
+            if (err) {
+              res.send(err)
+            }
+            res.json(user)
+          })
+        })
+      }).catch(error => {
+        if (error) {
+          res.send(error)
+        }
+      })
+  },
+
+  login: (req, res) => {
+
   }
 
   // updateUser: function (req, res) {
@@ -23,21 +85,10 @@ let users = {
 
   // },
 
-  // addDeviceForUser: function (req, res) {
-
-  // },
-
   // createFromFile: function (req, res) {
 
   // },
 
-  // createUser: function (req, res) {
-
-  // }
-
 };
 
-module.exports = (db) => {
-  users.init(db);
-  return users;
-};
+module.exports = users

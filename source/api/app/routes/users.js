@@ -1,6 +1,11 @@
-const router = require('express').Router();
-const users = require('../controllers/users');
+module.exports = function (app, db) {
+  let users = require('../controllers/users')
 
-router.get('/:id', users.getUser);
-
-module.exports = router;
+  app.route('/users')
+    .get(users.getUsers)
+    .post(users.createUser)
+  app.route('/users/:user_id')
+    .get(users.getUser)
+  app.route('/users/:user_id/devices')
+    .post(users.addDeviceForUser)
+}
